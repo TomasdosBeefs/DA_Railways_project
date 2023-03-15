@@ -16,8 +16,8 @@ private:
 public:
     file_reader();
 
-    static void readNetworks(Program_data&);
-    static void readStations(Program_data&);
+    static void readNetworks(Program_data& data);
+    static void readStations(Program_data& data);
 };
 
 

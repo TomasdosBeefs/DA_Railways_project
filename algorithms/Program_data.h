@@ -9,7 +9,7 @@
 #include <set>
 #include <unordered_map>
 #include "Graph.h"
-#include "file_reader.h"
+
 
 typedef std::vector<Vertex*> VE;
 typedef std::unordered_map<std::string,std::vector<Vertex*>> Categ;
@@ -28,6 +28,7 @@ public:
     void set_Municipality(std::string,Vertex*);
     void set_Township(std::string,Vertex*);
     void set_Line(std::string,Vertex*);
+
     VE Stations_Network;
     std::unordered_map<std::string,Vertex*> Name;
 private:

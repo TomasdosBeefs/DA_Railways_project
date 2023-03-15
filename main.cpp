@@ -1,6 +1,19 @@
+//
+// Created by tomas on 15/03/2023.
+//
+
+
 #include <iostream>
+#include "algorithms/Program_data.h"
+#include "algorithms/file_reader.h"
+
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+    Program_data cringe;
+
+    file_reader::readStations(cringe);
+    file_reader::readNetworks(cringe);
+
 }

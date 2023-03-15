@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include "file_reader.h"
+#include "Vertex_Edge.h"
 
 void file_reader::readNetworks(Program_data& data) {
     std::string line;
