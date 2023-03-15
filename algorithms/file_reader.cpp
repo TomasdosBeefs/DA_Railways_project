@@ -21,7 +21,9 @@ void file_reader::readNetworks(Program_data& data) {
 
         Edge edge = Edge(data.Name.find(Station_A)->second,data.Name.find(Station_B)->second,Capacity,Service);
 
+        Vertex* vertex = data.Name.find(Station_A)->second;
 
+        vertex->addEdge(&edge);
 
 
 
@@ -40,7 +42,7 @@ void file_reader::readNetworks(Program_data& data) {
 
 
 void file_reader::readStations(Program_data& data) {
-    Vertex *pointer;
+
 
     std::string line;
     std::ifstream ifs("../data/stations.csv");

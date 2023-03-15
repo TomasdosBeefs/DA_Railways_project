@@ -9,6 +9,7 @@
 #include <set>
 #include <unordered_map>
 #include "Graph.h"
+#include "file_reader.h"
 
 typedef std::vector<Vertex*> VE;
 typedef std::unordered_map<std::string,std::vector<Vertex*>> Categ;
@@ -20,6 +21,7 @@ class Program_data {
 
 public:
     Graph graph;
+    Program_data();
 
     void set_Name(std::string,Vertex*);
     void set_District(std::string,Vertex*);

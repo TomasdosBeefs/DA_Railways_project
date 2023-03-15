@@ -16,7 +16,7 @@
 #include <queue>
 #include <limits>
 #include <algorithm>
-#include "../data_structures/MutablePriorityQueue.h"
+//#include "../data_structures/MutablePriorityQueue.h"
 
 class Edge;
 
@@ -26,11 +26,15 @@ class Edge;
 
 class Vertex {
 public:
-    Vertex(int id);
     Vertex(std::string Name, std::string District,std::string Municipaly,std::string Township, std::string LIne);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
-    int getId() const;
+    std::string getName() const;
+    std::string getDistrict() const;
+    std::string getMunicipality() const;
+    std::string getTownship() const;
+    std::string getLine() const;
+
     std::vector<Edge *> getAdj() const;
     bool isVisited() const;
     bool isProcessing() const;
@@ -40,17 +44,16 @@ public:
     std::vector<Edge *> getIncoming() const;
 
 
-    void setId(int info);
+
     void setVisited(bool visited);
     void setProcesssing(bool processing);
     void setIndegree(unsigned int indegree);
     void setDist(double dist);
     void setPath(Edge *path);
-    Edge * addEdge(Vertex *dest, double w);
     Edge * addEdge(Edge* e);
-    bool removeEdge(int destID);
+    bool removeEdge(Vertex* origin, Vertex* sink);
 
-    friend class MutablePriorityQueue<Vertex>;
+   // friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
     std::vector<Edge *> adj;  // outgoing edges

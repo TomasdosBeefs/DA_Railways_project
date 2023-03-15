@@ -1,0 +1,7 @@
+# ninja log v5
+35	134	7006007543409403	CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.obj	31a941756ea7d7bf
+0	459	7006007546669479	CMakeFiles/Railways.dir/main.cpp.obj	8b6a3e03a76cf81a
+2	560	7006007731618794	CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.obj	9018758af7af2c7d
+12	621	7006007991508093	CMakeFiles/Railways.dir/algorithms/Graph.cpp.obj	621a69c4643cf181
+3	982	7006007995128209	CMakeFiles/Railways.dir/algorithms/file_reader.cpp.obj	7c1968141b38172
+3	736	7006011353476431	CMakeFiles/Railways.dir/algorithms/file_reader.cpp.obj	7c1968141b38172

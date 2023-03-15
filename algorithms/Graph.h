@@ -15,7 +15,7 @@ public:
     void add_Vertex(Vertex *);
     Vertex* get_Vertex(std::string Station_A);
     std::vector<Vertex*> get_Vertex_vector();
-    Vertex*
+
 
 
 private:
