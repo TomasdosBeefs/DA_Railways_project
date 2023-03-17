@@ -24,8 +24,8 @@ Vertex::Vertex(std::string Name, std::string District,std::string Municipaly,std
  * with a given destination vertex (d) and edge weight (w).
  */
 void Vertex::addEdge(Edge * e) {
-    this->getAdj().push_back(e);
-    e->getDest()->getIncoming().push_back(e);
+    this->adj.push_back(e);
+    e->getDest()->incoming.push_back(e);
 
 }
 
@@ -114,7 +114,7 @@ void Vertex::setPath(Edge *path) {
 
 Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
 
-Edge::Edge(Vertex* Station_A,Vertex* Station_B, double Capacity, std::string Service):orig(Station_A), dest(Station_B), weight(Capacity), Service(Service) {}
+Edge::Edge(Vertex* Station_A,Vertex* Station_B, double  Capacity, std::string Service):orig(Station_A), dest(Station_B), weight(Capacity), Service(Service) {}
 
 Vertex * Edge::getDest() const {
     return this->dest;
