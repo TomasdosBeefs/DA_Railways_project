@@ -31,7 +31,7 @@ public:
 
     VE Stations_Network;
     std::unordered_map<std::string,Vertex*> Name;
-private:
+//private:
 
     Categ District;
     Categ Municipality;

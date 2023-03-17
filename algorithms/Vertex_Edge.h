@@ -26,7 +26,7 @@ class Edge;
 
 class Vertex {
 public:
-    Vertex(std::string Name, std::string District,std::string Municipaly,std::string Township, std::string LIne);
+    Vertex(std::string Name, std::string District,std::string Municipaly,std::string Township, std::string Line);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
     std::string getName() const;
@@ -40,21 +40,29 @@ public:
     bool isProcessing() const;
     unsigned int getIndegree() const;
     double getDist() const;
+    int getId() const;
     Edge *getPath() const;
     std::vector<Edge *> getIncoming() const;
 
 
-
+    void setId(int id);
     void setVisited(bool visited);
     void setProcesssing(bool processing);
     void setIndegree(unsigned int indegree);
     void setDist(double dist);
     void setPath(Edge *path);
-    Edge * addEdge(Edge* e);
-    bool removeEdge(Vertex* origin, Vertex* sink);
+    void addEdge(Edge* e);
+    bool removeEdge(int ID);
+    //removeEdge com Id tambem parece boa idea
 
    // friend class MutablePriorityQueue<Vertex>;
 protected:
+    std::string Name;
+    std::string District;
+    std::string Municipaly;
+    std::string Township;
+    std::string Line;
+
     int id;                // identifier
     std::vector<Edge *> adj;  // outgoing edges
 
@@ -75,7 +83,7 @@ protected:
 class Edge {
 public:
     Edge(Vertex *orig, Vertex *dest, double w);
-    Edge(Vertex* Station_A,Vertex* Station_B, int Capacity, std::string Service);
+    Edge(Vertex* Station_A,Vertex* Station_B, double Capacity, std::string Service);
 
     Vertex * getDest() const;
     double getWeight() const;
@@ -88,6 +96,8 @@ public:
     void setReverse(Edge *reverse);
     void setFlow(double flow);
 protected:
+
+    std::string Service;
     Vertex * dest; // destination vertex
     double weight; // edge weight, can also be used for capacity
 

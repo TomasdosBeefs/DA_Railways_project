@@ -15,5 +15,19 @@ int main() {
 
     file_reader::readStations(cringe);
     file_reader::readNetworks(cringe);
+    auto i = cringe.Name.begin();
+    auto e = cringe.District.begin();
+
+    std::cout << cringe.Name.size() << '\n';
+    while( i != cringe.Name.end()){
+
+        std::cout << cringe.Name.size() <<  i->first << "\n";
+        i++;
+    }
+    while( e != cringe.District.end()){
+
+        std::cout << cringe.District.size() << e->first << "\n";
+        e++;
+    }
 
 }
