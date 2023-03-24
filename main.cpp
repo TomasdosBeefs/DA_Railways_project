@@ -12,22 +12,18 @@
 int main() {
 
     Program_data cringe;
+    std::vector<Vertex*> vector;
 
-    file_reader::readStations(cringe);
-    file_reader::readNetworks(cringe);
-    auto i = cringe.Name.begin();
+    std::cout << '\n';
+
+    cringe.graph.Most_fluent_stations();
     auto e = cringe.District.begin();
+  /*  Vertex* v = cringe.Name.find("A")->second;
+    Vertex* vv = cringe.Name.find("G")->second;
+    double numero = cringe.graph.edmondskarp(v,vv);
+    std::cout << numero;*/
 
-    std::cout << cringe.Name.size() << '\n';
-    while( i != cringe.Name.end()){
 
-        std::cout << cringe.Name.size() <<  i->first << "\n";
-        i++;
-    }
-    while( e != cringe.District.end()){
 
-        std::cout << cringe.District.size() << e->first << "\n";
-        e++;
-    }
 
 }
