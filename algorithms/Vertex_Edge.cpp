@@ -24,8 +24,8 @@ Vertex::Vertex(std::string Name, std::string District,std::string Municipaly,std
  * with a given destination vertex (d) and edge weight (w).
  */
 void Vertex::addEdge(Edge * e) {
-    this->getAdj().push_back(e);
-    e->getDest()->getIncoming().push_back(e);
+    this->adj.push_back(e);
+    e->getDest()->incoming.push_back(e);
 
 }
 
@@ -34,16 +34,31 @@ void Vertex::addEdge(Edge * e) {
  * from a vertex (this).
  * Returns true if successful, and false if such edge does not exist.
  */
-bool Vertex::removeEdge(int ID) {
+bool Vertex::removeEdge(double ID) {
 
-    for(auto e : this->getAdj()){
+    std::vector<Edge*>::iterator it = this->getAdj().begin();
 
-        if(e->getDest()->getId() == ID){
+    while(it != this->getAdj().end()){
 
-            std::remove(this->getAdj().begin(), this->getAdj().end(),e);
-            std::remove(e->getDest()->getIncoming().begin(),e->getDest()->getIncoming().end(),e);
-            return true;
+        if((*it)->getDest()->getId() == ID){
+
+            std::vector<Edge*>::iterator it2 = (*it)->getDest()->getIncoming().begin();
+
+            while(it2 != (*it)->getDest()->getIncoming().end()){
+
+                if((*it2)->getOrig()->getId() == this->getId()){
+
+                    (*it)->getDest()->getIncoming().erase(it2);
+
+                }
+                it2++;
+            }
+
+            this->getAdj().erase(it);
+
         }
+        it++;
+
 
     }
 
@@ -54,7 +69,7 @@ bool Vertex::operator<(Vertex & vertex) const {
     return this->dist < vertex.dist;
 }
 
-int Vertex::getId() const {
+double Vertex::getId() const {
     return this->id;
 }
 
@@ -110,11 +125,12 @@ void Vertex::setPath(Edge *path) {
     this->path = path;
 }
 
+
 /********************** Edge  ****************************/
 
 Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
 
-Edge::Edge(Vertex* Station_A,Vertex* Station_B, double Capacity, std::string Service):orig(Station_A), dest(Station_B), weight(Capacity), Service(Service) {}
+Edge::Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost):orig(Station_A), dest(Station_B), weight(weight), Service(Service), cost(cost) {}
 
 Vertex * Edge::getDest() const {
     return this->dest;
@@ -149,5 +165,44 @@ void Edge::setReverse(Edge *reverse) {
 }
 
 void Edge::setFlow(double flow) {
+    this->biflow +=  flow - this->flow;
     this->flow = flow;
+    this->getReverse()->setBiFlow(this->biflow);
+    this->setCapacity(this->getWeight()-this->biflow);
+    this->getReverse()->setCapacity(this->getCapacity());
+
+}
+
+std::string Vertex::getName() const {
+    return this->Name;
+}
+
+void Vertex::set_INC_capacity(double capacity){
+    this->INC_capacity+=capacity;
+}
+
+
+void Vertex::set_OUT_capacity(double capacity) {
+    this->OUT_capacity+=capacity;
+}
+
+double Vertex::get_OUT() const {
+    return this->OUT_capacity;
+}
+
+
+double Vertex::get_INC() const {
+    return this->INC_capacity;
+}
+void Edge::setCapacity(double cap){
+    this->capacity = cap;
+}
+double Edge::getCapacity() const{
+    return this->capacity;
+}
+double Edge::getBiFlow() const {
+    return biflow;
+}
+void Edge::setBiFlow(double biflow)  {
+    this->biflow =  biflow;
 }

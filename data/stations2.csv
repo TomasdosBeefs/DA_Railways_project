@@ -1,0 +1,516 @@
+Station_A,Station_B,Capacity,Service
+Casa Branca,Monte das Flores,8,STANDARD
+Monte das Flores,Ã‰vora,8,STANDARD
+Ã‰vora,Portalegre,10,STANDARD
+Funcheira,Santa Clara-SabÃ³ia,4,ALFA PENDULAR
+Alferrarede,Mouriscas,6,STANDARD
+Mouriscas,Mouriscas-A,6,STANDARD
+Mouriscas-A,Alvega-Ortiga,2,STANDARD
+Alvega-Ortiga,Barragem de Belver,2,STANDARD
+Barragem de Belver,Belver,6,STANDARD
+Belver,Barca da Amieira -Envendos,6,STANDARD
+Barca da Amieira -Envendos,Fratel,6,STANDARD
+Fratel,RÃ³dÃ£o,4,STANDARD
+RÃ³dÃ£o,Tojeirinha,2,STANDARD
+Tojeirinha,Sarnadas,4,STANDARD
+Sarnadas,Retaxo,2,STANDARD
+Retaxo,BenquerenÃ§as,2,STANDARD
+BenquerenÃ§as,Alcains,10,STANDARD
+Alcains,Lardosa,10,STANDARD
+Lardosa,Soalheira,2,STANDARD
+Soalheira,Castelo Novo,4,STANDARD
+Castelo Novo,Alpedrinha,2,STANDARD
+Alpedrinha,Vale de Prazeres,4,STANDARD
+Vale de Prazeres,Fatela-Penamacor,2,STANDARD
+Fatela-Penamacor,Alcaide,2,STANDARD
+Alcaide,Donas,2,STANDARD
+Donas,FundÃ£o,4,STANDARD
+FundÃ£o,Alcaria,2,STANDARD
+Alcaria,Tortosendo,6,STANDARD
+Tortosendo,CovilhÃ£,4,STANDARD
+CovilhÃ£,Caria,2,STANDARD
+Caria,Belmonte-Manteigas,4,STANDARD
+Belmonte-Manteigas,MaÃ§ainhas,2,STANDARD
+MaÃ§ainhas,Benespera,2,STANDARD
+Benespera,BarracÃ£o-Sabugal,2,STANDARD
+Lisboa Santa ApolÃ³nia,BraÃ§o de Prata,10,STANDARD
+BraÃ§o de Prata,SacavÃ©m,2,STANDARD
+SacavÃ©m,Bobadela,2,STANDARD
+Bobadela,Santa Iria,2,STANDARD
+Santa Iria,PÃ³voa,2,STANDARD
+PÃ³voa,Alhandra,4,STANDARD
+Alhandra,Vila Franca de Xira,2,STANDARD
+Vila Franca de Xira,Castanheira do Ribatejo,4,STANDARD
+Castanheira do Ribatejo,Carregado,2,STANDARD
+Carregado,Carregado Norte,4,STANDARD
+Carregado Norte,Vila Nova da RaÃ­nha,2,STANDARD
+Vila Nova da RaÃ­nha,Espadanal da Azambuja,2,STANDARD
+Espadanal da Azambuja,Virtudes,2,STANDARD
+Virtudes,Reguengo - Vale da Pedra - PontÃ©vel,2,STANDARD
+Reguengo - Vale da Pedra - PontÃ©vel,Santana Cartaxo,2,STANDARD
+Santana Cartaxo,Santana Cartaxo Resguardo,4,STANDARD
+Santana Cartaxo Resguardo,Vale de SantarÃ©m,2,STANDARD
+Vale de SantarÃ©m,SantarÃ©m,8,STANDARD
+SantarÃ©m,Vale de Figueira,8,STANDARD
+Vale de Figueira,Mato Miranda,6,STANDARD
+Mato Miranda,Riachos - Torres Novas - GolegÃ£,6,STANDARD
+Riachos - Torres Novas - GolegÃ£,Entroncamento,4,STANDARD
+Entroncamento,Soudos - Vila Nova,2,STANDARD
+Soudos - Vila Nova,Paialvo,2,STANDARD
+Paialvo,Fungalvaz Resguardo,4,STANDARD
+Fungalvaz Resguardo,Fungalvaz,2,STANDARD
+Fungalvaz,ChÃ£o de MaÃ§Ã£s-FÃ¡tima,6,STANDARD
+ChÃ£o de MaÃ§Ã£s-FÃ¡tima,SeiÃ§a-OurÃ©m,2,STANDARD
+SeiÃ§a-OurÃ©m,Caxarias,6,STANDARD
+Caxarias,Albergaria dos Doze,4,STANDARD
+Albergaria dos Doze,LitÃ©m,2,STANDARD
+LitÃ©m,Vermoil,4,STANDARD
+Vermoil,Pombal Resguardo,6,STANDARD
+Pombal Resguardo,Pelariga,2,STANDARD
+Pelariga,SimÃµes,2,STANDARD
+SimÃµes,Soure,6,STANDARD
+Soure,Vila Nova de AnÃ§os,2,STANDARD
+Vila Nova de AnÃ§os,Formoselha / Santo VarÃ£o,2,STANDARD
+Formoselha / Santo VarÃ£o,Pereira,2,STANDARD
+Pereira,Ameal-Sul,6,STANDARD
+Ameal-Sul,Ameal,2,STANDARD
+Ameal,Vila Pouca do Campo,2,STANDARD
+Vila Pouca do Campo,Casais,2,STANDARD
+Casais,Espadaneira,2,STANDARD
+Espadaneira,Bencanta,2,STANDARD
+Bencanta,Coimbra B,8,STANDARD
+Coimbra B,AdÃ©mia,2,STANDARD
+AdÃ©mia,Vilela - Fornos,2,STANDARD
+Vilela - Fornos,Pampilhosa,6,STANDARD
+Pampilhosa,Mealhada,2,STANDARD
+Mealhada,Mealhada Norte,4,STANDARD
+Mealhada Norte,Aguim,2,STANDARD
+Aguim,Curia,2,STANDARD
+Curia,Paraimo,2,STANDARD
+Paraimo,Oliveira do Bairro,4,STANDARD
+Oliveira do Bairro,OiÃ£,6,STANDARD
+OiÃ£,Quintans,2,STANDARD
+Quintans,Aveiro - Vouga,10,STANDARD
+Aveiro - Vouga,Cacia,10,STANDARD
+Cacia,Canelas,2,STANDARD
+Canelas,Salreu,2,STANDARD
+Salreu,Estarreja,4,STANDARD
+Estarreja,Avanca,2,STANDARD
+Avanca,VÃ¡lega,6,STANDARD
+VÃ¡lega,Ovar,4,STANDARD
+Ovar,Carvalheira - Maceda,2,STANDARD
+Carvalheira - Maceda,CortegaÃ§a,2,STANDARD
+CortegaÃ§a,Esmoriz,6,STANDARD
+Esmoriz,Paramos,2,STANDARD
+Paramos,Silvalde,2,STANDARD
+Silvalde,Granja,4,STANDARD
+Granja,Aguda,2,STANDARD
+Aguda,Miramar,2,STANDARD
+Miramar,Francelos Sul,4,STANDARD
+Francelos Sul,Francelos,2,STANDARD
+Francelos,Valadares,2,STANDARD
+Valadares,Madalena,2,STANDARD
+Madalena,CoimbrÃµes,2,STANDARD
+CoimbrÃµes,General Torres,4,STANDARD
+Contumil,Rio Tinto,2,STANDARD
+Rio Tinto,Ãguas Santas,2,STANDARD
+Ãguas Santas,Palmilheira,2,STANDARD
+Palmilheira,Travagem,2,STANDARD
+Travagem,Leandro,4,STANDARD
+Leandro,SÃ£o Frutuoso,6,STANDARD
+SÃ£o Frutuoso,SÃ£o RomÃ£o - A,2,STANDARD
+SÃ£o RomÃ£o - A,SÃ£o RomÃ£o,4,STANDARD
+SÃ£o RomÃ£o,Portela,2,STANDARD
+Portela,Trofa,2,STANDARD
+Trofa,Esmeriz,2,STANDARD
+Esmeriz,Barrimau,2,STANDARD
+Barrimau,FamalicÃ£o,4,STANDARD
+FamalicÃ£o,Mouquim,2,STANDARD
+Mouquim,Louro,2,STANDARD
+Louro,Carreira,2,STANDARD
+Carreira,Barcelos,6,STANDARD
+Barcelos,Silva,2,STANDARD
+Silva,CarapeÃ§os,2,STANDARD
+CarapeÃ§os,DurrÃ£es,2,STANDARD
+DurrÃ£es,Barroselas,8,STANDARD
+Barroselas,Senhora das Neves,2,STANDARD
+Senhora das Neves,AlvarÃ£es,2,STANDARD
+AlvarÃ£es,Darque,10,STANDARD
+Darque,Areia - Darque,2,STANDARD
+Areia - Darque,Areosa,2,STANDARD
+Areosa,CarreÃ§o,2,STANDARD
+CarreÃ§o,Afife,2,STANDARD
+Afife,Ã‚ncora Praia,2,STANDARD
+Ã‚ncora Praia,Moledo do Minho,2,STANDARD
+Moledo do Minho,Senhora da Agonia,2,STANDARD
+Senhora da Agonia,Caminha,4,STANDARD
+Caminha,Seixas,2,STANDARD
+Seixas,Esqueiro,2,STANDARD
+Esqueiro,GondarÃ©m,2,STANDARD
+GondarÃ©m,Vila Nova da Cerveira,4,STANDARD
+Vila Nova da Cerveira,Carvalha,2,STANDARD
+Carvalha,SÃ£o Pedro da Torre,4,STANDARD
+AlcÃ¢ntara-Terra,AlcÃ¢ntara-Mar,10,STANDARD
+Ermesinde - A,CabÃªda,2,STANDARD
+CabÃªda,SuzÃ£o,2,STANDARD
+SuzÃ£o,Valongo,6,STANDARD
+Valongo,SÃ£o Martinho do Campo,2,STANDARD
+SÃ£o Martinho do Campo,Terronhas,2,STANDARD
+Terronhas,Trancoso,2,STANDARD
+Trancoso,Recarei - Sobreira,6,STANDARD
+Recarei - Sobreira,Parada,2,STANDARD
+Parada,CÃªte,6,STANDARD
+CÃªte,Irivo,6,STANDARD
+Irivo,Oleiros,2,STANDARD
+Oleiros,Paredes,2,STANDARD
+Paredes,Bustelo,2,STANDARD
+Bustelo,Meinedo,2,STANDARD
+Meinedo,CaÃ­de,4,STANDARD
+CaÃ­de,Oliveira,2,STANDARD
+Oliveira,Vila MeÃ£,4,STANDARD
+Vila MeÃ£,Recezinhos,2,STANDARD
+Recezinhos,LivraÃ§Ã£o,6,STANDARD
+LivraÃ§Ã£o,Marco de Canaveses,6,STANDARD
+Marco de Canaveses,Juncal,4,STANDARD
+Juncal,Pala,2,STANDARD
+Pala,MosteirÃ´,4,STANDARD
+MosteirÃ´,Aregos,4,STANDARD
+Aregos,MirÃ£o,2,STANDARD
+MirÃ£o,Ermida,4,STANDARD
+Ermida,Porto Rei,2,STANDARD
+Porto Rei,Barqueiros,2,STANDARD
+Barqueiros,Rede,4,STANDARD
+Rede,Caldas de Moledo,2,STANDARD
+Caldas de Moledo,Godim,4,STANDARD
+Godim,RÃ©gua,4,STANDARD
+RÃ©gua,BagaÃºste,2,STANDARD
+BagaÃºste,FerrÃ£o,2,STANDARD
+FerrÃ£o,PinhÃ£o,6,STANDARD
+PinhÃ£o,SÃ£o Mamede do Tua,2,STANDARD
+SÃ£o Mamede do Tua,Alegria,2,STANDARD
+Alegria,Ferradosa,2,STANDARD
+Ferradosa,Vargelas,4,STANDARD
+Vargelas,VesÃºvio,2,STANDARD
+VesÃºvio,Freixo de NumÃ£o,2,STANDARD
+Freixo de NumÃ£o,Pocinho,4,STANDARD
+Silvalde-Vouga,Monte de Paramos,2,STANDARD
+Monte de Paramos,Lapa,2,STANDARD
+Lapa,Sampaio-Oleiros,2,STANDARD
+Sampaio-Oleiros,PaÃ§os de BrandÃ£o,4,STANDARD
+PaÃ§os de BrandÃ£o,Rio MeÃ£o,2,STANDARD
+Rio MeÃ£o,SÃ£o JoÃ£o de Ver,2,STANDARD
+SÃ£o JoÃ£o de Ver,Cavaco,2,STANDARD
+Cavaco,Sanfins,2,STANDARD
+Sanfins,Vila da Feira,4,STANDARD
+Vila da Feira,EscapÃ£es,2,STANDARD
+EscapÃ£es,Arrifana,2,STANDARD
+Arrifana,Faria,2,STANDARD
+Faria,Couto de CucujÃ£es,2,STANDARD
+Couto de CucujÃ£es,Santiago de Riba-Ul,2,STANDARD
+Santiago de Riba-Ul,Oliveira de AzemÃ©is,4,STANDARD
+Oliveira de AzemÃ©is,Ul,2,STANDARD
+Ul,Travanca-Macinhata,2,STANDARD
+Travanca-Macinhata,Figueiredo,2,STANDARD
+Figueiredo,Pinheiro da Bemposta,4,STANDARD
+Pinheiro da Bemposta,Branca,2,STANDARD
+Branca,Albergaria-a-Nova,2,STANDARD
+Albergaria-a-Nova,Urgueiras,2,STANDARD
+Urgueiras,Albergaria-a-Velha,4,STANDARD
+Albergaria-a-Velha,Sernada do Vouga,4,STANDARD
+Bemposta,Ponte de SÃ´r,4,STANDARD
+Ponte de SÃ´r,Fazenda,2,STANDARD
+Fazenda,Torre das Vargens,4,STANDARD
+Torre das Vargens,ChanÃ§a,2,STANDARD
+ChanÃ§a,Mata,2,STANDARD
+Mata,Portalegre,10,STANDARD
+Portalegre,Assumar,2,STANDARD
+Assumar,Arronches,2,STANDARD
+Arronches,Santa EulÃ¡lia-A,2,STANDARD
+Santo Tirso,CaniÃ§os,6,STANDARD
+CaniÃ§os,Giesteira,2,STANDARD
+Giesteira,Lordelo,6,STANDARD
+Lordelo,Cuca,2,STANDARD
+Cuca,Pereirinhas,2,STANDARD
+Pereirinhas,Vizela,4,STANDARD
+Vizela,Nespereira,2,STANDARD
+Nespereira,Covas,2,STANDARD
+Covas,GuimarÃ£es,6,STANDARD
+Morgado,Muge,6,STANDARD
+Muge,Marinhais,6,STANDARD
+Marinhais,"Desvio Km 19.5",4,STANDARD
+Desvio Km 19.5,Agolada,4,STANDARD
+Agolada,Salgueirinha,4,STANDARD
+Salgueirinha,SÃ£o Torcato,4,STANDARD
+SÃ£o Torcato,Lavre,4,STANDARD
+Lavre,Canha,6,STANDARD
+Canha,Vidigal,4,STANDARD
+Vidigal,Vendas Novas,4,STANDARD
+Couto de Cambeses,Arentim,8,STANDARD
+Arentim,RuÃ­lhe,10,STANDARD
+RuÃ­lhe,Tadim,10,STANDARD
+Tadim,Aveleda,2,STANDARD
+Aveleda,MazagÃ£o,2,STANDARD
+MazagÃ£o,Ferreiros,2,STANDARD
+Ferreiros,Braga,8,STANDARD
+Contumil,SÃ£o Gemil,4,STANDARD
+SÃ£o Gemil,SÃ£o Mamede de Infesta,4,STANDARD
+SÃ£o Mamede de Infesta,LeÃ§a do Balio,4,STANDARD
+LeÃ§a do Balio,LeixÃµes,4,STANDARD
+Albufeira - Ferreiras,Boliqueime,6,STANDARD
+Boliqueime,LoulÃ©,4,STANDARD
+LoulÃ©,Almancil,2,STANDARD
+Almancil,Parque das Cidades,6,STANDARD
+Parque das Cidades,Bom JoÃ£o,2,STANDARD
+Bom JoÃ£o,OlhÃ£o,6,STANDARD
+OlhÃ£o,Fuseta-A,2,STANDARD
+Fuseta-A,Fuseta,4,STANDARD
+Fuseta,Livramento,2,STANDARD
+Livramento,Luz,2,STANDARD
+Luz,Tavira,4,STANDARD
+Tavira,Porta Nova,2,STANDARD
+Porta Nova,ConceiÃ§Ã£o,2,STANDARD
+ConceiÃ§Ã£o,Cacela,4,STANDARD
+Cacela,Castro Marim,2,STANDARD
+Castro Marim,Monte Gordo,2,STANDARD
+Monte Gordo,Vila Real de StÂº AntÃ³nio,4,STANDARD
+Soudos - Vila Nova,Carrascal-Delongo,2,STANDARD
+Carrascal-Delongo,Curvaceiras,2,STANDARD
+Curvaceiras,Santa Cita,4,STANDARD
+Santa Cita,Carvalhos de Figueiredo,2,STANDARD
+Carvalhos de Figueiredo,Tomar,4,STANDARD
+Pampilhosa,Quinta do Valongo - VacariÃ§a,2,STANDARD
+Quinta do Valongo - VacariÃ§a,Pego,2,STANDARD
+Pego,BifurcaÃ§Ã£o do Luso,6,STANDARD
+BifurcaÃ§Ã£o do Luso,Luso BuÃ§aco,2,STANDARD
+Luso BuÃ§aco,Soito,2,STANDARD
+Soito,Monte dos Lobos,2,STANDARD
+Monte dos Lobos,MortÃ¡gua,4,STANDARD
+MortÃ¡gua,Castelejo,2,STANDARD
+Castelejo,PapÃ­zios,2,STANDARD
+PapÃ­zios,Carregal do Sal,4,STANDARD
+Carregal do Sal,Oliveirinha Cabanas,4,STANDARD
+Oliveirinha Cabanas,Lapa do Lobo,2,STANDARD
+Lapa do Lobo,Canas Felgueira,4,STANDARD
+Canas Felgueira,Moimenta Alcafache,2,STANDARD
+Moimenta Alcafache,ContenÃ§as,4,STANDARD
+ContenÃ§as,Gouveia,6,STANDARD
+Gouveia,Fornos de Algodres,4,STANDARD
+Fornos de Algodres,Muxagata,4,STANDARD
+Muxagata,Celorico da Beira,4,STANDARD
+Celorico da Beira,BaraÃ§al,2,STANDARD
+BaraÃ§al,Vila Franca das Naves,4,STANDARD
+Vila Franca das Naves,Pinhel,4,STANDARD
+Pinhel,Gata,2,STANDARD
+Gata,Vila Fernando,2,STANDARD
+Vila Fernando,Rochoso,2,STANDARD
+Rochoso,Cerdeira,6,STANDARD
+Cerdeira,Miuzela,2,STANDARD
+Miuzela,NoÃ©mi,4,STANDARD
+NoÃ©mi,Castelo Mendo,2,STANDARD
+Castelo Mendo,Freineda,2,STANDARD
+Freineda,Aldeia,2,STANDARD
+AlcÃ¢ntara-Terra,Sete Rios,8,STANDARD
+Sete Rios,Entrecampos - Poente,8,STANDARD
+Entrecampos - Poente,Entrecampos,10,STANDARD
+Entrecampos,Roma - Areeiro,10,STANDARD
+Roma - Areeiro,Chelas,2,STANDARD
+Chelas,Marvila,2,STANDARD
+Marvila,BraÃ§o de Prata,10,STANDARD
+Figueira da Foz,Pampilhosa,6,STANDARD
+Sernada do Vouga,Macinhata,4,STANDARD
+Macinhata,Carvalhal da Portela,2,STANDARD
+Carvalhal da Portela,Valongo-Vouga,2,STANDARD
+Valongo-Vouga,Aguieira,2,STANDARD
+Aguieira,Mourisca do Vouga,2,STANDARD
+Mourisca do Vouga,Ãgueda,4,STANDARD
+Ãgueda,Oronhe,2,STANDARD
+Oronhe,Casal do Ãlvaro,2,STANDARD
+Casal do Ãlvaro,CabanÃµes,2,STANDARD
+CabanÃµes,TravassÃ´,2,STANDARD
+TravassÃ´,Taipa - Requeixo,2,STANDARD
+Taipa - Requeixo,Eirol,8,STANDARD
+Eirol,SÃ£o JoÃ£o de Loure,2,STANDARD
+SÃ£o JoÃ£o de Loure,Eixo,8,STANDARD
+Eixo,Azurva,2,STANDARD
+Azurva,Esgueira,2,STANDARD
+Esgueira,Aveiro - Vouga,10,STANDARD
+Reveles,Verride,4,STANDARD
+Verride,Marujal,2,STANDARD
+Marujal,Montemor,2,STANDARD
+Lisboa Rossio,Benfica,10,STANDARD
+Benfica,Santa Cruz/Damaia,2,STANDARD
+Santa Cruz/Damaia,Reboleira,2,STANDARD
+Reboleira,Queluz-Belas,2,STANDARD
+Queluz-Belas,Monte AbraÃ£o,4,STANDARD
+Monte AbraÃ£o,MassamÃ¡-Barcarena,2,STANDARD
+MassamÃ¡-Barcarena,Agualva-CacÃ©m,4,STANDARD
+Agualva-CacÃ©m,Rio de Mouro,2,STANDARD
+Rio de Mouro,MercÃªs,4,STANDARD
+MercÃªs,AlgueirÃ£o-Mem Martins,2,STANDARD
+AlgueirÃ£o-Mem Martins,Portela de Sintra,2,STANDARD
+Portela de Sintra,Sintra,4,STANDARD
+Entroncamento,Barquinha,4,STANDARD
+Barquinha,Tancos,2,STANDARD
+Tancos,Almourol,4,STANDARD
+Almourol,Praia do Ribatejo,4,STANDARD
+Praia do Ribatejo,Tramagal,6,STANDARD
+Amoreiras-Odemira,Luzianes,6,STANDARD
+Luzianes,Santa Clara-SabÃ³ia,4,STANDARD
+Santa Clara-SabÃ³ia,Pereiras,2,STANDARD
+Pereiras,SÃ£o Marcos,4,STANDARD
+SÃ£o Marcos,Messines-Alte,4,STANDARD
+Venda do Alcaide,Palmela,6,STANDARD
+Palmela,Palmela - A,2,STANDARD
+Palmela - A,PraÃ§a do Quebedo,2,STANDARD
+PraÃ§a do Quebedo,SetÃºbal-Mar,8,STANDARD
+SetÃºbal-Mar,Cachofarra,2,STANDARD
+Cachofarra,Praias-Sado-A,2,STANDARD
+Praias-Sado-A,Vale da Rosa,10,STANDARD
+Vale da Rosa,Mourisca-Sado,2,STANDARD
+Mourisca-Sado,Ãguas de Moura,8,STANDARD
+Pinheiro,Monte Novo-Palma,4,STANDARD
+Monte Novo-Palma,Vale de Guizo,4,STANDARD
+Vale de Guizo,GrÃ¢ndola Norte,4,STANDARD
+GrÃ¢ndola Norte,GrÃ¢ndola,4,STANDARD
+GrÃ¢ndola,Canal-Caveira,4,STANDARD
+Canal-Caveira,Azinheira dos Barros,4,STANDARD
+Azinheira dos Barros,Azinheira dos Barros â€“ A,2,STANDARD
+Azinheira dos Barros â€“ A,Lousal,4,STANDARD
+Lousal,Alvalade,2,STANDARD
+Alvalade,BifurcaÃ§Ã£o de Torre VÃ£,4,STANDARD
+Barreiro,Barreiro-A,2,STANDARD
+Barreiro-A,Lavradio,4,STANDARD
+Lavradio,Baixa da Banheira,2,STANDARD
+Baixa da Banheira,Alhos Vedros,2,STANDARD
+Alhos Vedros,Moita,6,STANDARD
+Moita,Penteado,2,STANDARD
+Penteado,Fernando PÃ³,2,STANDARD
+Fernando PÃ³,PegÃµes,6,STANDARD
+PegÃµes,SÃ£o JoÃ£o das Craveiras,2,STANDARD
+SÃ£o JoÃ£o das Craveiras,Bombel,4,STANDARD
+Bombel,Vendas Novas,4,STANDARD
+Vendas Novas,Torre da Gadanha,4,STANDARD
+Torre da Gadanha,Casa Branca,4,STANDARD
+Casa Branca,AlcÃ¡Ã§ovas,2,STANDARD
+AlcÃ¡Ã§ovas,Viana,2,STANDARD
+Viana,Vila Nova da Baronia,4,STANDARD
+Vila Nova da Baronia,Alvito,2,STANDARD
+Alvito,Cuba,6,STANDARD
+Cuba,Beja,8,STANDARD
+Beja,Ourique,4,STANDARD
+Ourique,PanÃ³ias,2,STANDARD
+Algoz,Alcantarilha,4,STANDARD
+Alcantarilha,PoÃ§o Barreto,2,STANDARD
+PoÃ§o Barreto,EstÃ´mbar-Lagoa,4,STANDARD
+EstÃ´mbar-Lagoa,Ferragudo,2,STANDARD
+Ferragudo,PortimÃ£o,6,STANDARD
+PortimÃ£o,Mexilhoeira Grande,4,STANDARD
+Mexilhoeira Grande,Meia Praia,2,STANDARD
+Meia Praia,Lagos,4,STANDARD
+Desvio de Picotas,Minas de Neves Corvo,4,STANDARD
+Mira Sintra - MeleÃ§as,Sabugo,4,STANDARD
+Sabugo,Pedra Furada,2,STANDARD
+Pedra Furada,Mafra,4,STANDARD
+Mafra,AlcainÃ§a-Moinhos,2,STANDARD
+AlcainÃ§a-Moinhos,Malveira,4,STANDARD
+Malveira,Jerumelo,2,STANDARD
+Jerumelo,Sapataria,2,STANDARD
+Sapataria,Pero Negro,6,STANDARD
+Pero Negro,Zibreira,2,STANDARD
+Zibreira,Feliteira,2,STANDARD
+Feliteira,Dois Portos,4,STANDARD
+Dois Portos,Runa,2,STANDARD
+Runa,Torres Vedras,4,STANDARD
+Torres Vedras,Ramalhal,6,STANDARD
+Ramalhal,Outeiro,4,STANDARD
+Outeiro,CamarÃ£o,2,STANDARD
+CamarÃ£o,Bombarral,4,STANDARD
+Bombarral,PaÃºl,2,STANDARD
+PaÃºl,SÃ£o Mamede,2,STANDARD
+SÃ£o Mamede,Dagorda - Peniche,2,STANDARD
+Dagorda - Peniche,Ã“bidos,2,STANDARD
+Ã“bidos,Caldas da Rainha,4,STANDARD
+Caldas da Rainha,Campo-Serra,2,STANDARD
+Campo-Serra,Bouro,2,STANDARD
+Bouro,Salir do Porto,2,STANDARD
+Salir do Porto,SÃ£o Martinho do Porto,4,STANDARD
+SÃ£o Martinho do Porto,FamalicÃ£o da NazarÃ©,2,STANDARD
+FamalicÃ£o da NazarÃ©,Cela,2,STANDARD
+Cela,Valado,4,STANDARD
+Valado,Fanhais,2,STANDARD
+Fanhais,Pataias,4,STANDARD
+Pataias,MartinganÃ§a,4,STANDARD
+MartinganÃ§a,Marinha Grande,4,STANDARD
+Marinha Grande,Leiria,8,STANDARD
+Leiria,Regueira de Pontes,2,STANDARD
+Regueira de Pontes,Monte Real,8,STANDARD
+Monte Real,Monte Redondo,2,STANDARD
+Monte Redondo,Guia,2,STANDARD
+Guia,CarriÃ§o,2,STANDARD
+CarriÃ§o,LouriÃ§al,6,STANDARD
+LouriÃ§al,Ribeira de SeiÃ§a,2,STANDARD
+Ribeira de SeiÃ§a,Telhada,2,STANDARD
+Telhada,Bicanho,2,STANDARD
+Bicanho,Amieira,6,STANDARD
+Amieira,BifurcaÃ§Ã£o de Lares,4,STANDARD
+BifurcaÃ§Ã£o de Lares,Lares,2,STANDARD
+Lares,Fontela,4,STANDARD
+Fontela,Fontela-A,2,STANDARD
+Fontela-A,Figueira da Foz,4,STANDARD
+Alvito-A,Pragal,4,STANDARD
+Pragal,Corroios,6,STANDARD
+Corroios,Foros de Amora,2,STANDARD
+Foros de Amora,Fogueteiro,4,STANDARD
+Fogueteiro,Coina,4,STANDARD
+Coina,Penalva,4,STANDARD
+Sete Rios,Benfica,10,STANDARD
+Ermesinde - B,SÃ£o Gemil,4,STANDARD
+SÃ£o Bartolomeu da Serra,Raquete,6,STANDARD
+Raquete,Porto de Sines,6,STANDARD
+Cais do SodrÃ©,AlcÃ¢ntara-Mar,10,STANDARD
+AlcÃ¢ntara-Mar,BelÃ©m,2,STANDARD
+BelÃ©m,AlgÃ©s,4,STANDARD
+AlgÃ©s,Cruz Quebrada,2,STANDARD
+Cruz Quebrada,Caxias,4,STANDARD
+Caxias,PaÃ§o de Arcos,2,STANDARD
+PaÃ§o de Arcos,Santo Amaro,2,STANDARD
+Santo Amaro,Oeiras,4,STANDARD
+Oeiras,Carcavelos,4,STANDARD
+Carcavelos,Parede,2,STANDARD
+Parede,SÃ£o Pedro do Estoril,4,STANDARD
+SÃ£o Pedro do Estoril,SÃ£o JoÃ£o do Estoril,2,STANDARD
+SÃ£o JoÃ£o do Estoril,Estoril,4,STANDARD
+Estoril,Monte Estoril,2,STANDARD
+Monte Estoril,Cascais,4,STANDARD
+Viana do Castelo,Nine,4,STANDARD
+Nine,Trofa,4,STANDARD
+Porto CampanhÃ£,Espinho,6,STANDARD
+Coimbra B,Figueira da Foz,4,STANDARD
+Figueira da Foz,Leiria,4,STANDARD
+Leiria,Ã“bidos,4,STANDARD
+Ã“bidos,Entrecampos,4,STANDARD
+Pombal,ChÃ£o de MaÃ§Ã£s-FÃ¡tima,4,STANDARD
+ChÃ£o de MaÃ§Ã£s-FÃ¡tima,Entroncamento,2,STANDARD
+Entroncamento,Lisboa Oriente,8,STANDARD
+Albufeira - Ferreiras,Faro,8,STANDARD
+Braga,FamalicÃ£o,4,ALFA PENDULAR
+FamalicÃ£o,Trofa,4,ALFA PENDULAR
+Trofa,Porto CampanhÃ£,10,ALFA PENDULAR
+Porto CampanhÃ£,Vila Nova de Gaia-Devesas,8,ALFA PENDULAR
+Vila Nova de Gaia-Devesas,Espinho,6,ALFA PENDULAR
+Espinho,Aveiro - Vouga,10,ALFA PENDULAR
+Aveiro - Vouga,Coimbra B,8,ALFA PENDULAR
+Coimbra B,Pombal,6,ALFA PENDULAR
+Pombal,Entroncamento,4,ALFA PENDULAR
+Entroncamento,SantarÃ©m,8,ALFA PENDULAR
+SantarÃ©m,Lisboa Oriente,10,ALFA PENDULAR
+Lisboa Oriente,Lisboa Santa ApolÃ³nia,8,ALFA PENDULAR
+Entrecampos,Pinhal Novo,10,ALFA PENDULAR
+Pinhal Novo,GrÃ¢ndola,4,ALFA PENDULAR
+GrÃ¢ndola,Ermidas-Sado,4,ALFA PENDULAR
+Ermidas-Sado,Funcheira,4,ALFA PENDULAR
+Funcheira,Santa Clara-SabÃ³ia,4,ALFA PENDULAR
+Santa Clara-SabÃ³ia,Tunes,4,ALFA PENDULAR
+Tunes,Albufeira - Ferreiras,6,ALFA PENDULAR
+Albufeira - Ferreiras,LoulÃ©,4,ALFA PENDULAR
+LoulÃ©,Faro,10,ALFA PENDULAR

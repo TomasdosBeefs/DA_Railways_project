@@ -3,8 +3,15 @@
 //
 
 #include "Program_data.h"
+#include "file_reader.h"
 
-Program_data::Program_data() {}
+Program_data::Program_data() {
+
+    this->graph = Graph();
+    file_reader::readStations(*this);
+    this->graph.vertexSet =  this->Stations_Network;
+    file_reader::readNetworks(*this);
+}
 
 void Program_data::set_Name(std::string string, Vertex* vertex) {
 

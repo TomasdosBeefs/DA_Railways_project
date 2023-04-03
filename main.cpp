@@ -12,22 +12,29 @@
 int main() {
 
     Program_data cringe;
+    std::vector<Vertex*> vector;
 
-    file_reader::readStations(cringe);
-    file_reader::readNetworks(cringe);
-    auto i = cringe.Name.begin();
-    auto e = cringe.District.begin();
+    std::cout << '\n';
 
-    std::cout << cringe.Name.size() << '\n';
-    while( i != cringe.Name.end()){
+  Vertex* v = cringe.Name.find("A")->second;
+    Vertex* vv = cringe.Name.find("G")->second;
+    //cringe.graph.Most_fluent_stations();
+    //cringe.graph.edmondskarp(v,vv);
+    cringe.graph.edmondskarp(v,vv);
+    std::cout << '\n';
+    cringe.graph.Most_fluent_stations();
+    std::cout << '\n';
 
-        std::cout << cringe.Name.size() <<  i->first << "\n";
-        i++;
+    for(Vertex* v : cringe.graph.vertexSet){
+        for(Edge* e : v->getAdj()){
+            std::cout << "Origin->" << v->getName() << ' ' << "Destiny->" << e->getDest()->getName() << ' ' << "weight->" << e->getWeight() << ' ' << "Biflow->" << e->getBiFlow() << ' ' << "Flow->" << e->getFlow() <<' '<<"Capacity->" << e->getCapacity() << ' ' << "Reverse flow->" << e->getReverse()->getFlow() << '\n';
+        }
     }
-    while( e != cringe.District.end()){
 
-        std::cout << cringe.District.size() << e->first << "\n";
-        e++;
-    }
+
+  std::cout  <<  "Siuu";
+
+
+
 
 }

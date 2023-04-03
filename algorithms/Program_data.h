@@ -28,6 +28,7 @@ public:
     void set_Municipality(std::string,Vertex*);
     void set_Township(std::string,Vertex*);
     void set_Line(std::string,Vertex*);
+    std::vector<std::pair<std::string, double>> most_visited_municipalities();
 
     VE Stations_Network;
     std::unordered_map<std::string,Vertex*> Name;
@@ -82,6 +83,9 @@ public:
 
 
 
+    std::vector<std::pair<std::string, double>> most_visited_district();
+
+    double Cost_Efficient(Vertex *v1, Vertex *v2);
 };
 
 

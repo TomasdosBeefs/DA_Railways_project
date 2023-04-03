@@ -85,6 +85,12 @@ build CMakeFiles/Railways.dir/main.cpp.obj: CXX_COMPILER__Railways_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\Railways.dir
   OBJECT_FILE_DIR = CMakeFiles\Railways.dir
 
+build CMakeFiles/Railways.dir/algorithms/algorithms.cpp.obj: CXX_COMPILER__Railways_Debug C$:/Users/tomas/CLionProjects/Railways/algorithms/algorithms.cpp || cmake_object_order_depends_target_Railways
+  DEP_FILE = CMakeFiles\Railways.dir\algorithms\algorithms.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Railways.dir
+  OBJECT_FILE_DIR = CMakeFiles\Railways.dir\algorithms
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Railways
@@ -93,7 +99,7 @@ build CMakeFiles/Railways.dir/main.cpp.obj: CXX_COMPILER__Railways_Debug C$:/Use
 #############################################
 # Link the executable Railways.exe
 
-build Railways.exe: CXX_EXECUTABLE_LINKER__Railways_Debug CMakeFiles/Railways.dir/algorithms/file_reader.cpp.obj CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.obj CMakeFiles/Railways.dir/algorithms/Graph.cpp.obj CMakeFiles/Railways.dir/algorithms/Program_data.cpp.obj CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.obj CMakeFiles/Railways.dir/main.cpp.obj
+build Railways.exe: CXX_EXECUTABLE_LINKER__Railways_Debug CMakeFiles/Railways.dir/algorithms/file_reader.cpp.obj CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.obj CMakeFiles/Railways.dir/algorithms/Graph.cpp.obj CMakeFiles/Railways.dir/algorithms/Program_data.cpp.obj CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.obj CMakeFiles/Railways.dir/main.cpp.obj CMakeFiles/Railways.dir/algorithms/algorithms.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Railways.dir
