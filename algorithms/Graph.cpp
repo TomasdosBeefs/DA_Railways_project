@@ -11,15 +11,22 @@ bool Graph::addBidirectionalEdge(Vertex* v1,Vertex* v2, double weight, std::stri
 
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    double capacity;
-    Service == "STANDARD" ? capacity = 2 : capacity = 4;
+    double cost;
+    Service == "STANDARD" ?  cost = 2 : cost = 4;
     v1->set_OUT_capacity(weight);
     v2->set_INC_capacity(weight);
-    auto e1 =  new Edge(v1,v2,weight,Service,capacity);
-    auto e2 = new Edge(v2,v1,weight,Service,capacity);
+    auto e1 =  new Edge(v1,v2,weight,Service,cost);
+    auto e2 = new Edge(v2,v1,weight,Service,cost);
+  //  auto e1res =  new Edge(v1,v2,weight,Service,cost);
+   // auto e2res = new Edge(v2,v1,weight,Service,cost);
+  //  e1->setReverse(e2res);
+    //e2->setReverse(e1res);
     e1->setReverse(e2);
     e2->setReverse(e1);
      v1->addEdge(e1);
+     v2->addEdge(e2);
+
+
 
     return true;
 }

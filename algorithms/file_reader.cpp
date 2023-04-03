@@ -12,9 +12,9 @@
 
 void file_reader::readNetworks(Program_data& data) {
     std::string Station_A, Station_B,Service,Capacitystring;
-    int Capacity;
+    int Capacity, i = 0;
     std::string line;
-    std::ifstream ifs("../data/network.csv");
+    std::ifstream ifs("../testeNetworks.csv");
     std::getline(ifs,line);
     while(std::getline(ifs,line)){
         std::stringstream iss(line);
@@ -34,7 +34,8 @@ void file_reader::readNetworks(Program_data& data) {
         data.graph.addBidirectionalEdge(data.Name.find(Station_A)->second,data.Name.find(Station_B)->second,Capacity,Service);
 
 
-
+        std::cout << i << '\n';
+        i++;
 
 
         /*Vertex* a = graph.get_Vertex(Station_A);
@@ -54,7 +55,7 @@ void file_reader::readStations(Program_data& data) {
     int i = 0;
     std::string Name,District,Municipality,Township,Line;
     std::string line;
-    std::ifstream ifs("../data/stations.csv");
+    std::ifstream ifs("../teste.csv");
     std::getline(ifs,line);
     std::cout << line;
     while(std::getline(ifs,line)){

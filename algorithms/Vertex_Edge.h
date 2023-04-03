@@ -65,6 +65,7 @@ protected:
     std::string Municipaly;
     std::string Township;
     std::string Line;
+    double cost = 0;
     double INC_capacity = 0;
     double OUT_capacity = 0;
     double id;                // identifier
@@ -87,7 +88,7 @@ protected:
 class Edge {
 public:
     Edge(Vertex *orig, Vertex *dest, double w);
-    Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double capacity);
+    Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost);
 
     Vertex * getDest() const;
     double getWeight() const;
@@ -95,16 +96,21 @@ public:
     Vertex * getOrig() const;
     Edge *getReverse() const;
     double getFlow() const;
+    double getCapacity() const;
+    double getBiFlow() const;
 
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
     void setFlow(double flow);
+    void setCapacity(double cap);
+    void setBiFlow(double biflow);
 protected:
 
     std::string Service;
     Vertex * dest; // destination vertex
     double weight; // edge weight, can also be used for capacity
-    double capacity;
+    double capacity = 0;
+    double cost = 0;
 
     // auxiliary fields
     bool selected = false;
@@ -114,6 +120,7 @@ protected:
     Edge *reverse = nullptr;
 
     double flow; // for flow-related problems
+    double biflow = 0;
 };
 
 #endif /* DA_TP_CLASSES_VERTEX_EDGE */

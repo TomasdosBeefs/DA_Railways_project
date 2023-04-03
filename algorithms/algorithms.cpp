@@ -20,7 +20,7 @@ double Graph::edmondskarp(Vertex* source, Vertex* sink){ // retornar o max-flow?
         v->setVisited(0);
         for(Edge* e:  v->getAdj()){
             e->setFlow(0);
-           // e->getReverse()->setFlow(0);
+            e->getReverse()->setFlow(0);
         }
     }
 
@@ -29,6 +29,7 @@ double Graph::edmondskarp(Vertex* source, Vertex* sink){ // retornar o max-flow?
         maxflow += f;
         augmentPath(source,sink,f);
     }
+   // std::cout << '\n' << "FLOW" << maxflow <<'\n';
     return maxflow;
 
 }
@@ -42,10 +43,11 @@ double Graph::Find_Bottleneck(Vertex* src, Vertex* sink) {
         Edge *e = currVertex->getPath();
 
         if (e->getDest() == currVertex) {
-            bottleneck = std::min(currVertex->getPath()->getWeight() - currVertex->getPath()->getFlow(), bottleneck);
+            bottleneck = std::min(currVertex->getPath()->getWeight() - currVertex->getPath()->getBiFlow(), bottleneck);
             currVertex = currVertex->getPath()->getOrig();
         } else if (e->getOrig() == currVertex) {
-            bottleneck = std::min(currVertex->getPath()->getFlow(), bottleneck);
+         //   std::cout<< "auiq";
+            bottleneck = std::min(currVertex->getPath()->getBiFlow(), bottleneck);
             currVertex = currVertex->getPath()->getDest();
 
         }
@@ -65,31 +67,40 @@ bool Graph::Find_path(Vertex* source, Vertex* dest) {
         v->setPath(nullptr);
     }
 
+    source->setVisited(true);
     while(!q.empty() && !dest->isVisited()){
 
         Vertex* v = q.front();
+
         q.pop();
+
+       // std::cout << "stack: ";
 
         for(Edge* e : v->getAdj()){
 
-            if(!e->getDest()->isVisited() && e->getWeight() - e->getFlow() > 0){ // n faz mais sentido aqui meter no flow o que resta e guardar no reverse o flow?
+            if(!e->getDest()->isVisited() && e->getWeight() - e->getBiFlow() > 0){ // n faz mais sentido aqui meter no flow o que resta e guardar no reverse o flow?
                 e->getDest()->setVisited(true); // nao sei o que fazer com as reverse n entendo a utilidade do reverse
                 e->getDest()->setPath(e);
                 q.push(e->getDest());
+              //  std::cout << e->getDest()->getName() << ' ';
             }
         }
 
         for(Edge* e : v->getIncoming()){
 
-            if(!e->getOrig()->isVisited() && e->getFlow() > 0){
+            if(!e->getOrig()->isVisited() && e->getBiFlow() > 0 && e->getFlow() > 0){
+              //  std::cout << '\n' << e->getBiFlow() << ' ' << e->getFlow() << '\n';
                 e->getOrig()->setVisited(true);
                 e->getOrig()->setPath(e);
                 q.push(e->getOrig());
+           //     std::cout << e->getOrig()->getName()<< ' ';
             }
         }
 
-    }
+      //  std::cout << "next" << '\n';
 
+    }
+  //  std::cout << "end"<<'\n';
     return dest->isVisited();
 
 }
@@ -101,24 +112,28 @@ void Graph::augmentPath(Vertex* source, Vertex* sink, double f) {
 
         Vertex* currVertex = sink;
 
-      //  std::cout << '\n';
+      std::cout << '\n';
     while (currVertex != source){
         Edge* e = currVertex->getPath();
-       // std::cout << "Caminho "<< e->getDest()->getName() << ' ' << e->getOrig()->getName() << "\t";
+       std::cout << "Caminho "<< e->getDest()->getName() << ' ' << e->getOrig()->getName() << "\t";
         if(e->getDest() == currVertex){
-            e->setFlow(e->getFlow()+f);             // perguntar se faz mal estar baseado na solução dos exercicios
-            e->getReverse()->setFlow(e->getFlow()); // pra que a utilidade disto?
+            e->setFlow(e->getFlow()+f);// perguntar se faz mal estar baseado na solução dos exercicios
+            //std::cout << "ASSAS " << e->getOrig()->getName() << " flow " << e->getBiFlow() << '\n';
+            //e->setCapacity(e->getWeight()-e->getFlow());
+           // e->getReverse()->setBiFlow(e->getBiFlow() + f); // pra que a utilidade disto?
             currVertex = e->getOrig();
 
         }
         else if( e->getOrig() == currVertex){
+           // std::cout << "até os comemos \n" << e->getOrig();
             e->setFlow(e->getFlow() - f);
-            e->getReverse()->setFlow(e->getFlow()); // wut? faz sentido usar o reverse aqui sequer? pra que serve o reverse?
+           // e->setCapacity(e->getWeight()-e->getFlow());
+           // e->getReverse()->setBiFlow(e->getBiFlow()-f); // wut? faz sentido usar o reverse aqui sequer? pra que serve o reverse?
             currVertex = e->getDest();
         }
         //bidirectional edge //frente) adicionar flow e ir ao reverse tirar o flow
     }
-      //  std::cout << '\n' <<"next" << '\n';
+        std::cout << '\n' <<"next" << '\n';
 }
 
 void Graph::Most_fluent_stations(){
@@ -132,15 +147,20 @@ void Graph::Most_fluent_stations(){
             if(flow > maxflow){
                 pair.first = v;
                 pair.second = vv;
-              //  std::cout << pair.first->getName() << ' ' << pair.second->getName();
+             //  std::cout << pair.first->getName() << ' ' << pair.second->getName();
                 maxflow = flow;
             }
 
         }}
     std::cout << pair.first->getName() << ' ' << pair.second->getName();
 }
+/*
+std::vector<std::string> Graph::Budget_needed(Vertex* v1, Vertex* v2){//
 
-std::vector<std::string> Graph::Budget_needed
+    std::vector<std::string> s;
+return s;
+
+}*/
 
 
   /*  double maxflow = 0;
@@ -238,7 +258,13 @@ double Program_data::Cost_Efficient(Vertex* v1, Vertex* v2){
 
     double maxflow = graph.edmondskarp(v1,v2);
 
+    for();
+
+
         //através do residual graph encontrar o min cut
+
+
+
 
     
 

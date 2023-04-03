@@ -125,11 +125,12 @@ void Vertex::setPath(Edge *path) {
     this->path = path;
 }
 
+
 /********************** Edge  ****************************/
 
 Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
 
-Edge::Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double capacity):orig(Station_A), dest(Station_B), weight(weight), Service(Service), capacity(capacity) {}
+Edge::Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost):orig(Station_A), dest(Station_B), weight(weight), Service(Service), cost(cost) {}
 
 Vertex * Edge::getDest() const {
     return this->dest;
@@ -164,7 +165,12 @@ void Edge::setReverse(Edge *reverse) {
 }
 
 void Edge::setFlow(double flow) {
+    this->biflow +=  flow - this->flow;
     this->flow = flow;
+    this->getReverse()->setBiFlow(this->biflow);
+    this->setCapacity(this->getWeight()-this->biflow);
+    this->getReverse()->setCapacity(this->getCapacity());
+
 }
 
 std::string Vertex::getName() const {
@@ -187,4 +193,16 @@ double Vertex::get_OUT() const {
 
 double Vertex::get_INC() const {
     return this->INC_capacity;
+}
+void Edge::setCapacity(double cap){
+    this->capacity = cap;
+}
+double Edge::getCapacity() const{
+    return this->capacity;
+}
+double Edge::getBiFlow() const {
+    return biflow;
+}
+void Edge::setBiFlow(double biflow)  {
+    this->biflow =  biflow;
 }

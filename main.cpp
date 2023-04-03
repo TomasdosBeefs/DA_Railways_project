@@ -16,12 +16,23 @@ int main() {
 
     std::cout << '\n';
 
-    cringe.graph.Most_fluent_stations();
-    auto e = cringe.District.begin();
-  /*  Vertex* v = cringe.Name.find("A")->second;
+  Vertex* v = cringe.Name.find("A")->second;
     Vertex* vv = cringe.Name.find("G")->second;
-    double numero = cringe.graph.edmondskarp(v,vv);
-    std::cout << numero;*/
+    //cringe.graph.Most_fluent_stations();
+    //cringe.graph.edmondskarp(v,vv);
+    cringe.graph.edmondskarp(v,vv);
+    std::cout << '\n';
+    cringe.graph.Most_fluent_stations();
+    std::cout << '\n';
+
+    for(Vertex* v : cringe.graph.vertexSet){
+        for(Edge* e : v->getAdj()){
+            std::cout << "Origin->" << v->getName() << ' ' << "Destiny->" << e->getDest()->getName() << ' ' << "weight->" << e->getWeight() << ' ' << "Biflow->" << e->getBiFlow() << ' ' << "Flow->" << e->getFlow() <<' '<<"Capacity->" << e->getCapacity() << ' ' << "Reverse flow->" << e->getReverse()->getFlow() << '\n';
+        }
+    }
+
+
+  std::cout  <<  "Siuu";
 
 
 
