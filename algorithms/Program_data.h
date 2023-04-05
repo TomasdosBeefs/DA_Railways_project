@@ -21,6 +21,7 @@ class Program_data {
 
 public:
     Graph graph;
+    Graph originalgraph;
     Program_data();
 
     void set_Name(std::string,Vertex*);
@@ -29,6 +30,8 @@ public:
     void set_Township(std::string,Vertex*);
     void set_Line(std::string,Vertex*);
     std::vector<std::pair<std::string, double>> most_visited_municipalities();
+    Graph unresolved_lines(Graph graph, Vertex* v1, Vertex* v2,std::vector<Edge*> edges,std::vector<Vertex*> vertex);
+
 
     VE Stations_Network;
     std::unordered_map<std::string,Vertex*> Name;

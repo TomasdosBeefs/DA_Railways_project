@@ -6,33 +6,32 @@
 #include "Vertex_Edge.h"
 
 
-
-bool Graph::addBidirectionalEdge(Vertex* v1,Vertex* v2, double weight, std::string Service) {
+bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::string Service) {
 
     if (v1 == nullptr || v2 == nullptr)
         return false;
     double cost;
-    Service == "STANDARD" ?  cost = 2 : cost = 4;
+    Service == "STANDARD" ? cost = 2 : cost = 4;
     v1->set_OUT_capacity(weight);
     v2->set_INC_capacity(weight);
-    auto e1 =  new Edge(v1,v2,weight,Service,cost);
-    auto e2 = new Edge(v2,v1,weight,Service,cost);
-    auto e1res =  new Edge(v1,v2,weight,Service,cost);
-    auto e2res = new Edge(v2,v1,weight,Service,cost);
+    auto e1 = new Edge(v1, v2, weight, Service, cost);
+    auto e2 = new Edge(v2, v1, weight, Service, cost);
+    auto e1res = new Edge(v1, v2, weight, Service, cost);
+    auto e2res = new Edge(v2, v1, weight, Service, cost);
     e1->setReverse(e2res);
     e2->setReverse(e1res);
     e1->setOtherDirection(e2);
     e2->setOtherDirection(e1);
-     v1->addEdge(e1);
-     v2->addEdge(e2);
+    v1->addEdge(e1);
+    v2->addEdge(e2);
 
-     this->edgeSet.push_back(e1);
-     this->edgeSet.push_back(e2);
-
+    this->edgeSet.push_back(e1);
+    this->edgeSet.push_back(e2);
 
 
     return true;
 }
+
 int Graph::getNumVertex() const {
     return vertexSet.size();
 }
@@ -44,8 +43,8 @@ std::vector<Vertex *> Graph::getVertexSet() const {
 /*
  * Auxiliary function to find a vertex with a given content.
  */
-Vertex * Graph::findVertex(const int &id) const {
-    for (auto v : vertexSet)
+Vertex *Graph::findVertex(const int &id) const {
+    for (auto v: vertexSet)
         if (v->getId() == id)
             return v;
     return nullptr;
@@ -77,8 +76,8 @@ void deleteMatrix(int **m, int n) {
     if (m != nullptr) {
         for (int i = 0; i < n; i++)
             if (m[i] != nullptr)
-                delete [] m[i];
-        delete [] m;
+                delete[] m[i];
+        delete[] m;
     }
 }
 
@@ -86,9 +85,14 @@ void deleteMatrix(double **m, int n) {
     if (m != nullptr) {
         for (int i = 0; i < n; i++)
             if (m[i] != nullptr)
-                delete [] m[i];
-        delete [] m;
+                delete[] m[i];
+        delete[] m;
     }
+}
+bool Graph::addEdge(Edge* e){
+    this->edgeSet.push_back(e);
+    e->getOrig()->addEdge(e);
+
 }
 
 Graph::~Graph() {

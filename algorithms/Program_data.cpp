@@ -9,79 +9,76 @@ Program_data::Program_data() {
 
     this->graph = Graph();
     file_reader::readStations(*this);
-    this->graph.vertexSet =  this->Stations_Network;
+    this->graph.vertexSet = this->Stations_Network;
     file_reader::readNetworks(*this);
+    this->originalgraph = this->graph;
 }
 
-void Program_data::set_Name(std::string string, Vertex* vertex) {
+void Program_data::set_Name(std::string string, Vertex *vertex) {
 
-    std::unordered_map<std::string,Vertex*>::iterator iterator= this->Name.find(string);
+    std::unordered_map<std::string, Vertex *>::iterator iterator = this->Name.find(string);
 
-    if(iterator != this->Name.end()){
-            iterator->second =vertex;
-    }
-    else{
+    if (iterator != this->Name.end()) {
+        iterator->second = vertex;
+    } else {
 
-        std::pair<std::string,Vertex*> pair (string,vertex);
+        std::pair<std::string, Vertex *> pair(string, vertex);
         this->Name.insert(pair);
     }
-    }
+}
 
-void Program_data::set_Municipality(std::string string, Vertex* vertex) {
+void Program_data::set_Municipality(std::string string, Vertex *vertex) {
 
-    Categ::iterator iterator= this->Municipality.find(string);
+    Categ::iterator iterator = this->Municipality.find(string);
 
-    if(iterator != this->Municipality.end()){
+    if (iterator != this->Municipality.end()) {
         iterator->second.push_back(vertex);
-    }
-    else{
-        std::vector<Vertex*> vector;
+    } else {
+        std::vector<Vertex *> vector;
         vector.push_back(vertex);
-        std::pair<std::string,std::vector<Vertex*>> pair (string,vector);
+        std::pair<std::string, std::vector<Vertex *>> pair(string, vector);
         this->Municipality.insert(pair);
     }
 }
 
-void Program_data::set_Township(std::string string, Vertex * vertex) {
+void Program_data::set_Township(std::string string, Vertex *vertex) {
 
-    Categ::iterator iterator= this->Township.find(string);
+    Categ::iterator iterator = this->Township.find(string);
 
-    if(iterator != this->Township.end()){
+    if (iterator != this->Township.end()) {
         iterator->second.push_back(vertex);
-    }
-    else{
-        std::vector<Vertex*> vector;
+    } else {
+        std::vector<Vertex *> vector;
         vector.push_back(vertex);
-        std::pair<std::string,std::vector<Vertex*>> pair (string,vector);
+        std::pair<std::string, std::vector<Vertex *>> pair(string, vector);
         this->Township.insert(pair);
     }
 }
 
-void Program_data::set_Line(std::string string, Vertex * vertex) {
+void Program_data::set_Line(std::string string, Vertex *vertex) {
 
-    Categ::iterator iterator= this->Line.find(string);
+    Categ::iterator iterator = this->Line.find(string);
 
-    if(iterator != this->Line.end()){
+    if (iterator != this->Line.end()) {
         iterator->second.push_back(vertex);
-    }
-    else{
-        std::vector<Vertex*> vector;
+    } else {
+        std::vector<Vertex *> vector;
         vector.push_back(vertex);
-        std::pair<std::string,std::vector<Vertex*>> pair (string,vector);
+        std::pair<std::string, std::vector<Vertex *>> pair(string, vector);
         this->Line.insert(pair);
     }
 }
-void Program_data::set_District(std::string string, Vertex * vertex) {
 
-    Categ::iterator iterator= this->District.find(string);
+void Program_data::set_District(std::string string, Vertex *vertex) {
 
-    if(iterator != this->District.end()){
+    Categ::iterator iterator = this->District.find(string);
+
+    if (iterator != this->District.end()) {
         iterator->second.push_back(vertex);
-    }
-    else{
-        std::vector<Vertex*> vector;
+    } else {
+        std::vector<Vertex *> vector;
         vector.push_back(vertex);
-        std::pair<std::string,std::vector<Vertex*>> pair (string,vector);
+        std::pair<std::string, std::vector<Vertex *>> pair(string, vector);
         this->District.insert(pair);
     }
 }
