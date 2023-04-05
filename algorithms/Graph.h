@@ -37,6 +37,8 @@ public:
     double Find_Bottleneck(Vertex* source, Vertex* dest);
     double edmondskarp(Vertex* source, Vertex* sink);
     void Most_fluent_stations();
+    double Bellman_Ford(Vertex* v1, Vertex* v2);
+    void Edge_Relaxation(Edge* e);
 
     /*
      * Adds an edge to a graph (this), given the contents of vethe source and
@@ -49,6 +51,9 @@ public:
     int getNumVertex() const;
     std::vector<Vertex *> getVertexSet() const;
     std::vector<Vertex *> vertexSet;
+    std::vector<Edge *> edgeSet;
+    std::vector<Edge *> getEdgeSet();
+
 protected:
        // vertex set
 

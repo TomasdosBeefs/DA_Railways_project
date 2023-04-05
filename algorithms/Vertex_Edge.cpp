@@ -167,9 +167,11 @@ void Edge::setReverse(Edge *reverse) {
 void Edge::setFlow(double flow) {
     this->biflow +=  flow - this->flow;
     this->flow = flow;
-    this->getReverse()->setBiFlow(this->biflow);
     this->setCapacity(this->getWeight()-this->biflow);
-    this->getReverse()->setCapacity(this->getCapacity());
+    this->segment_cost = flow * cost;
+    if(this->getOtherDirection() != nullptr){
+    this->getOtherDirection()->setBiFlow(this->biflow);
+    this->getOtherDirection()->setCapacity(this->getCapacity());}
 
 }
 
@@ -205,4 +207,17 @@ double Edge::getBiFlow() const {
 }
 void Edge::setBiFlow(double biflow)  {
     this->biflow =  biflow;
+}
+void Edge::setOtherDirection(Edge* e){
+    this->otherdirection = e;
+}
+Edge* Edge::getOtherDirection() const {
+    return this->otherdirection;
+}
+
+void Edge::setSegment_cost(double segment_cost)  {
+    this->segment_cost = segment_cost;
+}
+double Edge::getSegment_cost() const  {
+    return this->segment_cost;
 }

@@ -19,12 +19,15 @@ int main() {
   Vertex* v = cringe.Name.find("A")->second;
     Vertex* vv = cringe.Name.find("G")->second;
     //cringe.graph.Most_fluent_stations();
-    //cringe.graph.edmondskarp(v,vv);
     cringe.graph.edmondskarp(v,vv);
-    std::cout << '\n';
+    double max = cringe.graph.edmondskarp(v,vv);
+    std::cout << '\n' << max;
     cringe.graph.Most_fluent_stations();
     std::cout << '\n';
-
+    //double a =  cringe.graph.Bellman_Ford(v,vv);
+   // std::cout << "is tis correct? " << a << '\n';
+    double test = cringe.Cost_Efficient(v,vv);
+    std::cout << "pff dá p " << test << '\n';
     for(Vertex* v : cringe.graph.vertexSet){
         for(Edge* e : v->getAdj()){
             std::cout << "Origin->" << v->getName() << ' ' << "Destiny->" << e->getDest()->getName() << ' ' << "weight->" << e->getWeight() << ' ' << "Biflow->" << e->getBiFlow() << ' ' << "Flow->" << e->getFlow() <<' '<<"Capacity->" << e->getCapacity() << ' ' << "Reverse flow->" << e->getReverse()->getFlow() << '\n';
