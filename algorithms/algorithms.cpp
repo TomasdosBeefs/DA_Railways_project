@@ -2,6 +2,7 @@
 // Created by tomas on 17/03/2023.
 //
 
+#include <cfloat>
 #include "algorithms.h"
 #include "Program_data.h"
 #include "Vertex_Edge.h"
@@ -21,6 +22,7 @@ double Graph::edmondskarp(Vertex* source, Vertex* sink){ // retornar o max-flow?
         for(Edge* e:  v->getAdj()){
             e->setFlow(0);
             e->getReverse()->setFlow(0);
+            e->getOtherDirection()->setFlow(0);
         }
     }
 
@@ -118,6 +120,8 @@ void Graph::augmentPath(Vertex* source, Vertex* sink, double f) {
        std::cout << "Caminho "<< e->getDest()->getName() << ' ' << e->getOrig()->getName() << "\t";
         if(e->getDest() == currVertex){
             e->setFlow(e->getFlow()+f);// perguntar se faz mal estar baseado na solução dos exercicios
+            e->getReverse()->setFlow(e->getFlow());
+
             //std::cout << "ASSAS " << e->getOrig()->getName() << " flow " << e->getBiFlow() << '\n';
             //e->setCapacity(e->getWeight()-e->getFlow());
            // e->getReverse()->setBiFlow(e->getBiFlow() + f); // pra que a utilidade disto?
@@ -127,6 +131,7 @@ void Graph::augmentPath(Vertex* source, Vertex* sink, double f) {
         else if( e->getOrig() == currVertex){
            // std::cout << "até os comemos \n" << e->getOrig();
             e->setFlow(e->getFlow() - f);
+            e->getReverse()->setFlow(e->getFlow());
            // e->setCapacity(e->getWeight()-e->getFlow());
            // e->getReverse()->setBiFlow(e->getBiFlow()-f); // wut? faz sentido usar o reverse aqui sequer? pra que serve o reverse?
             currVertex = e->getDest();
@@ -152,7 +157,7 @@ void Graph::Most_fluent_stations(){
             }
 
         }}
-    std::cout << pair.first->getName() << ' ' << pair.second->getName();
+    std::cout << pair.first->getName() << ' ' << pair.second->getName() << ' '<<maxflow;
 }
 /*
 std::vector<std::string> Graph::Budget_needed(Vertex* v1, Vertex* v2){//
@@ -255,13 +260,19 @@ std::vector<std::pair<std::string, double>> Program_data::most_visited_district(
 }
 */
 double Program_data::Cost_Efficient(Vertex* v1, Vertex* v2){
+    Graph Gf = this->graph;
+    double maxflow = Gf.edmondskarp(v1,v2);
 
-    double maxflow = graph.edmondskarp(v1,v2);
+    double min_cost = 0;
 
-    for();
+     min_cost = graph.Bellman_Ford(v1,v2);
 
 
-        //através do residual graph encontrar o min cut
+    return min_cost;
+
+
+
+
 
 
 
@@ -270,6 +281,45 @@ double Program_data::Cost_Efficient(Vertex* v1, Vertex* v2){
 
 return 0.0;
 }
+
+double Graph::Bellman_Ford(Vertex* v1, Vertex* v2){
+    std::vector<double> distance(vertexSet.size(), INF);
+    distance[v1->getId()] = 0;
+
+    for (int j = 0; j < vertexSet.size() - 1; j++) {
+        for (int i = 0; i < edgeSet.size(); i++) {
+            int u = edgeSet[i]->getOrig()->getId();
+            int v = edgeSet[i]->getDest()->getId();
+            int segment_cost = edgeSet[i]->getSegment_cost();
+            if (distance[u] != INF && distance[u] + segment_cost < distance[v])
+                distance[v] = distance[u] + segment_cost;
+        }
+    }
+
+    for (int i = 0; i < edgeSet.size(); i++) {
+        int u = edgeSet[i]->getOrig()->getId();
+        int v = edgeSet[i]->getDest()->getId();
+        int segment_cost = edgeSet[i]->getSegment_cost();
+        if (distance[u] != INF && distance[u] + segment_cost < distance[v])
+            return -1;
+    }
+
+    return distance[v2->getId()] != INF ? distance[v2->getId()] : -1;
+}
+void Graph::Edge_Relaxation(Edge* e){
+    Vertex* org = e->getOrig();
+    Vertex* dest = e->getDest();
+
+    if(org->getDist() + e->getWeight() < dest->getDist() ){
+
+        dest->setDist(org->getDist() + e->getWeight());
+
+        dest->setPath(e);
+
+    }
+}
+
+
 
 
 
