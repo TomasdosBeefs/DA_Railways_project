@@ -4,8 +4,8 @@
 
 
 #include <iostream>
-#include "algorithms/Program_data.h"
-#include "algorithms/file_reader.h"
+#include "Program_data.h"
+#include "file_reader.h"
 
 
 
