@@ -5,6 +5,50 @@
 #include "Graph.h"
 #include "Vertex_Edge.h"
 
+Graph::Graph() {};
+
+Graph::Graph(const Graph & graph) {
+
+    for(Vertex* v : graph.vertexSet){
+        Vertex* a = new Vertex(*v);
+        this->vertexSet.push_back(a);
+    }
+
+    for(Edge* e : graph.edgeSet){
+        Edge* d = new Edge(*e);
+        addEdge(d);
+    }
+
+
+}
+
+Graph::Graph(const Graph& graph,std::vector<Edge*> &edge,std::vector<Vertex*> &vertex){ // quando adiciona ao vetor vertex deve por todas as edges no vetor edge
+
+  /*  for(Vertex* v : graph.vertexSet){
+        if(std::find(vertex.begin(),vertex.end(),v) == vertex.end()){
+        Vertex* a = new Vertex(*v);
+        this->addVertex(a);
+        }
+    }*/
+  for(Vertex* v : vertex){
+      edge.insert(v->getAdj().begin(),v->getAdj().end(),edge.end());
+      edge.insert(v->getIncoming().begin(),v->getIncoming().end(),edge.end());
+
+  }
+
+    for(Edge* e : graph.edgeSet){
+        if(std::find(edge.begin(),edge.end(),e) == edge.end()){
+            Vertex* v1 = this->findVertex(e->getOrig()->getId());
+            Vertex* v2 = this->findVertex(e->getDest()->getId());
+            Edge* a = new Edge(v1,v2,e);
+            this->addEdge(a);
+            }
+
+    }
+
+
+}
+
 
 bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::string Service) {
 

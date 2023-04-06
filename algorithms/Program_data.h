@@ -97,9 +97,11 @@ public:
 
     Graph SubGraph(Graph original, std::vector<Edge *> edges, std::vector<std::string> verticesToRemove);
 
-    bool SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
+    Graph SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 
     bool OriginalGraph();
+
+    bool SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 };
 
 

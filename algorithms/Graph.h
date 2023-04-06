@@ -22,7 +22,12 @@
 class Graph {
 public:
 
+    Graph(const Graph &graph, std::vector<Edge *> &edge, std::vector<Vertex *> &vertex);
+
     ~Graph();
+    Graph();
+    Graph(const Graph&);
+    Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
     /*
     * Auxiliary function to find a vertex with a given ID.
     */

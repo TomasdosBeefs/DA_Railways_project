@@ -210,7 +210,9 @@ Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::v
                                      std::vector<Vertex *> vertex) {
 
 
-
+    for (auto v : graph.vertexSet) {
+        graph.addVertex(new Vertex(*v));
+    }
 
 
     // double maxflow = subgraph.edmondskarp(v1,v2);
@@ -232,8 +234,7 @@ int Graph::find(std::vector<Edge*> vector, Edge* value){
 
 
 
-bool Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex*> vertextoRemove ) {
-
+bool Program_data::SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex*> vertextoRemove ) {
 
 
     for(Edge* e : edges){
@@ -263,6 +264,13 @@ bool Program_data::OriginalGraph(){
     }
 
 return true;
+}
+
+Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove) {
+
+    Graph subgraph = Graph(original,edges,vertextoRemove);
+
+    return subgraph;
 }
 
 
