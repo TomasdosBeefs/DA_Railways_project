@@ -16,13 +16,20 @@ void file_reader::readNetworks(Program_data& data) {
     int Capacity;
     std::string line;
     std::ifstream ifs("../data/network.csv");
-    std::getline(ifs,line);
-    while(std::getline(ifs,line)){
-        std::stringstream iss(line);
-        std::getline(iss,Station_A,',');
-        std::getline(iss,Station_B,',');
-        std::getline(iss,Capacitystring,',');
-        std::getline(iss,Service);
+    std::getline(ifs,line, '\n');
+    while(std::getline(ifs,line, '\n')){
+        std::regex rgx(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+        std::sregex_token_iterator iter(line.begin(), line.end(), rgx, -1);
+        std::sregex_token_iterator end;
+
+        Station_A = *iter;
+        iter++;
+        Station_B = *iter;
+        iter++;
+        Capacitystring = *iter;
+        iter++;
+        Service = *iter;
+
         std::stringstream number(Capacitystring);
         number >> Capacity;
 
@@ -32,23 +39,30 @@ void file_reader::readNetworks(Program_data& data) {
 
 
 void file_reader::readStations(Program_data& data) {
-    int i = 0;
+    int id = 0;
     std::string Name,District,Municipality,Township,Line;
     std::string line;
     std::ifstream ifs("../data/stations.csv");
-    std::getline(ifs,line);
-    std::cout << line;
-    while(std::getline(ifs,line)){
-        std::stringstream iss(line);
-        std::getline(iss,Name,',');
-        std::getline(iss,District,',');
-        std::getline(iss,Municipality,',');
-        std::getline(iss,Township,',');
-        std::getline(iss,Line);
+    std::getline(ifs,line, '\n');
+    while(std::getline(ifs,line, '\n')){
+        std::regex rgx(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+        std::sregex_token_iterator iter(line.begin(), line.end(), rgx, -1);
+        std::sregex_token_iterator end;
+
+        Name = *iter;
+        iter++;
+        District = *iter;
+        iter++;
+        Municipality = *iter;
+        iter++;
+        Township = *iter;
+        iter++;
+        Line = *iter;
+
         if(data.Name.find(Name) != data.Name.end()){continue;}
         Vertex * vertex = new Vertex(Name,District,Municipality,Township,Line);
-        vertex->setId(i);
-        i++;
+        vertex->setId(id);
+        id++;
 
         data.Stations_Network.push_back(vertex);
 

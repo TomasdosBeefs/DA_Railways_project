@@ -2143,9 +2143,10 @@ CMakeFiles/Railways.dir/src/file_reader.cpp.o: /Users/brunodrumond/Documents/Git
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/regex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.h \
   /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.h \
   /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.h \
@@ -3045,6 +3046,8 @@ CMakeFiles/Railways.dir/src/main.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_
 /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp:
 
 /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/helpy.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/regex:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/sstream:
 
