@@ -34,36 +34,34 @@ void Vertex::addEdge(Edge * e) {
  * from a vertex (this).
  * Returns true if successful, and false if such edge does not exist.
  */
+
 bool Vertex::removeEdge(double ID) {
 
-    std::vector<Edge*>::iterator it = this->getAdj().begin();
-
-    while(it != this->getAdj().end()){
-
-        if((*it)->getDest()->getId() == ID){
-
-            std::vector<Edge*>::iterator it2 = (*it)->getDest()->getIncoming().begin();
-
-            while(it2 != (*it)->getDest()->getIncoming().end()){
-
-                if((*it2)->getOrig()->getId() == this->getId()){
-
-                    (*it)->getDest()->getIncoming().erase(it2);
-
+    bool removedEdge = false;
+    auto it = adj.begin();
+    while (it != adj.end()) {
+        Edge *edge = *it;
+        Vertex *dest = edge->getDest();
+        if (dest->getId() == id) {
+            it = adj.erase(it);
+            // Also remove the corresponding edge from the incoming list
+            auto it2 = dest->incoming.begin();
+            while (it2 != dest->incoming.end()) {
+                if ((*it2)->getOrig()->getId() == id) {
+                    it2 = dest->incoming.erase(it2);
                 }
-                it2++;
+                else {
+                    it2++;
+                }
             }
-
-            this->getAdj().erase(it);
-
+            delete edge;
+            removedEdge = true; // allows for multiple edges to connect the same pair of vertices (multigraph)
         }
-        it++;
-
-
+        else {
+            it++;
+        }
     }
-
-    return false;
-
+    return removedEdge;
 }
 bool Vertex::operator<(Vertex & vertex) const {
     return this->dist < vertex.dist;
@@ -167,9 +165,11 @@ void Edge::setReverse(Edge *reverse) {
 void Edge::setFlow(double flow) {
     this->biflow +=  flow - this->flow;
     this->flow = flow;
-    this->getReverse()->setBiFlow(this->biflow);
     this->setCapacity(this->getWeight()-this->biflow);
-    this->getReverse()->setCapacity(this->getCapacity());
+    this->segment_cost = flow * cost;
+    if(this->getOtherDirection() != nullptr){
+    this->getOtherDirection()->setBiFlow(this->biflow);
+    this->getOtherDirection()->setCapacity(this->getCapacity());}
 
 }
 
@@ -194,6 +194,29 @@ double Vertex::get_OUT() const {
 double Vertex::get_INC() const {
     return this->INC_capacity;
 }
+
+void Vertex::removeIncomingEdge(Edge *const &edge) {
+    std::vector<Edge*>::iterator iter = find(incoming.begin(),incoming.end(), edge);
+    if (iter != incoming.end()) {
+        incoming.erase(iter);
+        Vertex* orig = edge->getOrig();
+        orig->removeOutgoingEdge(edge);
+        delete edge;
+    }
+}
+
+void Vertex::removeOutgoingEdge(Edge *const &pe) {
+    std::vector<Edge*> edgesToRemove;
+    for (Edge *e : this->getAdj()) {
+        edgesToRemove.push_back(e);
+    }
+    for (Edge *e : edgesToRemove) {
+        Vertex *dest = e->getDest();
+        dest->removeIncomingEdge(e);
+        this->removeOutgoingEdge(e);
+    }
+}
+
 void Edge::setCapacity(double cap){
     this->capacity = cap;
 }
@@ -205,4 +228,17 @@ double Edge::getBiFlow() const {
 }
 void Edge::setBiFlow(double biflow)  {
     this->biflow =  biflow;
+}
+void Edge::setOtherDirection(Edge* e){
+    this->otherdirection = e;
+}
+Edge* Edge::getOtherDirection() const {
+    return this->otherdirection;
+}
+
+void Edge::setSegment_cost(double segment_cost)  {
+    this->segment_cost = segment_cost;
+}
+double Edge::getSegment_cost() const  {
+    return this->segment_cost;
 }

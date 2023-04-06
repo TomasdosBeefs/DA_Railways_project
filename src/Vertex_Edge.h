@@ -28,6 +28,7 @@ class Vertex {
 public:
     Vertex(std::string Name, std::string District,std::string Municipaly,std::string Township, std::string Line);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
+    Vertex(const Vertex &other);
 
     std::string getName() const;
     std::string getDistrict() const;
@@ -57,14 +58,25 @@ public:
     void addEdge(Edge* e);
     bool removeEdge(double ID);
     //removeEdge com Id tambem parece boa idea
+    bool operator==(const Vertex& other) const {
+        return (id == other.id); // Compare the id of the vertices
+    }
+    bool operator<(const Vertex& other) const {
+        return dist < other.dist;
+    }
 
    // friend class MutablePriorityQueue<Vertex>;
+    void removeIncomingEdge(Edge *const &pEdge);
+
+    void removeOutgoingEdge(Edge *const &pEdge);
+
 protected:
     std::string Name;
     std::string District;
     std::string Municipaly;
     std::string Township;
     std::string Line;
+    //Vertex* prev = nullptr;
     double cost = 0;
     double INC_capacity = 0;
     double OUT_capacity = 0;
@@ -75,12 +87,13 @@ protected:
     bool visited = false; // used by DFS, BFS, Prim ...
     bool processing = false; // used by isDAG (in addition to the visited attribute)
     unsigned int indegree; // used by topsort
-    double dist = 0;
+    double dist = INF;
     Edge *path = nullptr;
 
     std::vector<Edge *> incoming; // incoming edges
 
     int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
+
 };
 
 /********************** Edge  ****************************/
@@ -98,12 +111,23 @@ public:
     double getFlow() const;
     double getCapacity() const;
     double getBiFlow() const;
+    Edge* getOtherDirection() const;
+    double getSegment_cost() const;
 
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
     void setFlow(double flow);
     void setCapacity(double cap);
     void setBiFlow(double biflow);
+    void setOtherDirection(Edge* e);
+    void setSegment_cost(double segment_cost);
+
+    bool operator==(const Edge& other) const {
+        return orig == other.orig &&
+               dest == other.dest &&
+               weight == other.weight &&
+               Service == other.Service;
+    }
 protected:
 
     std::string Service;
@@ -118,9 +142,11 @@ protected:
     // used for bidirectional edges
     Vertex *orig;
     Edge *reverse = nullptr;
+    Edge *otherdirection = nullptr;
 
-    double flow; // for flow-related problems
+    double flow = 0; // for flow-related problems
     double biflow = 0;
+    double segment_cost = 0;
 };
 
 #endif /* DA_TP_CLASSES_VERTEX_EDGE */

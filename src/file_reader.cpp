@@ -31,11 +31,8 @@ void file_reader::readNetworks(Program_data& data) {
         Vertex* vertex = data.Name.find(Station_A)->second;
         Vertex* vertexx = data.Name.find(Station_B)->second;
 
+
         data.graph.addBidirectionalEdge(data.Name.find(Station_A)->second,data.Name.find(Station_B)->second,Capacity,Service);
-
-
-        std::cout << i << '\n';
-        i++;
 
 
         /*Vertex* a = graph.get_Vertex(Station_A);
@@ -89,3 +86,4 @@ void file_reader::readStations(Program_data& data) {
     }
 
 }
+
