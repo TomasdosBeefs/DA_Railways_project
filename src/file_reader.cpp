@@ -62,7 +62,7 @@ void file_reader::readStations(Program_data& data) {
         std::getline(iss,Municipality,',');
         std::getline(iss,Township,',');
         std::getline(iss,Line);
-        if(data.Name.find(Name) != 0){continue;}
+        if(data.Name.find(Name) != data.Name.end()){continue;}
         Vertex * vertex = new Vertex(Name,District,Municipality,Township,Line);
         vertex->setId(i);
         i++;
