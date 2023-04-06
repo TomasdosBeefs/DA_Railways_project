@@ -14,7 +14,7 @@ void file_reader::readNetworks(Program_data& data) {
     std::string Station_A, Station_B,Service,Capacitystring;
     int Capacity, i = 0;
     std::string line;
-    std::ifstream ifs("../data/network.csv");
+    std::ifstream ifs("../testeNetworks.csv");
     std::getline(ifs,line);
     while(std::getline(ifs,line)){
         std::stringstream iss(line);
@@ -52,7 +52,7 @@ void file_reader::readStations(Program_data& data) {
     int i = 0;
     std::string Name,District,Municipality,Township,Line;
     std::string line;
-    std::ifstream ifs("../data/stations.csv");
+    std::ifstream ifs("../teste.csv");
     std::getline(ifs,line);
     std::cout << line;
     while(std::getline(ifs,line)){

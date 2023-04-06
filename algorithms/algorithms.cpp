@@ -314,64 +314,38 @@ void Graph::Edge_Relaxation(Edge *e) {
 Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
                                      std::vector<Vertex *> vertex) {
 
-    Graph subgraph;
 
-    for (int i = 0; i < graph.vertexSet.size(); i++) {
-        if (auto iter = std::find(vertex.begin(), vertex.end(), graph.vertexSet[i]); iter != vertex.end()) {
-            for (Edge *e: (*iter)->getAdj()) {
-                auto iter2 = std::find(e->getDest()->getIncoming().begin(), e->getDest()->getIncoming().end(), e);
-                auto iter3 = std::find(e->getDest()->getAdj().begin(), e->getDest()->getAdj().end(),
-                                       e->getOtherDirection());
 
-                e->getDest()->getIncoming().erase(iter2);
-                e->getDest()->getAdj().erase(iter3);
-            }
-            for (Edge *e: (*iter)->getIncoming()) {
-                auto iter2 = std::find(e->getDest()->getIncoming().begin(), e->getDest()->getIncoming().end(), e->getOtherDirection());
-                auto iter3 = std::find(e->getDest()->getAdj().begin(), e->getDest()->getAdj().end(),
-                                       e);
 
-                e->getDest()->getIncoming().erase(iter3);
-                e->getDest()->getAdj().erase(iter2);
-            }
-            vertex.erase(iter);
-            continue;
+
+    // double maxflow = subgraph.edmondskarp(v1,v2);
+    return graph;
+}
+int Graph::find(std::vector<Edge*> vector, Edge* value){
+    int a = 0;
+    std::vector<Edge*>::iterator it = vector.begin();
+
+    while(it != vector.end()){
+        if((*it) == value){
+            break;
         }
-        int id = graph.vertexSet[i]->getId();
-        subgraph.addVertex(id);
-
+        it++;
+        a++;
     }
-
-    for (int i = 0; i < graph.edgeSet.size(); i++) {
-        if(graph.edgeSet[i]->getOtherDirection() == nullptr) continue;
-        if (auto iter = std::find(edges.begin(), edges.end(), graph.edgeSet[i]); iter != edges.end()) {
-
-
-            auto iter2 = std::find((*iter)->getDest()->getIncoming().begin(), (*iter)->getDest()->getIncoming().end(), (*iter));
-
-            auto iter5 = std::find((*iter)->getOrig()->getAdj().begin(), (*iter)->getOrig()->getAdj().end(),
-                                   (*iter));
-
-
-            (*iter)->getDest()->getAdj().erase(iter2);
-
-            (*iter)->getOrig()->getAdj().erase(iter5);
-            edges.erase(iter);
-
-            continue;
-        }
-
-        subgraph.addEdge(graph.edgeSet[i]);
-
-    }
-
-    double maxflow = subgraph.edmondskarp(v1,v2);
+    return a;
 }
 
 
 
+Graph Program_data::SubGraph(Graph original,std::vector<Edge *> edges,std::vector<Vertex*> vertextoRemove ) {
 
 
 
+
+
+
+return subgraph;
+
+}
 
 

@@ -91,6 +91,9 @@ public:
     double Cost_Efficient(Vertex *v1, Vertex *v2);
 
 
+    Graph SubGraph(Graph graph1, std::vector<Edge *> edges, std::vector<Vertex *> vertex);
+
+    Graph SubGraph(Graph original, std::vector<Edge *> edges, std::vector<std::string> verticesToRemove);
 };
 
 

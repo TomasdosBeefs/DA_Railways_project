@@ -32,6 +32,57 @@ bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::str
     return true;
 }
 
+bool Graph::addVertex(Vertex *v) {
+
+    this->vertexSet.push_back(v);
+    return true;
+}
+bool Graph::removeVertex(Vertex *v) {
+    auto iter = this->vertexSet.begin();
+
+    while(iter != this->vertexSet.end()){
+        if((*iter) == v){
+            for(Edge*e : (*iter)->getAdj()){
+                removeEdge(e);
+            }
+            this->vertexSet.erase(iter);
+            break;
+        }
+        iter++;
+    }
+    return true;
+}
+
+bool Graph::removeEdge(Edge *e) {
+    auto iter = this->edgeSet.begin();
+
+    while (iter != this->edgeSet.end()) {
+        if ((*iter) == e) {
+            (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
+            iter = this->edgeSet.erase(iter);
+            if((*iter) == e->getOtherDirection()){
+                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
+                 this->edgeSet.erase(iter);
+                break;
+            }
+            else {
+                iter--;
+                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
+                 this->edgeSet.erase(iter);
+                break;}
+        }
+        iter++;
+
+    }
+return true;
+}
+
+std::vector<Edge *> Graph::getEdgeSet() {
+
+    return this->edgeSet;
+
+}
+
 int Graph::getNumVertex() const {
     return vertexSet.size();
 }
@@ -89,10 +140,11 @@ void deleteMatrix(double **m, int n) {
         delete[] m;
     }
 }
-bool Graph::addEdge(Edge* e){
+
+bool Graph::addEdge(Edge *e) {
     this->edgeSet.push_back(e);
     e->getOrig()->addEdge(e);
-
+    return true;
 }
 
 Graph::~Graph() {
