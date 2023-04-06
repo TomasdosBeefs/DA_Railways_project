@@ -9,8 +9,6 @@
 #include "file_reader.h"
 #include "Vertex_Edge.h"
 
-#include <cstdlib>
-
 void file_reader::readNetworks(Program_data& data) {
     std::string Station_A, Station_B,Service,Capacitystring;
     int Capacity;
@@ -20,7 +18,6 @@ void file_reader::readNetworks(Program_data& data) {
     while(std::getline(ifs,line, '\n')){
         std::regex rgx(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
         std::sregex_token_iterator iter(line.begin(), line.end(), rgx, -1);
-        std::sregex_token_iterator end;
 
         Station_A = *iter;
         iter++;
@@ -47,7 +44,6 @@ void file_reader::readStations(Program_data& data) {
     while(std::getline(ifs,line, '\n')){
         std::regex rgx(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
         std::sregex_token_iterator iter(line.begin(), line.end(), rgx, -1);
-        std::sregex_token_iterator end;
 
         Name = *iter;
         iter++;

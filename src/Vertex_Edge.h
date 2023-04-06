@@ -34,7 +34,6 @@ public:
     std::string getDistrict() const;
     std::string getMunicipality() const;
     std::string getTownship() const;
-    std::string getLine() const;
     double get_INC() const;
     double get_OUT() const;
 

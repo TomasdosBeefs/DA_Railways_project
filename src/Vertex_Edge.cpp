@@ -177,6 +177,18 @@ std::string Vertex::getName() const {
     return this->Name;
 }
 
+std::string Vertex::getMunicipality() const{
+    return this->Municipaly;
+}
+
+std::string Vertex::getTownship() const {
+    return this->Township;
+}
+
+std::string Vertex::getDistrict() const {
+    return this->District;
+}
+
 void Vertex::set_INC_capacity(double capacity){
     this->INC_capacity+=capacity;
 }

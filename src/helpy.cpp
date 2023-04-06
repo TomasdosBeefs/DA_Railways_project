@@ -258,7 +258,8 @@ bool Helpy::process_command(std::string& s1, std::string& s2, std::string& s3){
 }
 
 void Helpy::displayAllStations() {
+    //fazer display por tabela
     for(Vertex* v : graph.vertexSet){
-        std::cout << v->getName() << std::endl;
+        std::cout << v->getId() << std::endl;
     }
 }
