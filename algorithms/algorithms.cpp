@@ -243,6 +243,10 @@ bool Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, std
     }
     this->keepVertex = vertextoRemove;
     for(Vertex* v : vertextoRemove){
+        for(Edge* e : v->getAdj()){
+            keepEdge.push_back(e);
+            keepEdge.push_back(e->getOtherDirection());
+        }
         this->graph.removeVertex(v);
     }
 

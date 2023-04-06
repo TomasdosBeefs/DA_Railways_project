@@ -57,6 +57,8 @@ public:
     std::vector<Edge *> edgeSet;
     std::vector<Edge *> getEdgeSet();
 
+
+    bool removeVertex(Vertex *v, std::vector<Edge *> &edge);
 protected:
        // vertex set
 
@@ -70,6 +72,8 @@ protected:
 
 
     int find(std::vector<Edge *> vector, Edge *value);
+
+
 };
 
 void deleteMatrix(int **m, int n);

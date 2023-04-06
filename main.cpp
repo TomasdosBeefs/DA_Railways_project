@@ -26,7 +26,6 @@ int main() {
                   << cringe.graph.edgeSet[i]->getDest()->getName() << '\n';
     }*/
 
-    //double max = cringe.graph.edmondskarp(v, vv);
     //std::cout << '\n' << max;
    // cringe.graph.Most_fluent_stations();
     std::cout << '\n';
@@ -47,18 +46,24 @@ int main() {
     std::cout << "Siuu";
 */
 
-
+    std::cout << cringe.graph.edgeSet.size() << '\n';
    std::vector<Edge*> edge;
    std::vector<Vertex*> vertex;
-   vertex.push_back(vv);
-   edge.push_back(v->getAdj()[0]);
+  // vertex.push_back(vv);
+   edge.push_back( v->getAdj()[0]);
    cringe.SubGraphCreate(cringe.graph,edge,vertex);
     std::cout << cringe.graph.vertexSet.size() << '\n';
     std::cout << cringe.graph.edgeSet.size() << '\n';
-   cringe.OriginalGraph();
+
+
+
+
+ //   cringe.OriginalGraph();
    std::cout << cringe.graph.vertexSet.size() << '\n';
    std::cout << cringe.graph.edgeSet.size() << '\n';
    std::cout << cringe.graph.edgeSet[0]->getOrig()->getName() << cringe.graph.edgeSet[0]->getDest()->getName();
    //cringe.SubGraph(cringe.graph,edge,vertex);
+    double max = cringe.graph.edmondskarp(v, vv);
+std::cout << max;
 
 }
