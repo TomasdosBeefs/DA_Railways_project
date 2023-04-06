@@ -42,7 +42,7 @@ bool Vertex::removeEdge(double ID) {
     while (it != adj.end()) {
         Edge *edge = *it;
         Vertex *dest = edge->getDest();
-        if (dest->getId() == id) {
+        if (dest->getId() == ID) {
             it = adj.erase(it);
             // Also remove the corresponding edge from the incoming list
             auto it2 = dest->incoming.begin();
@@ -54,7 +54,7 @@ bool Vertex::removeEdge(double ID) {
                     it2++;
                 }
             }
-            delete edge;
+            //delete edge;
             removedEdge = true; // allows for multiple edges to connect the same pair of vertices (multigraph)
         }
         else {

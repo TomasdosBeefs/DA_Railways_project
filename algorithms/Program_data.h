@@ -35,6 +35,8 @@ public:
 
     VE Stations_Network;
     std::unordered_map<std::string,Vertex*> Name;
+    std::vector<Vertex*> keepVertex;
+    std::vector<Edge*> keepEdge;
 //private:
 
     Categ District;
@@ -94,6 +96,10 @@ public:
     Graph SubGraph(Graph graph1, std::vector<Edge *> edges, std::vector<Vertex *> vertex);
 
     Graph SubGraph(Graph original, std::vector<Edge *> edges, std::vector<std::string> verticesToRemove);
+
+    bool SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
+
+    bool OriginalGraph();
 };
 
 

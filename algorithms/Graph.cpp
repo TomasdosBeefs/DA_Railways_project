@@ -55,25 +55,25 @@ bool Graph::removeVertex(Vertex *v) {
 
 bool Graph::removeEdge(Edge *e) {
     auto iter = this->edgeSet.begin();
-
+    int removed = 0;
+    Edge* e1 = e->getOtherDirection();
+    Edge* e2;
     while (iter != this->edgeSet.end()) {
         if ((*iter) == e) {
-            (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
+            removed++;
             iter = this->edgeSet.erase(iter);
-            if((*iter) == e->getOtherDirection()){
-                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
-                 this->edgeSet.erase(iter);
-                break;
-            }
-            else {
-                iter--;
-                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
-                 this->edgeSet.erase(iter);
-                break;}
+            continue;
         }
+        else if((*iter) == e->getOtherDirection()){
+            removed++;
+            iter = this->edgeSet.erase(iter);
+            continue;
+        }
+        if (removed == 2)break;
         iter++;
-
     }
+    (e)->getOrig()->removeEdge((e)->getDest()->getId());
+    (e1)->getOrig()->removeEdge((e1)->getDest()->getId());
 return true;
 }
 

@@ -113,17 +113,11 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
 
     Vertex *currVertex = sink;
 
-    // std::cout << '\n';
     while (currVertex != source) {
         Edge *e = currVertex->getPath();
-        //std::cout << "Caminho "<< e->getDest()->getName() << ' ' << e->getOrig()->getName() << "\t";
         if (e->getDest() == currVertex) {
-            e->setFlow(e->getFlow() + f);// perguntar se faz mal estar baseado na solução dos exercicios
+            e->setFlow(e->getFlow() + f);
             e->getReverse()->setFlow(e->getFlow());
-
-            //std::cout << "ASSAS " << e->getOrig()->getName() << " flow " << e->getBiFlow() << '\n';
-            //e->setCapacity(e->getWeight()-e->getFlow());
-            // e->getReverse()->setBiFlow(e->getBiFlow() + f); // pra que a utilidade disto?
             currVertex = e->getOrig();
 
         } else if (e->getOrig() == currVertex) {
@@ -158,106 +152,7 @@ void Graph::Most_fluent_stations() {
     }
     std::cout << pair.first->getName() << ' ' << pair.second->getName() << ' ' << maxflow;
 }
-/*
-std::vector<std::string> Graph::Budget_needed(Vertex* v1, Vertex* v2){//
 
-    std::vector<std::string> s;
-return s;
-
-}*/
-
-
-/*  double maxflow = 0;
-  std::vector<Vertex*> vector;
-
-  Vertex* source_vertex = new Vertex("Source","none","none","none","none");
-  Vertex* sink_vertex = new Vertex("Sink","none","none","none","none");
-
-  for(Vertex* vertex : vertexSet){
-      //auto e = new Edge(source_vertex,vertex,vertex->get_INC(),"none");
-      addBidirectionalEdge(source_vertex,vertex,vertex->get_INC(),"none");
-      //auto ee = new Edge(vertex,sink_vertex,vertex->get_OUT(),"none");
-      addBidirectionalEdge(vertex,sink_vertex,vertex->get_OUT(),"none");
-  }
-  vertexSet.push_back(source_vertex);
-  vertexSet.push_back(sink_vertex);
-
-  for(Vertex* vertex : vertexSet){
-
-     vertex->removeEdge(sink_vertex->getId());
-
-     maxflow = std::max(edmondskarp(source_vertex,sink_vertex),maxflow);
-
-     addBidirectionalEdge(vertex,sink_vertex,vertex->get_OUT(),"none"); */
-
-
-
-/*
-bool compare_(std::pair<std::string,double> p1, std::pair<std::string,double> p2){
-
-    if(p1.second == p2.second){
-
-        return p1.first < p2.first;
-
-    }
-
-    return p1.second > p2.second;
-
-
-}
-
-std::vector<std::pair<std::string, double>> Program_data::most_visited_municipalities(){
-
-    std::vector<std::pair<std::string,double>> Muni;
-
-    Categ::iterator it = this->Municipality.begin();
-
-    while(it != this->Municipality.end()){
-
-        double weight = 0;
-
-        for(Vertex* c : it->second){
-            weight += c->get_INC() + c->get_OUT();
-        }
-
-        std::pair<std::string,double> pair = {it->first,weight};
-
-        Muni.push_back(pair);
-        it++;
-    }
-
-    std::sort(Muni.begin(),Muni.end(),compare_);
-
-    return Muni;
-
-}
-
-std::vector<std::pair<std::string, double>> Program_data::most_visited_district(){
-
-    std::vector<std::pair<std::string,double>> Disct;
-
-    Categ::iterator it = this->District.begin();
-
-    while(it != this->District.end()){
-
-        double weight = 0; // posso mudar o District para ter municipios em vez de vertex
-
-        for(Vertex* c : it->second){
-            weight += c->get_INC() + c->get_OUT();
-        }
-
-        std::pair<std::string,double> pair = {it->first,weight};
-
-        Disct.push_back(pair);
-        it++;
-    }
-
-    std::sort(Disct.begin(),Disct.end(),compare_);
-
-    return Disct;
-
-}
-*/
 double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
     Graph Gf = this->graph;
     double maxflow = Gf.edmondskarp(v1, v2);
@@ -270,7 +165,7 @@ double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
     return min_cost;
 
 
-    return 0.0;
+
 }
 
 double Graph::Bellman_Ford(Vertex *v1, Vertex *v2) {
@@ -337,15 +232,33 @@ int Graph::find(std::vector<Edge*> vector, Edge* value){
 
 
 
-Graph Program_data::SubGraph(Graph original,std::vector<Edge *> edges,std::vector<Vertex*> vertextoRemove ) {
+bool Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex*> vertextoRemove ) {
 
 
 
+    for(Edge* e : edges){
+        keepEdge.push_back(e);
+        keepEdge.push_back(e->getOtherDirection());
+        this->graph.removeEdge(e);
+    }
+    this->keepVertex = vertextoRemove;
+    for(Vertex* v : vertextoRemove){
+        this->graph.removeVertex(v);
+    }
 
+        return true;
+}
 
+bool Program_data::OriginalGraph(){
 
-return subgraph;
+    for(Vertex* v : this->keepVertex){
+    this->graph.addVertex(v);}
 
+    for(Edge* e : this->keepEdge){
+        this->graph.addEdge(e);
+    }
+
+return true;
 }
 
 
