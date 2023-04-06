@@ -114,6 +114,15 @@
 		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/helpy.h">
 			<Option target="Railways"/>
 		</Unit>
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/lib/fort.c">
+			<Option target="Railways"/>
+		</Unit>
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/lib/fort.h">
+			<Option target="Railways"/>
+		</Unit>
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/lib/fort.hpp">
+			<Option target="Railways"/>
+		</Unit>
 		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp">
 			<Option target="Railways"/>
 		</Unit>

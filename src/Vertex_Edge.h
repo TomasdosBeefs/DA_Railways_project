@@ -33,6 +33,7 @@ public:
     std::string getName() const;
     std::string getDistrict() const;
     std::string getMunicipality() const;
+    std::string getLine() const;
     std::string getTownship() const;
     double get_INC() const;
     double get_OUT() const;

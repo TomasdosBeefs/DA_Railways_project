@@ -164,22 +164,22 @@ Edge::Edge(Vertex* V1, Vertex* V2, Edge* e){
 }
 
 Edge::Edge(const Edge *other) {
-        weight = other->weight;
-        capacity = other->capacity;
-        cost = other->cost;
-        selected = other->selected;
-        flow = other->flow;
-        biflow = other->biflow;
-        segment_cost = other->segment_cost;
-        Service = other->Service;
-        if (other->reverse != nullptr) {
-            reverse = new Edge(*other->reverse);
-        }
-        if (other->otherdirection != nullptr) {
-            otherdirection = new Edge(*other->otherdirection);
-        }
+    weight = other->weight;
+    capacity = other->capacity;
+    cost = other->cost;
+    selected = other->selected;
+    flow = other->flow;
+    biflow = other->biflow;
+    segment_cost = other->segment_cost;
+    Service = other->Service;
+    if (other->reverse != nullptr) {
+        reverse = new Edge(*other->reverse);
+    }
+    if (other->otherdirection != nullptr) {
+        otherdirection = new Edge(*other->otherdirection);
     }
 }
+
 Vertex * Edge::getDest() const {
     return this->dest;
 }
@@ -237,6 +237,10 @@ std::string Vertex::getTownship() const {
 
 std::string Vertex::getDistrict() const {
     return this->District;
+}
+
+std::string Vertex::getLine() const{
+    return "LINE NO BUENO";
 }
 
 void Vertex::set_INC_capacity(double capacity){

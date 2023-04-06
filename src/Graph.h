@@ -26,7 +26,8 @@ public:
     ~Graph();
     Graph();
     Graph(const Graph&);
-    Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
+    //WTF É ISTO?!??!?!?
+    //Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
     /*
     * Auxiliary function to find a vertex with a given ID.
     */

@@ -268,5 +268,4 @@ Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, st
 
     return subgraph;
 }
-*/
 

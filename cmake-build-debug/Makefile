@@ -273,6 +273,30 @@ src/helpy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/helpy.cpp.s
 .PHONY : src/helpy.cpp.s
 
+src/lib/fort.o: src/lib/fort.c.o
+.PHONY : src/lib/fort.o
+
+# target to build an object file
+src/lib/fort.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/lib/fort.c.o
+.PHONY : src/lib/fort.c.o
+
+src/lib/fort.i: src/lib/fort.c.i
+.PHONY : src/lib/fort.i
+
+# target to preprocess a source file
+src/lib/fort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/lib/fort.c.i
+.PHONY : src/lib/fort.c.i
+
+src/lib/fort.s: src/lib/fort.c.s
+.PHONY : src/lib/fort.s
+
+# target to generate assembly for a file
+src/lib/fort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/lib/fort.c.s
+.PHONY : src/lib/fort.c.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... src/helpy.o"
 	@echo "... src/helpy.i"
 	@echo "... src/helpy.s"
+	@echo "... src/lib/fort.o"
+	@echo "... src/lib/fort.i"
+	@echo "... src/lib/fort.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

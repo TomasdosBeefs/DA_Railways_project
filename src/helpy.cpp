@@ -9,7 +9,7 @@
 
 #include "Graph.h"
 #include "Program_data.h"
-//#include "libfort/fort.hpp"
+#include "lib/fort.hpp"
 
 // cores para o output
 #define RESET   "\033[0;m"
@@ -258,8 +258,24 @@ bool Helpy::process_command(std::string& s1, std::string& s2, std::string& s3){
 }
 
 void Helpy::displayAllStations() {
-    //fazer display por tabela
-    for(Vertex* v : graph.vertexSet){
-        std::cout << v->getId() << std::endl;
+
+    fort::utf8_table table;
+    table.set_border_style(FT_NICE_STYLE);
+
+    table.row(0).set_cell_content_text_style(fort::text_style::bold);
+    table.row(0).set_cell_content_fg_color(fort::color::yellow);
+    table << fort::header;
+
+    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line"};
+
+    auto it = columnNames.begin();
+    for (int i = 0; it != columnNames.end(); ++i) {
+        table << *it++;
+        table.column(i).set_cell_text_align(fort::text_align::center);
     }
+    table << fort::endr;
+    for(Vertex* v : graph.vertexSet){
+        table << v->getId() << v->getName() << v->getDistrict() << v->getMunicipality() << v->getLine() << fort::endr;
+    }
+    std::cout << table.to_string();
 }
