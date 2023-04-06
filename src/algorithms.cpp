@@ -336,7 +336,7 @@ int Graph::find(std::vector<Edge*> vector, Edge* value){
 }
 
 
-
+/*
 Graph Program_data::SubGraph(Graph original,std::vector<Edge *> edges,std::vector<Vertex*> vertextoRemove ) {
 
 
@@ -345,7 +345,6 @@ Graph Program_data::SubGraph(Graph original,std::vector<Edge *> edges,std::vecto
 
 
 return subgraph;
-
 }
-
+*/
 
