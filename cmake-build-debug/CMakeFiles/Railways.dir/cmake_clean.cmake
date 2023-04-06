@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Railways.dir/src/algorithms.cpp.o.d"
   "CMakeFiles/Railways.dir/src/file_reader.cpp.o"
   "CMakeFiles/Railways.dir/src/file_reader.cpp.o.d"
+  "CMakeFiles/Railways.dir/src/helpy.cpp.o"
+  "CMakeFiles/Railways.dir/src/helpy.cpp.o.d"
   "CMakeFiles/Railways.dir/src/main.cpp.o"
   "CMakeFiles/Railways.dir/src/main.cpp.o.d"
   "Railways"

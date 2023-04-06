@@ -249,6 +249,30 @@ src/file_reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/file_reader.cpp.s
 .PHONY : src/file_reader.cpp.s
 
+src/helpy.o: src/helpy.cpp.o
+.PHONY : src/helpy.o
+
+# target to build an object file
+src/helpy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/helpy.cpp.o
+.PHONY : src/helpy.cpp.o
+
+src/helpy.i: src/helpy.cpp.i
+.PHONY : src/helpy.i
+
+# target to preprocess a source file
+src/helpy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/helpy.cpp.i
+.PHONY : src/helpy.cpp.i
+
+src/helpy.s: src/helpy.cpp.s
+.PHONY : src/helpy.s
+
+# target to generate assembly for a file
+src/helpy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/helpy.cpp.s
+.PHONY : src/helpy.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -297,6 +321,9 @@ help:
 	@echo "... src/file_reader.o"
 	@echo "... src/file_reader.i"
 	@echo "... src/file_reader.s"
+	@echo "... src/helpy.o"
+	@echo "... src/helpy.i"
+	@echo "... src/helpy.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

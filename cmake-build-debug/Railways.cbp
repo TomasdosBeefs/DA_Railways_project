@@ -108,6 +108,12 @@
 		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.h">
 			<Option target="Railways"/>
 		</Unit>
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/helpy.cpp">
+			<Option target="Railways"/>
+		</Unit>
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/helpy.h">
+			<Option target="Railways"/>
+		</Unit>
 		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp">
 			<Option target="Railways"/>
 		</Unit>
