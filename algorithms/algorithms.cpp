@@ -341,7 +341,7 @@ Graph Program_data::SubGraph(Graph original,std::vector<Edge *> edges,std::vecto
 
 
 
-
+Graph subgraph;
 
 
 return subgraph;
