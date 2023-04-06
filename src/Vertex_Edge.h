@@ -101,7 +101,8 @@ class Edge {
 public:
     Edge(Vertex *orig, Vertex *dest, double w);
     Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost);
-
+    Edge(Vertex* V1, Vertex* V2,Edge* e);
+    Edge(const Edge* e);
     Vertex * getDest() const;
     double getWeight() const;
     bool isSelected() const;

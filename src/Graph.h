@@ -21,7 +21,12 @@
 class Graph {
 public:
 
+    Graph(const Graph &graph, std::vector<Edge *> &edge, std::vector<Vertex *> &vertex);
+
     ~Graph();
+    Graph();
+    Graph(const Graph&);
+    Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
     /*
     * Auxiliary function to find a vertex with a given ID.
     */
@@ -56,6 +61,8 @@ public:
     std::vector<Edge *> edgeSet;
     std::vector<Edge *> getEdgeSet();
 
+
+    bool removeVertex(Vertex *v, std::vector<Edge *> &edge);
 protected:
        // vertex set
 
@@ -69,6 +76,8 @@ protected:
 
 
     int find(std::vector<Edge *> vector, Edge *value);
+
+
 };
 
 void deleteMatrix(int **m, int n);

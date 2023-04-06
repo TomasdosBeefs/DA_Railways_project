@@ -18,6 +18,32 @@ Vertex::Vertex(std::string Name, std::string District,std::string Municipaly,std
     this->Line = Line;
     this->District = District;
 }
+Vertex::Vertex(const Vertex &other) {
+    this->Name = other.Name;
+    this->District = other.District;
+    this->Municipaly = other.Municipaly;
+    this->Township = other.Township;
+    this->Line = other.Line;
+    this->cost = other.cost;
+    this->INC_capacity = other.INC_capacity;
+    this->OUT_capacity = other.OUT_capacity;
+    this->id = other.id;
+    this->visited = other.visited;
+    this->processing = other.processing;
+    this->indegree = other.indegree;
+    this->dist = other.dist;
+    this->queueIndex = other.queueIndex;
+    this->path = other.path;
+    // create new vector of pointers to edges
+   /* for (auto e : other.adj) {
+        this->adj.push_back(new Edge(*e)); // n ler isto e adicionar quando adicionar as edges
+    }                                      // adicionar por ids e dar sort
+
+    // create new vector of pointers to incoming edges
+    for (auto e : other.incoming) {
+        this->incoming.push_back(new Edge(*e));
+    }*/
+}
 
 /*
  * Auxiliary function to add an outgoing edge to a vertex (this),
@@ -42,7 +68,7 @@ bool Vertex::removeEdge(double ID) {
     while (it != adj.end()) {
         Edge *edge = *it;
         Vertex *dest = edge->getDest();
-        if (dest->getId() == id) {
+        if (dest->getId() == ID) {
             it = adj.erase(it);
             // Also remove the corresponding edge from the incoming list
             auto it2 = dest->incoming.begin();
@@ -54,7 +80,7 @@ bool Vertex::removeEdge(double ID) {
                     it2++;
                 }
             }
-            delete edge;
+            //delete edge;
             removedEdge = true; // allows for multiple edges to connect the same pair of vertices (multigraph)
         }
         else {
@@ -130,6 +156,30 @@ Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight
 
 Edge::Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost):orig(Station_A), dest(Station_B), weight(weight), Service(Service), cost(cost) {}
 
+Edge::Edge(Vertex* V1, Vertex* V2, Edge* e){
+    this->orig = V1;
+    this->dest = V2;
+
+
+}
+
+Edge::Edge(const Edge *other) {
+        weight = other->weight;
+        capacity = other->capacity;
+        cost = other->cost;
+        selected = other->selected;
+        flow = other->flow;
+        biflow = other->biflow;
+        segment_cost = other->segment_cost;
+        Service = other->Service;
+        if (other->reverse != nullptr) {
+            reverse = new Edge(*other->reverse);
+        }
+        if (other->otherdirection != nullptr) {
+            otherdirection = new Edge(*other->otherdirection);
+        }
+    }
+}
 Vertex * Edge::getDest() const {
     return this->dest;
 }

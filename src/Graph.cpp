@@ -5,6 +5,50 @@
 #include "Graph.h"
 #include "Vertex_Edge.h"
 
+Graph::Graph() {};
+
+Graph::Graph(const Graph & graph) {
+
+    for(Vertex* v : graph.vertexSet){
+        Vertex* a = new Vertex(*v);
+        this->vertexSet.push_back(a);
+    }
+
+    for(Edge* e : graph.edgeSet){
+        Edge* d = new Edge(*e);
+        addEdge(d);
+    }
+
+
+}
+
+Graph::Graph(const Graph& graph,std::vector<Edge*> &edge,std::vector<Vertex*> &vertex){ // quando adiciona ao vetor vertex deve por todas as edges no vetor edge
+
+  /*  for(Vertex* v : graph.vertexSet){
+        if(std::find(vertex.begin(),vertex.end(),v) == vertex.end()){
+        Vertex* a = new Vertex(*v);
+        this->addVertex(a);
+        }
+    }*/
+  for(Vertex* v : vertex){
+      edge.insert(v->getAdj().begin(),v->getAdj().end(),edge.end());
+      edge.insert(v->getIncoming().begin(),v->getIncoming().end(),edge.end());
+
+  }
+
+    for(Edge* e : graph.edgeSet){
+        if(std::find(edge.begin(),edge.end(),e) == edge.end()){
+            Vertex* v1 = this->findVertex(e->getOrig()->getId());
+            Vertex* v2 = this->findVertex(e->getDest()->getId());
+            Edge* a = new Edge(v1,v2,e);
+            this->addEdge(a);
+            }
+
+    }
+
+
+}
+
 
 bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::string Service) {
 
@@ -55,25 +99,25 @@ bool Graph::removeVertex(Vertex *v) {
 
 bool Graph::removeEdge(Edge *e) {
     auto iter = this->edgeSet.begin();
-
+    int removed = 0;
+    Edge* e1 = e->getOtherDirection();
+    Edge* e2;
     while (iter != this->edgeSet.end()) {
         if ((*iter) == e) {
-            (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
+            removed++;
             iter = this->edgeSet.erase(iter);
-            if((*iter) == e->getOtherDirection()){
-                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
-                 this->edgeSet.erase(iter);
-                break;
-            }
-            else {
-                iter--;
-                (*iter)->getOrig()->removeEdge((*iter)->getDest()->getId());
-                 this->edgeSet.erase(iter);
-                break;}
+            continue;
         }
+        else if((*iter) == e->getOtherDirection()){
+            removed++;
+            iter = this->edgeSet.erase(iter);
+            continue;
+        }
+        if (removed == 2)break;
         iter++;
-
     }
+    (e)->getOrig()->removeEdge((e)->getDest()->getId());
+    (e1)->getOrig()->removeEdge((e1)->getDest()->getId());
 return true;
 }
 
