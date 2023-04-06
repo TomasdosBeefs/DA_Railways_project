@@ -9,10 +9,6 @@
 #include "Graph.h"
 
 
-//2.1 -- provavelmente maximum flow ( os que conseguem atravessar simultaneamente duas estaçoes)
-//2.2 -- de cada 2 estaçoes o numero de
-
-
 double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow?
     double maxflow = 0;
 

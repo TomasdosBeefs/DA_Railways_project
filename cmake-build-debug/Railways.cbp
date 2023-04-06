@@ -78,43 +78,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.cpp">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.h">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.h">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.cpp">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.h">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.cpp">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.h">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.cpp">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.h">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.cpp">
-			<Option target="Railways"/>
-		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.h">
-			<Option target="Railways"/>
-		</Unit>
-		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/main.cpp">
+		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp">
 			<Option target="Railways"/>
 		</Unit>
 		<Unit filename="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/CMakeLists.txt">

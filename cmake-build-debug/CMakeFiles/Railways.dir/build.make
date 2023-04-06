@@ -69,127 +69,111 @@ include CMakeFiles/Railways.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Railways.dir/flags.make
 
-CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.cpp
-CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o -MF CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.cpp
+CMakeFiles/Railways.dir/src/file_reader.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/file_reader.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.cpp
+CMakeFiles/Railways.dir/src/file_reader.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Railways.dir/src/file_reader.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/file_reader.cpp.o -MF CMakeFiles/Railways.dir/src/file_reader.cpp.o.d -o CMakeFiles/Railways.dir/src/file_reader.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.cpp
 
-CMakeFiles/Railways.dir/algorithms/file_reader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/file_reader.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.cpp > CMakeFiles/Railways.dir/algorithms/file_reader.cpp.i
+CMakeFiles/Railways.dir/src/file_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/file_reader.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.cpp > CMakeFiles/Railways.dir/src/file_reader.cpp.i
 
-CMakeFiles/Railways.dir/algorithms/file_reader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/file_reader.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/file_reader.cpp -o CMakeFiles/Railways.dir/algorithms/file_reader.cpp.s
+CMakeFiles/Railways.dir/src/file_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/file_reader.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/file_reader.cpp -o CMakeFiles/Railways.dir/src/file_reader.cpp.s
 
-CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.cpp
-CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o -MF CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.cpp
+CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.cpp
+CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o -MF CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o.d -o CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.cpp
 
-CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.cpp > CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.i
+CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.cpp > CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.i
 
-CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Vertex_Edge.cpp -o CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.s
+CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Vertex_Edge.cpp -o CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.s
 
-CMakeFiles/Railways.dir/algorithms/Graph.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/Graph.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.cpp
-CMakeFiles/Railways.dir/algorithms/Graph.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Railways.dir/algorithms/Graph.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/Graph.cpp.o -MF CMakeFiles/Railways.dir/algorithms/Graph.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/Graph.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.cpp
+CMakeFiles/Railways.dir/src/Graph.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/Graph.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.cpp
+CMakeFiles/Railways.dir/src/Graph.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Railways.dir/src/Graph.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/Graph.cpp.o -MF CMakeFiles/Railways.dir/src/Graph.cpp.o.d -o CMakeFiles/Railways.dir/src/Graph.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.cpp
 
-CMakeFiles/Railways.dir/algorithms/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/Graph.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.cpp > CMakeFiles/Railways.dir/algorithms/Graph.cpp.i
+CMakeFiles/Railways.dir/src/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/Graph.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.cpp > CMakeFiles/Railways.dir/src/Graph.cpp.i
 
-CMakeFiles/Railways.dir/algorithms/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/Graph.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Graph.cpp -o CMakeFiles/Railways.dir/algorithms/Graph.cpp.s
+CMakeFiles/Railways.dir/src/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/Graph.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Graph.cpp -o CMakeFiles/Railways.dir/src/Graph.cpp.s
 
-CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.cpp
-CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o -MF CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.cpp
+CMakeFiles/Railways.dir/src/Program_data.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/Program_data.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp
+CMakeFiles/Railways.dir/src/Program_data.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Railways.dir/src/Program_data.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/Program_data.cpp.o -MF CMakeFiles/Railways.dir/src/Program_data.cpp.o.d -o CMakeFiles/Railways.dir/src/Program_data.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp
 
-CMakeFiles/Railways.dir/algorithms/Program_data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/Program_data.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.cpp > CMakeFiles/Railways.dir/algorithms/Program_data.cpp.i
+CMakeFiles/Railways.dir/src/Program_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/Program_data.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp > CMakeFiles/Railways.dir/src/Program_data.cpp.i
 
-CMakeFiles/Railways.dir/algorithms/Program_data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/Program_data.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/Program_data.cpp -o CMakeFiles/Railways.dir/algorithms/Program_data.cpp.s
+CMakeFiles/Railways.dir/src/Program_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/Program_data.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp -o CMakeFiles/Railways.dir/src/Program_data.cpp.s
 
-CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.cpp
-CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o -MF CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.cpp
+CMakeFiles/Railways.dir/src/main.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/main.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp
+CMakeFiles/Railways.dir/src/main.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Railways.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/main.cpp.o -MF CMakeFiles/Railways.dir/src/main.cpp.o.d -o CMakeFiles/Railways.dir/src/main.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp
 
-CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.cpp > CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.i
+CMakeFiles/Railways.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp > CMakeFiles/Railways.dir/src/main.cpp.i
 
-CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/MutablePriorityQueue.cpp -o CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.s
+CMakeFiles/Railways.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/main.cpp -o CMakeFiles/Railways.dir/src/main.cpp.s
 
-CMakeFiles/Railways.dir/main.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/main.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/main.cpp
-CMakeFiles/Railways.dir/main.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Railways.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/main.cpp.o -MF CMakeFiles/Railways.dir/main.cpp.o.d -o CMakeFiles/Railways.dir/main.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/main.cpp
+CMakeFiles/Railways.dir/src/algorithms.cpp.o: CMakeFiles/Railways.dir/flags.make
+CMakeFiles/Railways.dir/src/algorithms.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.cpp
+CMakeFiles/Railways.dir/src/algorithms.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Railways.dir/src/algorithms.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/algorithms.cpp.o -MF CMakeFiles/Railways.dir/src/algorithms.cpp.o.d -o CMakeFiles/Railways.dir/src/algorithms.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.cpp
 
-CMakeFiles/Railways.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/main.cpp > CMakeFiles/Railways.dir/main.cpp.i
+CMakeFiles/Railways.dir/src/algorithms.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/algorithms.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.cpp > CMakeFiles/Railways.dir/src/algorithms.cpp.i
 
-CMakeFiles/Railways.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/main.cpp -o CMakeFiles/Railways.dir/main.cpp.s
-
-CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o: /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.cpp
-CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o -MF CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o.d -o CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o -c /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.cpp
-
-CMakeFiles/Railways.dir/algorithms/algorithms.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/algorithms/algorithms.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.cpp > CMakeFiles/Railways.dir/algorithms/algorithms.cpp.i
-
-CMakeFiles/Railways.dir/algorithms/algorithms.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/algorithms/algorithms.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/algorithms/algorithms.cpp -o CMakeFiles/Railways.dir/algorithms/algorithms.cpp.s
+CMakeFiles/Railways.dir/src/algorithms.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/algorithms.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/algorithms.cpp -o CMakeFiles/Railways.dir/src/algorithms.cpp.s
 
 # Object files for target Railways
 Railways_OBJECTS = \
-"CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o" \
-"CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o" \
-"CMakeFiles/Railways.dir/algorithms/Graph.cpp.o" \
-"CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o" \
-"CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o" \
-"CMakeFiles/Railways.dir/main.cpp.o" \
-"CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o"
+"CMakeFiles/Railways.dir/src/file_reader.cpp.o" \
+"CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o" \
+"CMakeFiles/Railways.dir/src/Graph.cpp.o" \
+"CMakeFiles/Railways.dir/src/Program_data.cpp.o" \
+"CMakeFiles/Railways.dir/src/main.cpp.o" \
+"CMakeFiles/Railways.dir/src/algorithms.cpp.o"
 
 # External object files for target Railways
 Railways_EXTERNAL_OBJECTS =
 
-Railways: CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o
-Railways: CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o
-Railways: CMakeFiles/Railways.dir/algorithms/Graph.cpp.o
-Railways: CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o
-Railways: CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o
-Railways: CMakeFiles/Railways.dir/main.cpp.o
-Railways: CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o
+Railways: CMakeFiles/Railways.dir/src/file_reader.cpp.o
+Railways: CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o
+Railways: CMakeFiles/Railways.dir/src/Graph.cpp.o
+Railways: CMakeFiles/Railways.dir/src/Program_data.cpp.o
+Railways: CMakeFiles/Railways.dir/src/main.cpp.o
+Railways: CMakeFiles/Railways.dir/src/algorithms.cpp.o
 Railways: CMakeFiles/Railways.dir/build.make
 Railways: CMakeFiles/Railways.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Railways"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/brunodrumond/Documents/GitHub/DA_Railways_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Railways"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Railways.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

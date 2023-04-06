@@ -129,173 +129,149 @@ Railways/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/build
 .PHONY : Railways/fast
 
-algorithms/Graph.o: algorithms/Graph.cpp.o
-.PHONY : algorithms/Graph.o
+src/Graph.o: src/Graph.cpp.o
+.PHONY : src/Graph.o
 
 # target to build an object file
-algorithms/Graph.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Graph.cpp.o
-.PHONY : algorithms/Graph.cpp.o
+src/Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
 
-algorithms/Graph.i: algorithms/Graph.cpp.i
-.PHONY : algorithms/Graph.i
+src/Graph.i: src/Graph.cpp.i
+.PHONY : src/Graph.i
 
 # target to preprocess a source file
-algorithms/Graph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Graph.cpp.i
-.PHONY : algorithms/Graph.cpp.i
+src/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
 
-algorithms/Graph.s: algorithms/Graph.cpp.s
-.PHONY : algorithms/Graph.s
+src/Graph.s: src/Graph.cpp.s
+.PHONY : src/Graph.s
 
 # target to generate assembly for a file
-algorithms/Graph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Graph.cpp.s
-.PHONY : algorithms/Graph.cpp.s
+src/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
 
-algorithms/MutablePriorityQueue.o: algorithms/MutablePriorityQueue.cpp.o
-.PHONY : algorithms/MutablePriorityQueue.o
+src/Program_data.o: src/Program_data.cpp.o
+.PHONY : src/Program_data.o
 
 # target to build an object file
-algorithms/MutablePriorityQueue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.o
-.PHONY : algorithms/MutablePriorityQueue.cpp.o
+src/Program_data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Program_data.cpp.o
+.PHONY : src/Program_data.cpp.o
 
-algorithms/MutablePriorityQueue.i: algorithms/MutablePriorityQueue.cpp.i
-.PHONY : algorithms/MutablePriorityQueue.i
+src/Program_data.i: src/Program_data.cpp.i
+.PHONY : src/Program_data.i
 
 # target to preprocess a source file
-algorithms/MutablePriorityQueue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.i
-.PHONY : algorithms/MutablePriorityQueue.cpp.i
+src/Program_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Program_data.cpp.i
+.PHONY : src/Program_data.cpp.i
 
-algorithms/MutablePriorityQueue.s: algorithms/MutablePriorityQueue.cpp.s
-.PHONY : algorithms/MutablePriorityQueue.s
+src/Program_data.s: src/Program_data.cpp.s
+.PHONY : src/Program_data.s
 
 # target to generate assembly for a file
-algorithms/MutablePriorityQueue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/MutablePriorityQueue.cpp.s
-.PHONY : algorithms/MutablePriorityQueue.cpp.s
+src/Program_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Program_data.cpp.s
+.PHONY : src/Program_data.cpp.s
 
-algorithms/Program_data.o: algorithms/Program_data.cpp.o
-.PHONY : algorithms/Program_data.o
+src/Vertex_Edge.o: src/Vertex_Edge.cpp.o
+.PHONY : src/Vertex_Edge.o
 
 # target to build an object file
-algorithms/Program_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Program_data.cpp.o
-.PHONY : algorithms/Program_data.cpp.o
+src/Vertex_Edge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o
+.PHONY : src/Vertex_Edge.cpp.o
 
-algorithms/Program_data.i: algorithms/Program_data.cpp.i
-.PHONY : algorithms/Program_data.i
+src/Vertex_Edge.i: src/Vertex_Edge.cpp.i
+.PHONY : src/Vertex_Edge.i
 
 # target to preprocess a source file
-algorithms/Program_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Program_data.cpp.i
-.PHONY : algorithms/Program_data.cpp.i
+src/Vertex_Edge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.i
+.PHONY : src/Vertex_Edge.cpp.i
 
-algorithms/Program_data.s: algorithms/Program_data.cpp.s
-.PHONY : algorithms/Program_data.s
+src/Vertex_Edge.s: src/Vertex_Edge.cpp.s
+.PHONY : src/Vertex_Edge.s
 
 # target to generate assembly for a file
-algorithms/Program_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Program_data.cpp.s
-.PHONY : algorithms/Program_data.cpp.s
+src/Vertex_Edge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.s
+.PHONY : src/Vertex_Edge.cpp.s
 
-algorithms/Vertex_Edge.o: algorithms/Vertex_Edge.cpp.o
-.PHONY : algorithms/Vertex_Edge.o
+src/algorithms.o: src/algorithms.cpp.o
+.PHONY : src/algorithms.o
 
 # target to build an object file
-algorithms/Vertex_Edge.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.o
-.PHONY : algorithms/Vertex_Edge.cpp.o
+src/algorithms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/algorithms.cpp.o
+.PHONY : src/algorithms.cpp.o
 
-algorithms/Vertex_Edge.i: algorithms/Vertex_Edge.cpp.i
-.PHONY : algorithms/Vertex_Edge.i
+src/algorithms.i: src/algorithms.cpp.i
+.PHONY : src/algorithms.i
 
 # target to preprocess a source file
-algorithms/Vertex_Edge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.i
-.PHONY : algorithms/Vertex_Edge.cpp.i
+src/algorithms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/algorithms.cpp.i
+.PHONY : src/algorithms.cpp.i
 
-algorithms/Vertex_Edge.s: algorithms/Vertex_Edge.cpp.s
-.PHONY : algorithms/Vertex_Edge.s
+src/algorithms.s: src/algorithms.cpp.s
+.PHONY : src/algorithms.s
 
 # target to generate assembly for a file
-algorithms/Vertex_Edge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/Vertex_Edge.cpp.s
-.PHONY : algorithms/Vertex_Edge.cpp.s
+src/algorithms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/algorithms.cpp.s
+.PHONY : src/algorithms.cpp.s
 
-algorithms/algorithms.o: algorithms/algorithms.cpp.o
-.PHONY : algorithms/algorithms.o
+src/file_reader.o: src/file_reader.cpp.o
+.PHONY : src/file_reader.o
 
 # target to build an object file
-algorithms/algorithms.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/algorithms.cpp.o
-.PHONY : algorithms/algorithms.cpp.o
+src/file_reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/file_reader.cpp.o
+.PHONY : src/file_reader.cpp.o
 
-algorithms/algorithms.i: algorithms/algorithms.cpp.i
-.PHONY : algorithms/algorithms.i
+src/file_reader.i: src/file_reader.cpp.i
+.PHONY : src/file_reader.i
 
 # target to preprocess a source file
-algorithms/algorithms.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/algorithms.cpp.i
-.PHONY : algorithms/algorithms.cpp.i
+src/file_reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/file_reader.cpp.i
+.PHONY : src/file_reader.cpp.i
 
-algorithms/algorithms.s: algorithms/algorithms.cpp.s
-.PHONY : algorithms/algorithms.s
+src/file_reader.s: src/file_reader.cpp.s
+.PHONY : src/file_reader.s
 
 # target to generate assembly for a file
-algorithms/algorithms.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/algorithms.cpp.s
-.PHONY : algorithms/algorithms.cpp.s
+src/file_reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/file_reader.cpp.s
+.PHONY : src/file_reader.cpp.s
 
-algorithms/file_reader.o: algorithms/file_reader.cpp.o
-.PHONY : algorithms/file_reader.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-algorithms/file_reader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/file_reader.cpp.o
-.PHONY : algorithms/file_reader.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-algorithms/file_reader.i: algorithms/file_reader.cpp.i
-.PHONY : algorithms/file_reader.i
-
-# target to preprocess a source file
-algorithms/file_reader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/file_reader.cpp.i
-.PHONY : algorithms/file_reader.cpp.i
-
-algorithms/file_reader.s: algorithms/file_reader.cpp.s
-.PHONY : algorithms/file_reader.s
-
-# target to generate assembly for a file
-algorithms/file_reader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/algorithms/file_reader.cpp.s
-.PHONY : algorithms/file_reader.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Railways.dir/build.make CMakeFiles/Railways.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -306,27 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Railways"
-	@echo "... algorithms/Graph.o"
-	@echo "... algorithms/Graph.i"
-	@echo "... algorithms/Graph.s"
-	@echo "... algorithms/MutablePriorityQueue.o"
-	@echo "... algorithms/MutablePriorityQueue.i"
-	@echo "... algorithms/MutablePriorityQueue.s"
-	@echo "... algorithms/Program_data.o"
-	@echo "... algorithms/Program_data.i"
-	@echo "... algorithms/Program_data.s"
-	@echo "... algorithms/Vertex_Edge.o"
-	@echo "... algorithms/Vertex_Edge.i"
-	@echo "... algorithms/Vertex_Edge.s"
-	@echo "... algorithms/algorithms.o"
-	@echo "... algorithms/algorithms.i"
-	@echo "... algorithms/algorithms.s"
-	@echo "... algorithms/file_reader.o"
-	@echo "... algorithms/file_reader.i"
-	@echo "... algorithms/file_reader.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
+	@echo "... src/Program_data.o"
+	@echo "... src/Program_data.i"
+	@echo "... src/Program_data.s"
+	@echo "... src/Vertex_Edge.o"
+	@echo "... src/Vertex_Edge.i"
+	@echo "... src/Vertex_Edge.s"
+	@echo "... src/algorithms.o"
+	@echo "... src/algorithms.i"
+	@echo "... src/algorithms.s"
+	@echo "... src/file_reader.o"
+	@echo "... src/file_reader.i"
+	@echo "... src/file_reader.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
