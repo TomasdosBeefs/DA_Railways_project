@@ -240,7 +240,7 @@ std::string Vertex::getDistrict() const {
 }
 
 std::string Vertex::getLine() const{
-    return "LINE NO BUENO";
+    return this->Line;
 }
 
 void Vertex::set_INC_capacity(double capacity){

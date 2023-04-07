@@ -266,16 +266,17 @@ void Helpy::displayAllStations() {
     table.row(0).set_cell_content_fg_color(fort::color::yellow);
     table << fort::header;
 
-    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line"};
+    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line", "TESTE"};
 
     auto it = columnNames.begin();
-    for (int i = 0; it != columnNames.end(); ++i) {
+    for (int i = 0; it != columnNames.end(); i++) {
         table << *it++;
         table.column(i).set_cell_text_align(fort::text_align::center);
     }
     table << fort::endr;
-    for(Vertex* v : graph.vertexSet){
-        table << v->getId() << v->getName() << v->getDistrict() << v->getMunicipality() << v->getLine() << fort::endr;
+
+    for(int i = 1; i < graph.vertexSet.size(); i++){
+        table << graph.vertexSet[i]->getId() << graph.vertexSet[i]->getName() << graph.vertexSet[i]->getDistrict() << graph.vertexSet[i]->getMunicipality() << graph.vertexSet[i]->getLine() << fort::endr;
     }
     std::cout << table.to_string();
 }
