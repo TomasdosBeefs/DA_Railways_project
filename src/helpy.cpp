@@ -266,7 +266,7 @@ void Helpy::displayAllStations() {
     table.row(0).set_cell_content_fg_color(fort::color::yellow);
     table << fort::header;
 
-    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line", "TESTE"};
+    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line"};
 
     auto it = columnNames.begin();
     for (int i = 0; it != columnNames.end(); i++) {
@@ -276,7 +276,7 @@ void Helpy::displayAllStations() {
     table << fort::endr;
 
     for(int i = 1; i < graph.vertexSet.size(); i++){
-        table << graph.vertexSet[i]->getId() << graph.vertexSet[i]->getName() << graph.vertexSet[i]->getDistrict() << graph.vertexSet[i]->getMunicipality() << graph.vertexSet[i]->getLine() << fort::endr;
+        table << graph.vertexSet[i]->getId() << graph.vertexSet[i]->getName() << graph.vertexSet[i]->getDistrict() << graph.vertexSet[i]->getMunicipality() << "Line Not Working" << fort::endr;
     }
     std::cout << table.to_string();
 }
