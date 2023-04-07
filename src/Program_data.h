@@ -12,6 +12,7 @@
 
 
 typedef std::vector<Vertex*> VE;
+typedef std::vector<Edge*> EV;
 typedef std::unordered_map<std::string,std::vector<Vertex*>> Categ;
 
 
@@ -34,6 +35,7 @@ public:
 
 
     VE Stations_Network;
+    EV Networks_vector;
     std::unordered_map<std::string,Vertex*> Name;
     std::vector<Vertex*> keepVertex;
     std::vector<Edge*> keepEdge;
@@ -86,7 +88,7 @@ public:
 
 
 
-
+   // bool createBidirectionalEdge(Vertex *v1,Vertex* v2, double weight, std::string Service);
 
     std::vector<std::pair<std::string, double>> most_visited_district();
 
@@ -97,11 +99,13 @@ public:
 
     Graph SubGraph(Graph original, std::vector<Edge *> edges, std::vector<std::string> verticesToRemove);
 
-    Graph SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
+    //Graph SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 
     bool OriginalGraph();
 
     bool SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
+
+    Graph SubGraphCreate(Graph original, std::vector<Edge *> &edges, std::vector<Vertex *> &vertextoRemove);
 };
 
 

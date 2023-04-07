@@ -3,6 +3,7 @@
 //
 
 #include <cfloat>
+#include <functional>
 #include "algorithms.h"
 #include "Program_data.h"
 #include "Vertex_Edge.h"
@@ -12,15 +13,6 @@
 double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow?
     double maxflow = 0;
 
-    for (auto v: vertexSet) {
-        v->setPath(nullptr);
-        v->setVisited(0);
-        for (Edge *e: v->getAdj()) {
-            e->setFlow(0);
-            e->getReverse()->setFlow(0);
-            e->getOtherDirection()->setFlow(0);
-        }
-    }
 
     while (Find_path(source, sink)) {
         double f = Find_Bottleneck(source, sink);
@@ -72,7 +64,6 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
 
         q.pop();
 
-        // std::cout << "stack: ";
 
         for (Edge *e: v->getAdj()) {
 
@@ -88,7 +79,7 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
         for (Edge *e: v->getIncoming()) {
 
             if (!e->getOrig()->isVisited() && e->getBiFlow() > 0 && e->getFlow() > 0) {
-                //  std::cout << '\n' << e->getBiFlow() << ' ' << e->getFlow() << '\n';
+                std::cout << '\n' << e->getBiFlow() << ' ' << e->getFlow() << '\n';
                 e->getOrig()->setVisited(true);
                 e->getOrig()->setPath(e);
                 q.push(e->getOrig());
@@ -110,6 +101,8 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
     Vertex *currVertex = sink;
 
     while (currVertex != source) {
+        std::cout << " Caminho " << currVertex->getPath()->getDest()->getName() << ' '
+                  << currVertex->getPath()->getOrig()->getName();
         Edge *e = currVertex->getPath();
         if (e->getDest() == currVertex) {
             e->setFlow(e->getFlow() + f);
@@ -126,7 +119,7 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
         }
         //bidirectional edge //frente) adicionar flow e ir ao reverse tirar o flow
     }
-    // std::cout << '\n' <<"next" << '\n';
+    std::cout << '\n' << "next" << '\n';
 }
 
 void Graph::Most_fluent_stations() {
@@ -150,16 +143,18 @@ void Graph::Most_fluent_stations() {
 }
 
 double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
-    Graph Gf = this->graph;
-    double maxflow = Gf.edmondskarp(v1, v2);
+    Graph Gf = Graph(this->graph);
+    Vertex *v = Gf.findVertex(0);
+    Vertex *vv = Gf.findVertex(4);
+
+    double maxflow = Gf.edmondskarp(v, vv);
 
     double min_cost = 0;
 
-    min_cost = graph.Bellman_Ford(v1, v2);
+    min_cost = Gf.Bellman_Ford(v, vv);
 
 
     return min_cost;
-
 
 
 }
@@ -202,24 +197,12 @@ void Graph::Edge_Relaxation(Edge *e) {
     }
 }
 
-Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
-                                     std::vector<Vertex *> vertex) {
-
-
-    for (auto v : graph.vertexSet) {
-        graph.addVertex(new Vertex(*v));
-    }
-
-
-    // double maxflow = subgraph.edmondskarp(v1,v2);
-    return graph;
-}
-int Graph::find(std::vector<Edge*> vector, Edge* value){
+int Graph::find(std::vector<Edge *> vector, Edge *value) {
     int a = 0;
-    std::vector<Edge*>::iterator it = vector.begin();
+    std::vector<Edge *>::iterator it = vector.begin();
 
-    while(it != vector.end()){
-        if((*it) == value){
+    while (it != vector.end()) {
+        if ((*it) == value) {
             break;
         }
         it++;
@@ -229,43 +212,89 @@ int Graph::find(std::vector<Edge*> vector, Edge* value){
 }
 
 
+bool Program_data::SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove) {
 
-bool Program_data::SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex*> vertextoRemove ) {
 
-
-    for(Edge* e : edges){
+    for (Edge *e: edges) {
         keepEdge.push_back(e);
         keepEdge.push_back(e->getOtherDirection());
         this->graph.removeEdge(e);
     }
     this->keepVertex = vertextoRemove;
-    for(Vertex* v : vertextoRemove){
-        for(Edge* e : v->getAdj()){
+    for (Vertex *v: vertextoRemove) {
+        for (Edge *e: v->getAdj()) {
             keepEdge.push_back(e);
             keepEdge.push_back(e->getOtherDirection());
         }
         this->graph.removeVertex(v);
     }
 
-        return true;
+    return true;
 }
 
-bool Program_data::OriginalGraph(){
+bool Program_data::OriginalGraph() {
 
-    for(Vertex* v : this->keepVertex){
-    this->graph.addVertex(v);}
+    for (Vertex *v: this->keepVertex) {
+        this->graph.addVertex(v);
+    }
 
-    for(Edge* e : this->keepEdge){
+    for (Edge *e: this->keepEdge) {
         this->graph.addEdge(e);
     }
 
-return true;
+    return true;
 }
 
-Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove) {
+Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> &edges, std::vector<Vertex *> &vertextoRemove) {
 
-    Graph subgraph = Graph(original,edges,vertextoRemove);
+    Graph subgraph = Graph(original, edges, vertextoRemove);
 
     return subgraph;
+}
+
+
+Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,std::vector<Vertex *> vertex) {
+    double max = 0;
+    std::unordered_map<Edge *, double> oldflow;
+    max = graph.edmondskarp(v1, v2);
+    for (Edge *e: graph.edgeSet) {
+        std::pair<Edge *, double> pairr = {e, e->getFlow()};
+        oldflow.insert(pairr);
+    }
+    graph.ResetGraphValues();
+    std::cout << "primeiro Edmond->" << max << ' ' << '\n' << graph.edgeSet.size() << '\n';
+
+    SubGraphEdit(graph,edges,vertex);
+    std::priority_queue<Edge*, std::vector<Edge*>, std::function<bool(Edge*, Edge*)>> pq([](Edge* a, Edge* b) {return a->getFlowDifference() < b->getFlowDifference();});
+    max = graph.edmondskarp(v1, v2);
+    for (Edge *e: graph.edgeSet) {
+        double diff = abs(e->getFlow() - oldflow.find(e)->second);
+        e->setFlowDifference(diff);
+        pq.push(e);
+    }
+    std::cout << "segundo Edmond->" << max << '\n' << graph.edgeSet.size() << '\n';
+
+
+    while (!pq.empty()) {
+        std::cout << pq.top()->getOrig()->getName() << "->" << pq.top()->getDest()->getName() << ' ' <<  pq.top()->getFlowDifference() << '\n';
+        pq.pop();
+    }
+
+
+    return graph;
+
+
+}
+
+void Graph::ResetGraphValues() {
+    for (auto v: vertexSet) {
+        v->setPath(nullptr);
+        v->setVisited(0);
+        for (Edge *e: v->getAdj()) {
+            e->setFlow(0);
+            e->getReverse()->setFlow(0);
+            e->getOtherDirection()->setFlow(0);
+        }
+    }
 }
 

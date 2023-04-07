@@ -4,50 +4,79 @@
 
 #include "Graph.h"
 #include "Vertex_Edge.h"
+#include "Program_data.h"
 
 Graph::Graph() {};
 
-Graph::Graph(const Graph & graph) {
+/*Graph::Graph(const Graph & graph) {
 
     for(Vertex* v : graph.vertexSet){
         Vertex* a = new Vertex(*v);
-        this->vertexSet.push_back(a);
+        this->addVertex(a);
     }
 
-    for(Edge* e : graph.edgeSet){
-        Edge* d = new Edge(*e);
-        addEdge(d);
-    }
+    for(int i = 0; i < graph.edgeSet.size();i+=2){
+            Edge* e = graph.edgeSet[i];
+            Vertex* v1 = this->findVertex(e->getOrig()->getId());
+            Vertex* v2 = this->findVertex(e->getDest()->getId());
+            this->addBidirectionalEdge(v1,v2,e->getWeight(),e->getService());
 
 
-}
+}}*/
 
 Graph::Graph(const Graph& graph,std::vector<Edge*> &edge,std::vector<Vertex*> &vertex){ // quando adiciona ao vetor vertex deve por todas as edges no vetor edge
 
-  /*  for(Vertex* v : graph.vertexSet){
+    for(Vertex* v : graph.vertexSet){
         if(std::find(vertex.begin(),vertex.end(),v) == vertex.end()){
         Vertex* a = new Vertex(*v);
         this->addVertex(a);
         }
-    }*/
-  for(Vertex* v : vertex){
-      edge.insert(v->getAdj().begin(),v->getAdj().end(),edge.end());
-      edge.insert(v->getIncoming().begin(),v->getIncoming().end(),edge.end());
+        else{
+            for(Edge* e : v->getAdj()){
+                edge.push_back(e);
+                edge.push_back(e->getOtherDirection());
+            }
+         }
+    }
 
-  }
 
-    for(Edge* e : graph.edgeSet){
-        if(std::find(edge.begin(),edge.end(),e) == edge.end()){
+    for(int i = 0; i < graph.edgeSet.size();i+=2){
+        Edge* e = graph.edgeSet[i];
+        if((std::find(edge.begin(),edge.end(),e) == edge.end()) || (std::find(edge.begin(),edge.end(),e->getOtherDirection()) == edge.end())){
             Vertex* v1 = this->findVertex(e->getOrig()->getId());
             Vertex* v2 = this->findVertex(e->getDest()->getId());
-            Edge* a = new Edge(v1,v2,e);
-            this->addEdge(a);
+            this->subaddBidirectionalEdge(v1,v2,e);
             }
 
     }
 
 
 }
+/*bool Program_data::createBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::string Service) {
+
+    if (v1 == nullptr || v2 == nullptr)
+        return false;
+    double cost;
+    Service == "STANDARD" ? cost = 2 : cost = 4;
+    v1->set_OUT_capacity(weight);
+    v2->set_INC_capacity(weight);
+    auto e1 = new Edge(v1, v2, weight, Service, cost);
+    auto e2 = new Edge(v2, v1, weight, Service, cost);
+    auto e1res = new Edge(v1, v2, weight, Service, cost);
+    auto e2res = new Edge(v2, v1, weight, Service, cost);
+    e1->setReverse(e2res);
+    e2->setReverse(e1res);
+    e1->setOtherDirection(e2);
+    e2->setOtherDirection(e1);
+    v1->addEdge(e1);
+    v2->addEdge(e2);
+
+    this->Networks_vector.push_back(e1);
+    this->Networks_vector.push_back(e2);
+
+    return true;
+}*/
+
 
 
 bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::string Service) {
@@ -68,12 +97,31 @@ bool Graph::addBidirectionalEdge(Vertex *v1, Vertex *v2, double weight, std::str
     e2->setOtherDirection(e1);
     v1->addEdge(e1);
     v2->addEdge(e2);
-
     this->edgeSet.push_back(e1);
     this->edgeSet.push_back(e2);
 
 
     return true;
+}
+bool Graph::subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e) {
+
+    if (v1 == nullptr || v2 == nullptr)
+        return false;
+
+    auto e1 = new Edge(v1, v2, e);
+    auto e2 = new Edge(v2, v1, e->getOtherDirection());
+    auto e1res = new Edge(v1, v2, e->getReverse());
+    auto e2res = new Edge(v2, v1, e->getOtherDirection()->getReverse());
+    e1->setReverse(e2res);
+    e2->setReverse(e1res);
+    e1->setOtherDirection(e2);
+    e2->setOtherDirection(e1);
+    v1->addEdge(e1);
+    v2->addEdge(e2);
+    this->edgeSet.push_back(e1);
+    this->edgeSet.push_back(e2);
+    return true;
+
 }
 
 bool Graph::addVertex(Vertex *v) {

@@ -156,12 +156,21 @@ Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight
 
 Edge::Edge(Vertex* Station_A,Vertex* Station_B, double weight, std::string Service, double cost):orig(Station_A), dest(Station_B), weight(weight), Service(Service), cost(cost) {}
 
-Edge::Edge(Vertex* V1, Vertex* V2, Edge* e){
+Edge::Edge(Vertex* V1, Vertex* V2, Edge* other){
     this->orig = V1;
     this->dest = V2;
-
+    weight = other->weight;
+    capacity = other->capacity;
+    cost = other->cost;
+    selected = other->selected;
+    flow = other->flow;
+    biflow = other->biflow;
+    segment_cost = other->segment_cost;
+    Service = other->Service;
 
 }
+
+
 
 Edge::Edge(const Edge *other) {
     weight = other->weight;
@@ -210,6 +219,10 @@ void Edge::setSelected(bool selected) {
 
 void Edge::setReverse(Edge *reverse) {
     this->reverse = reverse;
+}
+
+std::string Edge::getService() const {
+    return this->Service;
 }
 
 void Edge::setFlow(double flow) {
@@ -307,4 +320,12 @@ void Edge::setSegment_cost(double segment_cost)  {
 }
 double Edge::getSegment_cost() const  {
     return this->segment_cost;
+}
+
+void Edge::setFlowDifference(double flow)  {
+     this->flow_difference = flow;
+}
+
+double Edge::getFlowDifference() const {
+    return this->flow_difference;
 }

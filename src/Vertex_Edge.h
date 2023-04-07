@@ -112,8 +112,11 @@ public:
     double getFlow() const;
     double getCapacity() const;
     double getBiFlow() const;
+    std::string getService() const;
     Edge* getOtherDirection() const;
     double getSegment_cost() const;
+    void setFlowDifference(double flow);
+    double getFlowDifference() const;
 
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
@@ -129,13 +132,18 @@ public:
                weight == other.weight &&
                Service == other.Service;
     }
+
+    bool operator >(const Edge& e1) const{
+        return this->flow_difference > e1.flow_difference;
+    }
 protected:
 
     std::string Service;
     Vertex * dest; // destination vertex
-    double weight; // edge weight, can also be used for capacity
+    double weight = 0; // edge weight, can also be used for capacity
     double capacity = 0;
     double cost = 0;
+    double flow_difference = 0;
 
     // auxiliary fields
     bool selected = false;
