@@ -22,12 +22,13 @@
 class Graph {
 public:
 
-    Graph(const Graph &graph, std::vector<Edge *> &edge, std::vector<Vertex *> &vertex);
 
     ~Graph();
     Graph();
-    Graph(const Graph&);
-    Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
+   // Graph(const Graph&);
+    Graph(const Graph &graph, std::vector<Edge *> &edge, std::vector<Vertex *> &vertex);
+
+    //Graph(const Graph&,std::vector<Edge*>,std::vector<Vertex*>);
     /*
     * Auxiliary function to find a vertex with a given ID.
     */
@@ -62,7 +63,7 @@ public:
     std::vector<Edge *> edgeSet;
     std::vector<Edge *> getEdgeSet();
 
-
+    void ResetGraphValues();
     bool removeVertex(Vertex *v, std::vector<Edge *> &edge);
 protected:
        // vertex set
@@ -79,6 +80,7 @@ protected:
     int find(std::vector<Edge *> vector, Edge *value);
 
 
+    bool subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e );
 };
 
 void deleteMatrix(int **m, int n);
