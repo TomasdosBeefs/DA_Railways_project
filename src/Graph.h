@@ -64,6 +64,10 @@ public:
 
     void ResetGraphValues();
     bool removeVertex(Vertex *v, std::vector<Edge *> &edge);
+
+    //FUNCOES CACHALDORA
+    std::vector<std::pair<std::string, int>> Budget_needed_district();
+    std::vector<std::pair<std::string, int>> Budget_needed_municipality();
 protected:
        // vertex set
 
@@ -80,6 +84,7 @@ protected:
 
 
     bool subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e );
+
 };
 
 void deleteMatrix(int **m, int n);

@@ -15,4 +15,16 @@ int main() {
     Helpy helpy(data);
     helpy.terminal();
 
+    /*
+    Program_data cringe;
+    std::string input;
+    std::cin >> input;
+
+    if (input == "f"){
+        std::vector<std::pair<std::string, int>> test = cringe.graph.Budget_needed_district();
+        for (std::pair<std::string, int> par : test){
+            std::cout << par.first << " " << par.second << '\n';
+        }
+    }
+    */
 }

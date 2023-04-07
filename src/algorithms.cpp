@@ -298,3 +298,44 @@ void Graph::ResetGraphValues() {
     }
 }
 
+//FUNÇOES CACHALDORA
+
+std::vector<std::pair<std::string, int>>Graph::Budget_needed_district(){
+    std::vector<std::pair<std::string, int>> networkCount;
+    for(Vertex * vertex : vertexSet){
+        auto it = std::find_if(networkCount.begin(), networkCount.end(), [&](const auto& pair) {return pair.first == vertex->getDistrict();});
+        if (it != networkCount.end()){
+            it->second += vertex->getAdj().size();
+        }
+        else{
+            networkCount.emplace_back(vertex->getDistrict(), vertex->getAdj().size());
+        }
+    }
+
+    sort(networkCount.begin(), networkCount.end(), [](std::pair<std::string, int> district1, std::pair<std::string, int> district2){
+        if (district1.second == district2.second)
+            return district1.first > district2.first;
+        return district1.second > district2.second;
+    });
+    return networkCount;
+}
+
+std::vector<std::pair<std::string, int>>Graph::Budget_needed_municipality(){
+    std::vector<std::pair<std::string, int>> networkCount;
+    for(Vertex * vertex : vertexSet){
+        auto it = std::find_if(networkCount.begin(), networkCount.end(), [&](const auto& pair) {return pair.first == vertex->getMunicipality();});
+        if (it != networkCount.end()){
+            it->second += vertex->getAdj().size();
+        }
+        else{
+            networkCount.emplace_back(vertex->getMunicipality(), vertex->getAdj().size());
+        }
+    }
+
+    sort(networkCount.begin(), networkCount.end(), [](std::pair<std::string, int> municipality1, std::pair<std::string, int> municipality2){
+        if (municipality1.second == municipality2.second)
+            return municipality1.first > municipality2.first;
+        return municipality1.second > municipality2.second;
+    });
+    return networkCount;
+}
