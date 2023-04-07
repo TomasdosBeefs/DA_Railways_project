@@ -1,4 +1,8 @@
 Station_A,Station_B,Capacity,Service
-Porto Campanhã,Chaves1,100,SIUUU
-Mondim Quimboios,Chaves1,200,SIUUU
-Mondim Quimboios,Porto Campanhã,300,SIUUU
+A,B,15,PENDULAR
+A,C,20,STANDARD
+B,E,15,STANDARD
+C,E,20,STANDARD
+E,G,5,STANDARD
+D,G,25,STANDARD
+B,D,25,STANDARD

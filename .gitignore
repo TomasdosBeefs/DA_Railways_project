@@ -1,0 +1,7 @@
+.idea/
+cmake-build-debug/
+
+# mac users
+.vscode/
+build/
+.DS_Store
