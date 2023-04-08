@@ -301,30 +301,77 @@ void Helpy::displayMaximumTrains() {
 
     std::cin >> s1; //need to lowecase?
 
-    if(s1 != "All Stations" || s1 != "District" || s1 != "Municipality" || s1 != "Line" ){
-        std::cout << "Invalid Input\n try again\n!" << std::endl;//tlvz fzr outra coisa
-    }
-    else if(s1 == "All Stations"){
+   /* if(s1 != "All Stations" && s1 != "District" && s1 != "Municipality" && s1 != "Line" ){
+        std::cout << "Invalid Input\n try again!" << std::endl;//tlvz fzr outra coisa
+    }*/
+    // if(s1 == "All Stations"){
 
 
-        fort::utf8_table table;
-        table.set_border_style(FT_SOLID_ROUND_STYLE);
-        table << fort::header << "ID" << "Name" << fort::endr;
-        for (const auto& row : data) {
-            table << row[0] << row[1] << fort::endr;
+
+            // Define page size
+            const int page_size = 5;
+
+            // Get total number of pages
+            int num_pages = data.Name.size() / page_size + (data.Name.size() % page_size == 0 ? 0 : 1);
+
+            // Print pages
+            int current_page = 1;
+            while (true) {
+                // Get start and end indices for current page
+                int start_index = (current_page - 1) * page_size;
+                int end_index = start_index + page_size > data.graph.vertexSet.size() ? data.graph.vertexSet.size() : start_index + page_size;
+
+                // Create table for current page
+                fort::utf8_table table;
+                table << fort::header << "ID" << "Name" << fort::endr;
+                for (int i = start_index; i < end_index; i++) {
+                    table << data.graph.vertexSet[i]->getId() << data.graph.vertexSet[i]->getName() << fort::endr;
+                }
+
+                // Print table and page number
+                std::cout << table.to_string() << std::endl;
+                std::cout << "Page " << current_page << " of " << num_pages << std::endl;
+
+                // Ask user if they want to go to the next or previous page, or exit
+                std::string input;
+                std::cout << "Press 'n' for next page, 'p' for previous page, or 'q' to quit: ";
+                std::cin >> input;
+
+                // Check input and update current page accordingly
+                if (input == "n") {
+                    if (current_page == num_pages) {
+                        std::cout << "Already on the last page." << std::endl;
+                    } else {
+                        current_page++;
+                    }
+                } else if (input == "p") {
+                    if (current_page == 1) {
+                        std::cout << "Already on the first page." << std::endl;
+                    } else {
+                        current_page--;
+                    }
+                } else if (input == "q") {
+                    break;
+                } else {
+                    std::cout << "Invalid input. Please try again." << std::endl;
+                }
+
+                // Print separator
+                std::cout << "----------------------------------------" << std::endl;
+            }
+
+
         }
-        std::cout << table.to_string() << std::endl;
-        }
 
 
 
 
 
-    }
 
 
 
 
-}
+
+
 
 
