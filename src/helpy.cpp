@@ -312,8 +312,8 @@ void Helpy::displayAllStations() {
 }
 
 Vertex *selectStation(Program_data &data,std::vector<Vertex*> vector, int &id, std::string message) {
-    int input;
-    Vertex *v;
+    int input = -1;
+    Vertex *v = nullptr;
 
     while (true) {
         std::cout << message;
@@ -328,7 +328,9 @@ Vertex *selectStation(Program_data &data,std::vector<Vertex*> vector, int &id, s
                 std::cout << "U already typed this station choose another\n";
                 continue;
             }
-            v = data.graph.findVertex(input);
+            for(Vertex* e : vector){
+                if(e->getId() == input) v = e;
+            } // tem de ver no vector
             if (v != nullptr) {
                 id = input;
                 return v;
@@ -339,7 +341,15 @@ Vertex *selectStation(Program_data &data,std::vector<Vertex*> vector, int &id, s
     }
 }
 
-std::vector<Vertex*> selectDistrict(Program_data& data,){
+std::vector<Vertex*> selectDistrict(Program_data& data,std::string message){
+    std::string input;
+    while(true){
+        std::cout << message;
+        std::cin >> input;
+
+
+
+    }
 
 }
 
@@ -431,6 +441,19 @@ std::vector<Vertex*> printPagesMaps(Program_data &data, int page_size, int num_c
         } else if (input == "q") {
             break;
         } else if (input == "s") {
+
+            if(type == "District"){
+
+                selectDistrict(data)
+
+
+            }
+            else if (type == "Municipality"){
+
+            }
+            else if (type == "Township"){
+
+            }
 
 
 
