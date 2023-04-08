@@ -14,6 +14,7 @@
 class Helpy {
     private:
         Graph graph;
+        Program_data data;
 
         // for search purposes
 
@@ -29,6 +30,7 @@ class Helpy {
         std::string readInput(const std::string& instruction, uSet<std::string>& options);
 
         void displayAllStations();
+        void displayMaximumTrains();
 
         void terminal();
         void advanced_mode();

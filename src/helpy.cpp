@@ -21,9 +21,9 @@
 #define BREAK1  std::cout << std::endl << YELLOW << BREAK << RESET << std::endl << std::endl;
 
 std::map<std::string, int> Helpy::command = {{"display", 1}, {"print", 1}, {"show", 1}};
-std::map<std::string, int> Helpy::target = {{"all", 6}, {"shortest", 8}, {"fastest", 8}, {"reachable", 10}};
+std::map<std::string, int> Helpy::target = {{"all", 6}, {"shortest", 8}, {"fastest", 8}, {"reachable", 10}, {"maximum", 11}};
 std::map<std::string, int> Helpy::what = {{"stations", 24}, {"info", 24}, {"route", 27}, {"routes", 27}, {"flight", 27},
-                                {"flights", 27}, {"path", 27}, {"paths", 27}, {"airport", 29}, {"airports", 29}};
+                                {"flights", 27}, {"path", 27}, {"paths", 27}, {"trains", 29}, {"trains", 29}};
 
 /**
  * @brief turns all the characters of a string into lowercase or uppercase
@@ -41,7 +41,7 @@ void Helpy::lowercase(std::string & s, bool uppercase){
  * @brief Construct a new Helpy:: Helpy object
  * @param graph graph that contains all the data regarding Airports, Airlines and flights
  */
-Helpy::Helpy(Program_data& data) : graph(data.graph) {}
+Helpy::Helpy(Program_data& data) : graph(data.graph), data(data) {}
 
 /**
  * @brief reads a line of user input
@@ -241,7 +241,8 @@ bool Helpy::process_command(std::string& s1, std::string& s2, std::string& s3){
             displayAllStations();
             break;
         }
-        case(36) : {
+        case(41) : {
+            displayMaximumTrains();
             break;
         }
         case (40) : {
@@ -258,25 +259,72 @@ bool Helpy::process_command(std::string& s1, std::string& s2, std::string& s3){
 }
 
 void Helpy::displayAllStations() {
-
     fort::utf8_table table;
     table.set_border_style(FT_NICE_STYLE);
 
-    table.row(0).set_cell_content_text_style(fort::text_style::bold);
-    table.row(0).set_cell_content_fg_color(fort::color::yellow);
     table << fort::header;
 
-    std::list<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line"};
+    std::vector<std::string> columnNames = {"ID", "Name", "District", "Municipality", "Line"};
 
-    auto it = columnNames.begin();
-    for (int i = 0; it != columnNames.end(); i++) {
-        table << *it++;
-        table.column(i).set_cell_text_align(fort::text_align::center);
+    for (const auto& column : columnNames) {
+        table << fort::header << column;
     }
+
     table << fort::endr;
 
-    for(int i = 1; i < graph.vertexSet.size(); i++){
-        table << graph.vertexSet[i]->getId() << graph.vertexSet[i]->getName() << graph.vertexSet[i]->getDistrict() << graph.vertexSet[i]->getMunicipality() << "Line Not Working" << fort::endr;
+    for (int i = 1; i < graph.vertexSet.size(); i++) {
+        table << graph.vertexSet[i]->getId() << graph.vertexSet[i]->getName() << graph.vertexSet[i]->getDistrict() << graph.vertexSet[i]->getMunicipality() << graph.vertexSet[i]->getLine() << fort::endr;
     }
-    std::cout << table.to_string();
+
+    // Adjust column width based on maximum length of data in each column
+    table.column(0).set_cell_text_align(fort::text_align::center);
+    table.column(1).set_cell_text_align(fort::text_align::center);
+    table.column(1).set_cell_min_width(20);
+    table.column(2).set_cell_text_align(fort::text_align::center);
+    table.column(3).set_cell_text_align(fort::text_align::center);
+    table.column(3).set_cell_min_width(20);
+    table.column(4).set_cell_text_align(fort::text_align::center);
+
+    // Print formatted table
+    std::cout << table.to_string() << std::endl;
 }
+
+void Helpy::displayMaximumTrains() {
+
+    b1: std::cout << std::endl << YELLOW << BREAK << RESET << std::endl << std::endl;
+
+    std::cout << "Departure station" <<std::endl << std::endl;
+    std::cout << "Choose from: \n\n" << RED << "All Stations \n" << "District \n" << "Municipality \n" << "Line \n";
+
+    std::string s1,s2,s3;
+    std::istringstream s_;
+
+    std::cin >> s1; //need to lowecase?
+
+    if(s1 != "All Stations" || s1 != "District" || s1 != "Municipality" || s1 != "Line" ){
+        std::cout << "Invalid Input\n try again\n!" << std::endl;//tlvz fzr outra coisa
+    }
+    else if(s1 == "All Stations"){
+
+
+        fort::utf8_table table;
+        table.set_border_style(FT_SOLID_ROUND_STYLE);
+        table << fort::header << "ID" << "Name" << fort::endr;
+        for (const auto& row : data) {
+            table << row[0] << row[1] << fort::endr;
+        }
+        std::cout << table.to_string() << std::endl;
+        }
+
+
+
+
+
+    }
+
+
+
+
+}
+
+

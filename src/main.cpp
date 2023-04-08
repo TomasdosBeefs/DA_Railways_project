@@ -12,8 +12,8 @@
 int main() {
 
     Program_data data;
-   /*Helpy helpy(data);
-    helpy.terminal();*/
+   Helpy helpy(data);
+    helpy.terminal();
 
     /*
     Program_data cringe;
@@ -27,7 +27,7 @@ int main() {
         }
     }
     */
-    Vertex* v = data.Name.find("Trofa")->second;
+    /*Vertex* v = data.Name.find("Trofa")->second;
     Vertex* vv = data.Name.find("Aveiro - Vouga")->second;
     Edge* vvv = data.graph.edgeSet[501];
     std::vector<Vertex*> vec;
@@ -37,5 +37,5 @@ int main() {
     data.graph.edmondskarp(v,vv);
     double max = data.graph.Dijkstra(v,vv);
     std::cout << max;
-
+*/
 }
