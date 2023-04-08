@@ -12,6 +12,7 @@
 int main() {
 
     Program_data data;
+
    Helpy helpy(data);
     helpy.terminal();
 
@@ -31,7 +32,8 @@ int main() {
     Vertex* vv = data.Name.find("Aveiro - Vouga")->second;
     Edge* vvv = data.graph.edgeSet[501];
     std::vector<Vertex*> vec;
-    std::vector<Edge*> edg;
+    std::vector<Edge*>
+     edg;
     edg.push_back(vvv);
     data.SubGraphEdit(data.graph, edg,vec);
     data.graph.edmondskarp(v,vv);

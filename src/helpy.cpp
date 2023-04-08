@@ -311,7 +311,7 @@ void Helpy::displayAllStations() {
     std::cout << table.to_string() << std::endl;
 }
 
-Vertex *selectStation(Program_data &data, int &id, std::string message) {
+Vertex *selectStation(Program_data &data,std::vector<Vertex*> vector, int &id, std::string message) {
     int input;
     Vertex *v;
 
@@ -342,10 +342,10 @@ Vertex *selectStation(Program_data &data, int &id, std::string message) {
 
 
 
-std::vector<Vertex*> printPages(Program_data &data, int page_size, int num_cols) {
+std::vector<Vertex*> printPages(Program_data & program_data, std::vector<Vertex*>& data, int page_size, int num_cols) {
     // Get total number of pages
     int num_pages =
-            (data.Name.size() / (page_size * num_cols)) + ((data.Name.size() % (page_size * num_cols)) == 0 ? 0 : 1);
+            (data.size() / (page_size * num_cols)) + ((data.size() % (page_size * num_cols)) == 0 ? 0 : 1);
 
     // Print pages
     int current_page = 1;
@@ -355,8 +355,7 @@ std::vector<Vertex*> printPages(Program_data &data, int page_size, int num_cols)
     while (true) {
         // Get start and end indices for current page
         int start_index = (current_page - 1) * page_size * num_cols;
-        int end_index = start_index + page_size * num_cols > data.Name.size() ? data.Name.size() : start_index +
-                                                                                                   page_size * num_cols;
+        int end_index = start_index + page_size * num_cols > data.size() ? data.size() : start_index +page_size * num_cols;
 
         // Create table for current page
         fort::utf8_table table;
@@ -368,7 +367,7 @@ std::vector<Vertex*> printPages(Program_data &data, int page_size, int num_cols)
         for (int i = start_index; i < end_index; i += num_cols) {
             for (int j = 0; j < num_cols; j++) {
                 if (i + j < end_index) {
-                    table << data.graph.vertexSet[i + j]->getId() << data.graph.vertexSet[i + j]->getName();
+                    table << data[i + j]->getId() << data[i + j]->getName();
                 } else {
                     table << "" << "";
                 }
@@ -405,14 +404,14 @@ std::vector<Vertex*> printPages(Program_data &data, int page_size, int num_cols)
             if (station_n == 1) {
 
                 station_n++;
-                Vertex *v = selectStation(data, id, "Select the departure station: ");
+                Vertex *v = selectStation(program_data,data, id, "Select the departure station: ");
                 if (v != nullptr) {
                     vertex_vector.push_back(v);
                 }
 
             } if (station_n == 2) {
 
-                Vertex *vv = selectStation(data, id, "Select the arrival station: ");
+                Vertex *vv = selectStation(program_data,data, id, "Select the arrival station: ");
                 if (vv != nullptr && vv != vertex_vector.front()) {
                     vertex_vector.push_back(vv);
                     std::cout << "xups";
@@ -443,23 +442,48 @@ void Helpy::displayMaximumTrains() {
     std::cout << std::endl << YELLOW << BREAK << RESET << std::endl << std::endl;
 
     std::cout << "Departure station" << std::endl << std::endl;
-    std::cout << "Choose from: \n\n" << RED << "All Stations \n" << "District \n" << "Municipality \n" << "Line \n";
+    std::cout << "Choose from: \n\n" << RED << "All \n" << "District \n" << "Municipality \n" << "Line \n\n";
 
     std::string s1, s2, s3;
     std::istringstream s_;
 
     std::cin >> s1; //need to lowecase?
+    std::cout << s1;
 
     std::cout << std::endl << YELLOW << BREAK << RESET << std::endl << std::endl;
 
-    /* if(s1 != "All Stations" && s1 != "District" && s1 != "Municipality" && s1 != "Line" ){
+     if(s1 != "All" && s1 != "District" && s1 != "Municipality" && s1 != "Line" ){
          std::cout << "Invalid Input\n try again!" << std::endl;//tlvz fzr outra coisa
-     }*/
-    // if(s1 == "All Stations"){
+         goto b1;
+     }
+     if(s1 == "All") {
 
-    const int page_size = 15;
-    const int num_cols = 6; // number of columns to print
+         const int page_size = 15;
+         const int num_cols = 6; // number of columns to print
 
-    printPages(data, 10, 6);
+         double max = 0;
+         std::vector<Vertex *> vertexx;
+         vertexx = printPages(data,data.Stations_Network, page_size, num_cols);
+         data.graph.ResetGraphValues();
+         max = data.graph.edmondskarp(vertexx[0], vertexx[1]);
+
+         std::cout << '\n' << "the maximum amount of trains that can go from " << vertexx[0]->getName() << " to "
+                   << vertexx[1]->getName() << " are " << max;
+
+     }
+
+     if(s1 == "District"){
+
+         // printar distritos
+
+         const int page_size = 15;
+         const int num_cols = 6; // number of columns to print
+
+         double max = 0;
+         std::vector<Vertex *> vertexx;
+         //vertexx = printPages(data,data.District.find(), page_size, num_cols);
+
+
+     }
 
 }
