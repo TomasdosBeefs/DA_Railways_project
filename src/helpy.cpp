@@ -339,13 +339,122 @@ Vertex *selectStation(Program_data &data,std::vector<Vertex*> vector, int &id, s
     }
 }
 
+std::vector<Vertex*> selectDistrict(Program_data& data,){
+
+}
 
 
 
-std::vector<Vertex*> printPages(Program_data & program_data, std::vector<Vertex*>& data, int page_size, int num_cols) {
+std::vector<Vertex*> printPagesMaps(Program_data &data, int page_size, int num_cols,std::string type) {
     // Get total number of pages
+    std::unordered_map<std::string, std::vector<Vertex *>> map;
+    int size;
+    if (type == "District") {
+        size = data.District.size();
+        map = data.District;
+    }
+    else if (type == "Municipality") {
+        size = data.Municipality.size();
+        map = data.Municipality;
+    }
+    else if (type == "Township") {
+        size = data.Township.size();
+        map = data.Township;
+    }
     int num_pages =
-            (data.size() / (page_size * num_cols)) + ((data.size() % (page_size * num_cols)) == 0 ? 0 : 1);
+            (size / (page_size * num_cols)) + ((size % (page_size * num_cols)) == 0 ? 0 : 1);
+
+    // Print pages
+    int current_page = 1;
+    int station_n = 1;
+    std::vector<Vertex *> vertex_vector;
+    fort::utf8_table table;
+    table << fort::header;
+    while (true) {
+
+
+        // Create table for current page
+
+        auto start_iter = std::next(map.begin(), (current_page - 1) * page_size * num_cols);
+        auto end_iter = map.end();
+        if (std::distance(start_iter, end_iter) > page_size * num_cols) {
+            end_iter = std::next(start_iter, page_size * num_cols);
+        }
+
+        // Create table for current page
+
+        for (int i = 0; i < num_cols; i++) {
+            if (type == "District") table << "District";
+            else if (type == "Municipality") table << "Municipality";
+            else if (type == "Township") table << "Township";
+
+        }
+        table << fort::endr;
+        for (auto iter = start_iter; iter != end_iter; std::advance(iter, num_cols)) {
+            for (int j = 0; j < num_cols; j++) {
+                if (iter != map.end()) {
+                    table << iter->first;
+                    std::advance(iter, 1);
+                } else {
+                    table << "" << "";
+                }
+            }
+        }
+        table << fort::endr;
+
+
+
+
+        // Print table and page number
+        std::cout << table.to_string() << std::endl;
+        std::cout << "Page " << current_page << " of " << num_pages << std::endl;
+
+        // Ask user if they want to go to the next or previous page, or exit
+
+        std::string input;
+        std::cout << "Press 'n' for next page, 'p' for previous page, or 'q' to quit or 's' to make your selection: ";
+        std::cin >> input;
+
+        // Check input and update current page accordingly
+        if (input == "n") {
+            if (current_page == num_pages) {
+                std::cout << "Already on the last page." << std::endl;
+            } else {
+                current_page++;
+            }
+        } else if (input == "p") {
+            if (current_page == 1) {
+                std::cout << "Already on the first page." << std::endl;
+            } else {
+                current_page--;
+            }
+        } else if (input == "q") {
+            break;
+        } else if (input == "s") {
+
+
+
+
+        }
+
+    else {
+        std::cout << "Invalid input. Please try again.\n" << std::endl;
+    }
+
+    // Print separator
+    std::cout << "------------------------------------------------------" << std::endl;
+}
+        return vertex_vector;
+}
+
+std::vector<Vertex*> printPages(Program_data &data,std::vector<Vertex*> vector, int page_size, int num_cols,std::string type) {
+    // Get total number of pages
+    std::unordered_map<std::string,std::vector<Vertex*>> map;
+    int size;
+   size = vector.size();
+
+    int num_pages =
+            (size / (page_size * num_cols)) + ((size % (page_size * num_cols)) == 0 ? 0 : 1);
 
     // Print pages
     int current_page = 1;
@@ -355,11 +464,13 @@ std::vector<Vertex*> printPages(Program_data & program_data, std::vector<Vertex*
     while (true) {
         // Get start and end indices for current page
         int start_index = (current_page - 1) * page_size * num_cols;
-        int end_index = start_index + page_size * num_cols > data.size() ? data.size() : start_index +page_size * num_cols;
+        int end_index = start_index + page_size * num_cols > size ? size : start_index +page_size * num_cols;
+
 
         // Create table for current page
         fort::utf8_table table;
         table << fort::header;
+
         for (int i = 0; i < num_cols; i++) {
             table << "ID" << "Name";
         }
@@ -367,13 +478,14 @@ std::vector<Vertex*> printPages(Program_data & program_data, std::vector<Vertex*
         for (int i = start_index; i < end_index; i += num_cols) {
             for (int j = 0; j < num_cols; j++) {
                 if (i + j < end_index) {
-                    table << data[i + j]->getId() << data[i + j]->getName();
+                    table << vector[i + j]->getId() << vector[i + j]->getName();
                 } else {
                     table << "" << "";
                 }
             }
             table << fort::endr;
         }
+
 
         // Print table and page number
         std::cout << table.to_string() << std::endl;
@@ -404,14 +516,14 @@ std::vector<Vertex*> printPages(Program_data & program_data, std::vector<Vertex*
             if (station_n == 1) {
 
                 station_n++;
-                Vertex *v = selectStation(program_data,data, id, "Select the departure station: ");
+                Vertex *v = selectStation(data,vector, id, "Select the departure station: ");
                 if (v != nullptr) {
                     vertex_vector.push_back(v);
                 }
 
             } if (station_n == 2) {
 
-                Vertex *vv = selectStation(program_data,data, id, "Select the arrival station: ");
+                Vertex *vv = selectStation(data,vector, id, "Select the arrival station: ");
                 if (vv != nullptr && vv != vertex_vector.front()) {
                     vertex_vector.push_back(vv);
                     std::cout << "xups";
@@ -474,7 +586,7 @@ void Helpy::displayMaximumTrains() {
 
      if(s1 == "District"){
 
-         // printar distritos
+         //table with the Districts
 
          const int page_size = 15;
          const int num_cols = 6; // number of columns to print
