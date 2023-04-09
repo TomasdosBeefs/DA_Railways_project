@@ -110,7 +110,12 @@ Menu::Menu(Program_data data) {
                 std::cout <<" Introduce the number of municipalities to display... \n";
                 std::cin >> input;
                 int k = std::stoi(input);
-                //verify if number is valid
+
+                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
+                    std::cout <<" Introduce the number of stations to display... \n";
+                    std::cin >> input;
+                    k = std::stoi(input);
+                }
 
                 std::cout <<"The top ", k, " municipalities that require the largest  of trains are is \n";
 
@@ -124,14 +129,29 @@ Menu::Menu(Program_data data) {
                 int k = std::stoi(input);
                 //verify if number is valid
 
+                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
+                    std::cout <<" Introduce the number of stations to display... \n";
+                    std::cin >> input;
+                    k = std::stoi(input);
+                }
+
                 std::cout <<"The top ", k, " districts that require the largest  of trains are is \n";
 
                 //for cycle to print the vector
             }
             else if (topic_in_metrics_menu == 5){
                 std::string station;
-                std::cout <<" Introduce the station... \n";
-                std::getline(std::cin, station);
+                auto it = data.Stations_Network.end(); // Initialize iterator to end
+
+                while (it == data.Stations_Network.end() || station == "") {
+                    std::cout << "Enter station: \n";
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore any remaining input from previous input
+                    std::getline(std::cin, station);
+
+                    it = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(), [&station](Vertex* vertex){
+                        return station == vertex->getName();
+                    });
+                }
 
                 //verify if station exists
 
@@ -251,7 +271,12 @@ Menu::Menu(Program_data data) {
                 std::cout <<" Introduce the number of stations to display... \n";
                 std::cin >> input;
                 int k = std::stoi(input);
-                //verify if number is valid
+
+                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
+                    std::cout <<" Introduce the number of stations to display... \n";
+                    std::cin >> input;
+                    k = std::stoi(input);
+                }
 
                 std::cout <<"The top ", k, " stations that are the most affected by each segment failure \n";
 
