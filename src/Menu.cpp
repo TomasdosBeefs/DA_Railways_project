@@ -86,13 +86,6 @@ Menu::Menu(Program_data data) {
                 }
 
 
-
-
-
-
-
-
-
             //function
 
             //cout the number of simultaneous trains between two stations
