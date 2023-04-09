@@ -111,13 +111,13 @@ Menu::Menu(Program_data data) {
                 std::cin >> input;
                 int k = std::stoi(input);
 
-                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
+                while(k>data.Municipality.size() || k<data.Municipality.size()){
                     std::cout <<" Introduce the number of stations to display... \n";
                     std::cin >> input;
                     k = std::stoi(input);
                 }
 
-                std::cout <<"The top ", k, " municipalities that require the largest  of trains are is \n";
+                std::cout <<"The top " + input + " municipalities that require the largest  of trains are is \n";
 
                 //for cycle to print the vector
 
@@ -129,8 +129,8 @@ Menu::Menu(Program_data data) {
                 int k = std::stoi(input);
                 //verify if number is valid
 
-                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
-                    std::cout <<" Introduce the number of stations to display... \n";
+                while(k>data.District.size() || k<data.District.size()){
+                    std::cout <<" Introduce the number of districts to display... \n";
                     std::cin >> input;
                     k = std::stoi(input);
                 }
