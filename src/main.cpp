@@ -13,7 +13,7 @@
 int main() {
 
     Program_data data;
-    Menu();
+    Menu menu(data);
 
 
 

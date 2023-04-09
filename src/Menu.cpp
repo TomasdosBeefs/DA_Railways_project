@@ -5,8 +5,12 @@
 #include "Menu.h"
 #include <string>
 #include <iostream>
+#include "Program_data.h"
+#include "Graph.h"
 
-Menu::Menu() {
+Menu::Menu(Program_data data) {
+    this->data_ = data;
+
     std::cout << "\n\n ----------------------------------------------\n"
             "|                 Main Menu                    |\n"
             " ----------------------------------------------\n";
@@ -54,24 +58,48 @@ Menu::Menu() {
 
             if (topic_in_metrics_menu == 1) {
                 std::string station1;
-                std::cout << "Enter station1: \n";
+                auto it1 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while(station1=="")
+                while (it1 == data.Stations_Network.end() || station1 == "") {
+                    std::cout << "Enter station1: \n";
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
+                                    '\n'); // Ignore any remaining input from previous input
                     std::getline(std::cin, station1);
 
+                    it1 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station1](Vertex *vertex) {
+                                           return station1 == vertex->getName();
+                                       });
+                }
+
                 std::string station2;
-                std::cout << "Enter station2: \n";
-                std::getline(std::cin, station2);
+                auto it2 = data.Stations_Network.end(); // Initialize iterator to end
+
+                while (it2 == data.Stations_Network.end() || station2 == "") {
+                    std::cout << "Enter station2: \n";
+                    std::getline(std::cin, station2);
+
+                    it2 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station2](Vertex *vertex) {
+                                           return station2 == vertex->getName();
+                                       });
+                }
 
 
-                //check if stations exist
 
-                //function
 
-                //cout the number of simultaneous trains between two stations
 
-                std::cout <<"The maximum number of simultaneous trains between the stations "+ station1+ " and " + station2 + " is " "\n";
-            }
+
+
+
+
+            //function
+
+            //cout the number of simultaneous trains between two stations
+
+            std::cout << "The maximum number of simultaneous trains between the stations " + station1 + " and " +
+                         station2 + " is " "\n";
+        }
             else if (topic_in_metrics_menu == 2){
                 std::cout <<"The stations that require the most amount of trains are is \n";
                 //for cycle to print the vector
@@ -130,14 +158,32 @@ Menu::Menu() {
 
             if (topic_in_optimization_menu == 1) {
                 std::string station1;
-                std::cout << "Enter station1: \n";
+                auto it1 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while(station1=="")
+                while (it1 == data.Stations_Network.end() || station1 == "") {
+                    std::cout << "Enter station1: \n";
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
+                                    '\n'); // Ignore any remaining input from previous input
                     std::getline(std::cin, station1);
 
+                    it1 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station1](Vertex *vertex) {
+                                           return station1 == vertex->getName();
+                                       });
+                }
+
                 std::string station2;
-                std::cout << "Enter station2: \n";
-                std::getline(std::cin, station2);
+                auto it2 = data.Stations_Network.end(); // Initialize iterator to end
+
+                while (it2 == data.Stations_Network.end() || station2 == "") {
+                    std::cout << "Enter station2: \n";
+                    std::getline(std::cin, station2);
+
+                    it2 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station2](Vertex *vertex) {
+                                           return station2 == vertex->getName();
+                                       });
+                }
 
                 //check if stations exist
 
@@ -167,16 +213,32 @@ Menu::Menu() {
 
             if (topic_in_failures_menu == 1) {
                 std::string station1;
-                std::cout << "Enter station1: \n";
+                auto it1 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while(station1=="")
+                while (it1 == data.Stations_Network.end() || station1 == "") {
+                    std::cout << "Enter station1: \n";
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
+                                    '\n'); // Ignore any remaining input from previous input
                     std::getline(std::cin, station1);
 
-                std::string station2;
-                std::cout << "Enter station2: \n";
-                std::getline(std::cin, station2);
+                    it1 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station1](Vertex *vertex) {
+                                           return station1 == vertex->getName();
+                                       });
+                }
 
-                //check if stations exist
+                std::string station2;
+                auto it2 = data.Stations_Network.end(); // Initialize iterator to end
+
+                while (it2 == data.Stations_Network.end() || station2 == "") {
+                    std::cout << "Enter station2: \n";
+                    std::getline(std::cin, station2);
+
+                    it2 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
+                                       [&station2](Vertex *vertex) {
+                                           return station2 == vertex->getName();
+                                       });
+                }
 
                 //function
 
@@ -229,7 +291,7 @@ void Menu::backToMainMenu( ){
         catch (...) {
             back = 10;
         }
-        if (back == 1) Menu();
+        if (back == 1) Menu menu(data_);
         else if (back == 0) break;
         std::cout << "> Invalid choice.\n"
                      "[1]> Back to Main Menu.\n"
