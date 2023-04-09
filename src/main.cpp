@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "Program_data.h"
-#include "helpy.h"
+#include "Menu.h"
 #include "file_reader.h"
 
 
@@ -13,12 +13,7 @@ int main() {
 
     Program_data data;
 
-    std::vector<Vertex*> LIne = data.Line.find("Linha do Norte")->second;
-    for(Edge* e : data.graph.edgeSet){
-        if((std::find(LIne.begin(),LIne.end(),e->getOrig()) == LIne.end()) ||(std::find(LIne.begin(),LIne.end(),e->getDest()) == LIne.end()))
-        std::cout << e->getOrig()->getName() << "->" << e->getDest()->getName()<<'?';
-        }
-    }
+    Menu();}
    /*Helpy helpy(data);
     helpy.terminal();*/
 

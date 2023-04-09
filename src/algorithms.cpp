@@ -11,6 +11,9 @@
 
 
 double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow?
+
+    //2.1 -- antes de usar deve-se usar ResetGraphValues()
+
     double maxflow = 0;
     if(source->getLine() != sink->getLine()) return 0;
 
@@ -124,7 +127,7 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
 }
 
 void Graph::Most_fluent_stations() {
-
+                            //  2.2 -- calcula as estaçoes com maior flow
     double maxflow = 0;
     std::pair<Vertex *, Vertex *> pair;
     for (Vertex *v: vertexSet) {
@@ -144,10 +147,10 @@ void Graph::Most_fluent_stations() {
 }
 
 double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
+                // 3.1 cost efficient -- podemos usar Dijkstra our Bellman
+     this->graph.edmondskarp(v1, v2);
 
-    double maxflow = this->graph.edmondskarp(v1, v2);
-
-    double min_cost = 0;
+    double min_cost;
 
     min_cost = this->graph.Dijkstra(v1, v2);
 
@@ -280,7 +283,7 @@ Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> &edges, s
 }
 
 double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Vertex* v2,std::vector<Vertex*> vertex,std::vector<Edge*> edge){
-
+                        // 4.1 -- ele retira as edegs e vertex dos vetores e faz edmondkarp, depois restitui o grafo, se quiseres restituir atraves do menu será melhor
     double max = 0;
     SubGraphEdit(this->graph,edge,vertex);
     graph.ResetGraphValues();
@@ -294,7 +297,7 @@ double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Ver
 std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
 Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
                                std::vector<Vertex *> vertex) {
-    double max = 0;
+    double max = 0;                                           //4.2 -- função que retorna uma priority queue com os segmentos mais afetados, 4.2;
     std::unordered_map<Edge *, double> oldflow;
     max = graph.edmondskarp(v1, v2);
     for (Edge *e: graph.edgeSet) {
@@ -386,7 +389,7 @@ std::vector<std::pair<std::string, int>> Graph::Budget_needed_municipality() {
 
 
 double Graph::MaxTrainsAtStation(Vertex* sink){
-
+         // 2.4 --
     Vertex* super = new Vertex("SuperSource","SuperDistrict","SuperMunicipality","SuperTownship","SuperLine");
     this->addVertex(super);
     double max;
