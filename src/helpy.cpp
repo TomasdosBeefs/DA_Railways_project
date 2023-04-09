@@ -1,4 +1,4 @@
-#include "helpy.h"
+/*#include "helpy.h"
 
 #include <fstream>
 #include <sstream>
@@ -20,7 +20,7 @@
 #define BREAK   "- - - - - - - - - - - - - - - - - - - - -"
 #define BREAK1  std::cout << std::endl << YELLOW << BREAK << RESET << std::endl << std::endl;
 
-std::map<std::string, int> Helpy::command = {{"display", 1},
+/*std::map<std::string, int> Helpy::command = {{"display", 1},
                                              {"print",   1},
                                              {"show",    1}};
 std::map<std::string, int> Helpy::target = {{"all",       6},
@@ -39,22 +39,22 @@ std::map<std::string, int> Helpy::what = {{"stations", 24},
                                           {"trains",   29},
                                           {"trains",   29}};
 
-/**
+
  * @brief turns all the characters of a string into lowercase or uppercase
  * @complexity O(n)
  * @param s string to be modified
  * @param uppercase if true turns all the characters of the string to uppercase; if false turns all the characters of the string to lowercase
- */
+
 void Helpy::lowercase(std::string &s, bool uppercase) {
     for (char &c: s) {
         c = (uppercase) ? (char) toupper(c) : (char) tolower(c);
     }
 }
 
-/**
+/*
  * @brief Construct a new Helpy:: Helpy object
  * @param graph graph that contains all the data regarding Airports, Airlines and flights
- */
+
 Helpy::Helpy(Program_data &data) : graph(data.graph), data(data) {}
 
 /**
@@ -63,7 +63,7 @@ Helpy::Helpy(Program_data &data) : graph(data.graph), data(data) {}
  * @param instruction the instruction that will be displayed before prompting the user to type
  * @param options the options that will be displayed to the user
  * @return read input
- */
+
 std::string Helpy::readInput(const std::string &instruction, uSet<std::string> &options) {
     std::string res;
     bool valid = false;
@@ -97,7 +97,7 @@ std::string Helpy::readInput(const std::string &instruction, uSet<std::string> &
 /**
  * @brief allostd::ws the user to choose the mode of the UI
  * @complexity O(n^2)
- */
+
 void Helpy::terminal() {
     std::string instruction = "Which mode would you prefer?\n\n"
                               "* Guided\n"
@@ -114,7 +114,7 @@ void Helpy::terminal() {
 /**
  * @brief executes the advanced mode of the UI
  * @complexity O(1)
- */
+
 void Helpy::advanced_mode() {
     b1:
     std::cout << std::endl << YELLOW << BREAK << RESET << std::endl;
@@ -165,7 +165,7 @@ void Helpy::advanced_mode() {
 /**
  * @brief executes the guided mode of the UI
  * @complexity O(1)
- */
+
 void Helpy::guided_mode() {
     b2:
     std::cout << std::endl << YELLOW << BREAK << RESET << std::endl;
@@ -255,7 +255,7 @@ void Helpy::guided_mode() {
  * @param s2 second word of the command
  * @param s3 third word of the command
  * @return 'true' if the command exists, 'false' otherwise
- */
+
 bool Helpy::process_command(std::string &s1, std::string &s2, std::string &s3) {
     switch (command[s1] + target[s2] + what[s3]) {
         case (31) : {
@@ -622,3 +622,4 @@ void Helpy::displayMaximumTrains() {
      }
 
 }
+*/
