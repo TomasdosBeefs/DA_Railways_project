@@ -7,18 +7,21 @@
 
 
 #include <string>
+#include "Program_data.h"
 
 class Menu {
-
 
     void Error(const std::__cxx11::basic_string<char> &erro);
 
 public:
+    Menu(Program_data data);
     Menu();
 
     void backToMainMenu(std::string striBack);
 
     void backToMainMenu();
+
+    Program_data data_;
 };
 
 
