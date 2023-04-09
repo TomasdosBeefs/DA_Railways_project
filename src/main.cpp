@@ -13,8 +13,14 @@ int main() {
 
     Program_data data;
 
-   Helpy helpy(data);
-    helpy.terminal();
+    std::vector<Vertex*> LIne = data.Line.find("Linha do Norte")->second;
+    for(Edge* e : data.graph.edgeSet){
+        if((std::find(LIne.begin(),LIne.end(),e->getOrig()) == LIne.end()) ||(std::find(LIne.begin(),LIne.end(),e->getDest()) == LIne.end()))
+        std::cout << e->getOrig()->getName() << "->" << e->getDest()->getName()<<'?';
+        }
+    }
+   /*Helpy helpy(data);
+    helpy.terminal();*/
 
     /*
     Program_data cringe;
@@ -27,9 +33,10 @@ int main() {
             std::cout << par.first << " " << par.second << '\n';
         }
     }
-    */
-    /*Vertex* v = data.Name.find("Trofa")->second;
-    Vertex* vv = data.Name.find("Aveiro - Vouga")->second;
+    *//*
+    Vertex* v = data.Name.find("E")->second;
+    Vertex* vv = data.Name.find("D")->second;
+    std::cout << data.Cost_Efficient(v,vv);
     Edge* vvv = data.graph.edgeSet[501];
     std::vector<Vertex*> vec;
     std::vector<Edge*>
@@ -38,6 +45,6 @@ int main() {
     data.SubGraphEdit(data.graph, edg,vec);
     data.graph.edmondskarp(v,vv);
     double max = data.graph.Dijkstra(v,vv);
-    std::cout << max;
-*/
-}
+    std::cout << max;*/
+
+
