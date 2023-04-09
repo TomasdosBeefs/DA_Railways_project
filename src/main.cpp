@@ -7,14 +7,18 @@
 #include "Program_data.h"
 #include "helpy.h"
 #include "file_reader.h"
+#include "Menu.h"
 
 
 int main() {
 
     Program_data data;
+    Menu();
 
-   Helpy helpy(data);
-    helpy.terminal();
+
+
+   //Helpy helpy(data);
+    //helpy.terminal();
 
     /*
     Program_data cringe;
