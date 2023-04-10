@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Railways.dir/src/Graph.cpp.o"
   "CMakeFiles/Railways.dir/src/Graph.cpp.o.d"
+  "CMakeFiles/Railways.dir/src/Menu.cpp.o"
+  "CMakeFiles/Railways.dir/src/Menu.cpp.o.d"
   "CMakeFiles/Railways.dir/src/Program_data.cpp.o"
   "CMakeFiles/Railways.dir/src/Program_data.cpp.o.d"
   "CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.o"
@@ -16,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Railways.dir/src/main.cpp.o"
   "CMakeFiles/Railways.dir/src/main.cpp.o.d"
   "Railways"
+  "Railways.manifest"
   "Railways.pdb"
 )
 
