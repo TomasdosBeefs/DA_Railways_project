@@ -169,7 +169,10 @@ CMakeFiles/Railways.dir/src/Graph.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
-  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h
 
 CMakeFiles/Railways.dir/src/Menu.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Menu.cpp \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Menu.h \
@@ -340,7 +343,10 @@ CMakeFiles/Railways.dir/src/Menu.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ 
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/algorithmfwd.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
-  C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Vertex_Edge.h
+  C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Vertex_Edge.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h
 
 CMakeFiles/Railways.dir/src/Program_data.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Program_data.cpp \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Program_data.h \
@@ -511,6 +517,9 @@ CMakeFiles/Railways.dir/src/Program_data.cpp.obj: C:/Users/ritac/OneDrive/Ambien
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Vertex_Edge.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/file_reader.h
 
 CMakeFiles/Railways.dir/src/Vertex_Edge.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Vertex_Edge.cpp \
@@ -1067,7 +1076,8 @@ CMakeFiles/Railways.dir/src/file_reader.cpp.obj: C:/Users/ritac/OneDrive/Ambient
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/unordered_map \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h \
-  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional
 
 CMakeFiles/Railways.dir/src/helpy.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/helpy.cpp
 
@@ -1278,6 +1288,9 @@ CMakeFiles/Railways.dir/src/main.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ 
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tempbuf.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Vertex_Edge.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
+  C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
   C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/helpy.h \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
   C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
@@ -1672,6 +1685,10 @@ C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w6
 
 C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array:
 
+C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional:
+
+C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h:
+
 C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Menu.cpp:
 
 C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Menu.h:
@@ -1689,10 +1706,6 @@ C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w6
 C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/float.h:
 
 C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/x86_64-w64-mingw32/include/float.h:
-
-C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional:
-
-C:/Users/ritac/AppData/Local/JetBrains/CLion\ 2022.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h:
 
 C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/algorithms.h:
 

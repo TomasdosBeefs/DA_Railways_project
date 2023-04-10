@@ -32,7 +32,7 @@ public:
     void set_Line(std::string,Vertex*);
     std::vector<std::pair<std::string, double>> most_visited_municipalities();
     std::priority_queue<Edge *, std::vector<Edge *>,std::function<bool(Edge *, Edge *)>>
-    unresolved_lines(Graph graph, Vertex* v1, Vertex* v2, std::vector<Edge*> edges, std::vector<Vertex*> vertex);
+    unresolved_lines(Graph graph, Vertex* v1, Vertex* v2, std::vector<Edge*> edges, std::vector<Vertex*> vertex, int num);
 
 
     VE Stations_Network;
@@ -46,33 +46,6 @@ public:
     Categ Municipality;
     Categ Township;
     Categ Line;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /*std::unordered_map<Vertex*,std::vector<Edge*>> VE; // relações entre estaçõpes e ligações

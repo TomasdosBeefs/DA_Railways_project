@@ -69,6 +69,9 @@ public:
     //FUNCOES CACHALDORA
     std::vector<std::pair<std::string, int>> Budget_needed_district();
     std::vector<std::pair<std::string, int>> Budget_needed_municipality();
+
+    double MaxTrainsAtStation(Vertex *sink);
+
 protected:
        // vertex set
 
@@ -86,7 +89,6 @@ protected:
 
     bool subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e );
 
-    double MaxTrainsAtStation(Vertex *sink);
 };
 
 void deleteMatrix(int **m, int n);
