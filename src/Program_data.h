@@ -9,7 +9,7 @@
 #include <set>
 #include <unordered_map>
 #include "Graph.h"
-
+#include <functional>
 
 typedef std::vector<Vertex*> VE;
 typedef std::vector<Edge*> EV;
@@ -31,7 +31,8 @@ public:
     void set_Township(std::string,Vertex*);
     void set_Line(std::string,Vertex*);
     std::vector<std::pair<std::string, double>> most_visited_municipalities();
-    Graph unresolved_lines(Graph graph, Vertex* v1, Vertex* v2,std::vector<Edge*> edges,std::vector<Vertex*> vertex);
+    std::priority_queue<Edge *, std::vector<Edge *>,std::function<bool(Edge *, Edge *)>>
+    unresolved_lines(Graph graph, Vertex* v1, Vertex* v2, std::vector<Edge*> edges, std::vector<Vertex*> vertex);
 
 
     VE Stations_Network;
@@ -106,6 +107,13 @@ public:
     bool SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 
     Graph SubGraphCreate(Graph original, std::vector<Edge *> &edges, std::vector<Vertex *> &vertextoRemove);
+
+    bool removeEdge(Edge *pEdge);
+
+    bool removeVertex(Vertex *v);
+
+    double ReducedConnectivityMaximumTrains(Graph graph, Vertex *v1, Vertex *v2, std::vector<Vertex *> vertex,
+                                            std::vector<Edge *> edge);
 };
 
 

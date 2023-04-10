@@ -11,7 +11,11 @@
 
 
 double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow?
+
+    //2.1 -- antes de usar deve-se usar ResetGraphValues()
+
     double maxflow = 0;
+    if(source->getLine() != sink->getLine()) return 0;
 
 
     while (Find_path(source, sink)) {
@@ -67,7 +71,8 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
 
         for (Edge *e: v->getAdj()) {
 
-            if (!e->getDest()->isVisited() && e->getWeight() - e->getBiFlow() > 0) { // n faz mais sentido aqui meter no flow o que resta e guardar no reverse o flow?
+            if (!e->getDest()->isVisited() && e->getWeight() - e->getBiFlow() >
+                                              0) { // n faz mais sentido aqui meter no flow o que resta e guardar no reverse o flow?
                 e->getDest()->setVisited(true); // nao sei o que fazer com as reverse n entendo a utilidade do reverse
                 e->getDest()->setPath(e);
                 q.push(e->getDest());
@@ -122,7 +127,7 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
 }
 
 void Graph::Most_fluent_stations() {
-
+                            //  2.2 -- calcula as estaçoes com maior flow
     double maxflow = 0;
     std::pair<Vertex *, Vertex *> pair;
     for (Vertex *v: vertexSet) {
@@ -142,41 +147,38 @@ void Graph::Most_fluent_stations() {
 }
 
 double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
-    Graph Gf = Graph(this->graph);
-    Vertex *v = Gf.findVertex(0);
-    Vertex *vv = Gf.findVertex(4);
+                // 3.1 cost efficient -- podemos usar Dijkstra our Bellman
+     this->graph.edmondskarp(v1, v2);
 
-    double maxflow = Gf.edmondskarp(v, vv);
+    double min_cost;
 
-    double min_cost = 0;
-
-    min_cost = Gf.Bellman_Ford(v, vv);
-
+    min_cost = this->graph.Dijkstra(v1, v2);
 
     return min_cost;
 
 
 }
+
 typedef std::pair<int, int> pii;
 
-double Graph::Dijkstra(Vertex* v1, Vertex* v2) {
+double Graph::Dijkstra(Vertex *v1, Vertex *v2) {
 
-    for(Vertex* v : this->vertexSet){
+    for (Vertex *v: this->vertexSet) {
         v->setVisited(false);
     }
 
-    std::priority_queue<Vertex*> pq;
+    std::priority_queue<Vertex *> pq;
     v1->setDist(0);
     pq.push(v1);
 
-    while(!pq.empty()){
+    while (!pq.empty()) {
 
-        Vertex* v = pq.top();
+        Vertex *v = pq.top();
         pq.pop();
-        if(v->isVisited()) continue;
+        if (v->isVisited()) continue;
         v->setVisited(true);
 
-        for(Edge* e : v->getAdj()){
+        for (Edge *e: v->getAdj()) {
             Edge_Relaxation(e);
             pq.push(e->getDest());
         }
@@ -184,7 +186,7 @@ double Graph::Dijkstra(Vertex* v1, Vertex* v2) {
     }
     return v2->getDist();
 
-    }
+}
 
 double Graph::Bellman_Ford(Vertex *v1, Vertex *v2) {
     std::vector<double> distance(vertexSet.size(), INF);
@@ -254,6 +256,7 @@ bool Program_data::SubGraphEdit(Graph original, std::vector<Edge *> edges, std::
             keepEdge.push_back(e->getOtherDirection());
         }
         this->graph.removeVertex(v);
+
     }
 
     return true;
@@ -279,9 +282,22 @@ Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> &edges, s
     return subgraph;
 }
 
-
-Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,std::vector<Vertex *> vertex) {
+double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Vertex* v2,std::vector<Vertex*> vertex,std::vector<Edge*> edge){
+                        // 4.1 -- ele retira as edegs e vertex dos vetores e faz edmondkarp, depois restitui o grafo, se quiseres restituir atraves do menu será melhor
     double max = 0;
+    SubGraphEdit(this->graph,edge,vertex);
+    graph.ResetGraphValues();
+    max = this->graph.edmondskarp(v1,v2);
+    OriginalGraph();
+    return max;
+
+}
+
+
+std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
+Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
+                               std::vector<Vertex *> vertex) {
+    double max = 0;                                           //4.2 -- função que retorna uma priority queue com os segmentos mais afetados, 4.2;
     std::unordered_map<Edge *, double> oldflow;
     max = graph.edmondskarp(v1, v2);
     for (Edge *e: graph.edgeSet) {
@@ -291,8 +307,9 @@ Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::v
     graph.ResetGraphValues();
     std::cout << "primeiro Edmond->" << max << ' ' << '\n' << graph.edgeSet.size() << '\n';
 
-    SubGraphEdit(graph,edges,vertex);
-    std::priority_queue<Edge*, std::vector<Edge*>, std::function<bool(Edge*, Edge*)>> pq([](Edge* a, Edge* b) {return a->getFlowDifference() < b->getFlowDifference();});
+    SubGraphEdit(graph, edges, vertex);
+    std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>> pq(
+            [](Edge *a, Edge *b) { return a->getFlowDifference() < b->getFlowDifference(); });
     max = graph.edmondskarp(v1, v2);
     for (Edge *e: graph.edgeSet) {
         double diff = abs(e->getFlow() - oldflow.find(e)->second);
@@ -303,12 +320,13 @@ Graph Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::v
 
 
     while (!pq.empty()) {
-        std::cout << pq.top()->getOrig()->getName() << "->" << pq.top()->getDest()->getName() << ' ' <<  pq.top()->getFlowDifference() << '\n';
+        std::cout << pq.top()->getOrig()->getName() << "->" << pq.top()->getDest()->getName() << ' '
+                  << pq.top()->getFlowDifference() << '\n';
         pq.pop();
     }
 
-
-    return graph;
+    OriginalGraph();
+    return pq;
 
 
 }
@@ -327,42 +345,63 @@ void Graph::ResetGraphValues() {
 
 //FUNÇOES CACHALDORA
 
-std::vector<std::pair<std::string, int>>Graph::Budget_needed_district(){
+std::vector<std::pair<std::string, int>> Graph::Budget_needed_district() {
     std::vector<std::pair<std::string, int>> networkCount;
-    for(Vertex * vertex : vertexSet){
-        auto it = std::find_if(networkCount.begin(), networkCount.end(), [&](const auto& pair) {return pair.first == vertex->getDistrict();});
-        if (it != networkCount.end()){
+    for (Vertex *vertex: vertexSet) {
+        auto it = std::find_if(networkCount.begin(), networkCount.end(),
+                               [&](const auto &pair) { return pair.first == vertex->getDistrict(); });
+        if (it != networkCount.end()) {
             it->second += vertex->getAdj().size();
-        }
-        else{
+        } else {
             networkCount.emplace_back(vertex->getDistrict(), vertex->getAdj().size());
         }
     }
 
-    sort(networkCount.begin(), networkCount.end(), [](std::pair<std::string, int> district1, std::pair<std::string, int> district2){
-        if (district1.second == district2.second)
-            return district1.first > district2.first;
-        return district1.second > district2.second;
-    });
+    sort(networkCount.begin(), networkCount.end(),
+         [](std::pair<std::string, int> district1, std::pair<std::string, int> district2) {
+             if (district1.second == district2.second)
+                 return district1.first > district2.first;
+             return district1.second > district2.second;
+         });
     return networkCount;
 }
 
-std::vector<std::pair<std::string, int>>Graph::Budget_needed_municipality(){
+std::vector<std::pair<std::string, int>> Graph::Budget_needed_municipality() {
     std::vector<std::pair<std::string, int>> networkCount;
-    for(Vertex * vertex : vertexSet){
-        auto it = std::find_if(networkCount.begin(), networkCount.end(), [&](const auto& pair) {return pair.first == vertex->getMunicipality();});
-        if (it != networkCount.end()){
+    for (Vertex *vertex: vertexSet) {
+        auto it = std::find_if(networkCount.begin(), networkCount.end(),
+                               [&](const auto &pair) { return pair.first == vertex->getMunicipality(); });
+        if (it != networkCount.end()) {
             it->second += vertex->getAdj().size();
-        }
-        else{
+        } else {
             networkCount.emplace_back(vertex->getMunicipality(), vertex->getAdj().size());
         }
     }
 
-    sort(networkCount.begin(), networkCount.end(), [](std::pair<std::string, int> municipality1, std::pair<std::string, int> municipality2){
-        if (municipality1.second == municipality2.second)
-            return municipality1.first > municipality2.first;
-        return municipality1.second > municipality2.second;
-    });
+    sort(networkCount.begin(), networkCount.end(),
+         [](std::pair<std::string, int> municipality1, std::pair<std::string, int> municipality2) {
+             if (municipality1.second == municipality2.second)
+                 return municipality1.first > municipality2.first;
+             return municipality1.second > municipality2.second;
+         });
     return networkCount;
+}
+
+
+double Graph::MaxTrainsAtStation(Vertex* sink){
+         // 2.4 --
+    Vertex* super = new Vertex("SuperSource","SuperDistrict","SuperMunicipality","SuperTownship","SuperLine");
+    this->addVertex(super);
+    double max;
+    for(Vertex* v : this->getVertexSet()){
+        if(v->getAdj().size() == 1)
+
+            addBidirectionalEdge(super,v,INF,"STANDARD");
+    }
+    max = edmondskarp(super,sink);
+
+    this->removeVertex(super);
+
+    return max;
+
 }

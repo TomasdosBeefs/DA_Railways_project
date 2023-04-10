@@ -263,7 +263,7 @@ bool Helpy::process_command(std::string &s1, std::string &s2, std::string &s3) {
             break;
         }
         case (41) : {
-            displayMaximumTrains();
+//            displayMaximumTrains();
             break;
         }
         case (40) : {
@@ -353,7 +353,7 @@ std::vector<Vertex*> selectDistrict(Program_data& data,std::string message){
 
 }
 
-
+/*
 
 std::vector<Vertex*> printPagesMaps(Program_data &data, int page_size, int num_cols,std::string type) {
     // Get total number of pages

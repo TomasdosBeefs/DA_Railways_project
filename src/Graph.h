@@ -86,6 +86,7 @@ protected:
 
     bool subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e );
 
+    double MaxTrainsAtStation(Vertex *sink);
 };
 
 void deleteMatrix(int **m, int n);
