@@ -152,24 +152,10 @@ CMakeFiles/Railways.dir/src/algorithms.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/algorithms.cpp.s"
 	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\algorithms.cpp" -o CMakeFiles\Railways.dir\src\algorithms.cpp.s
 
-CMakeFiles/Railways.dir/src/helpy.cpp.obj: CMakeFiles/Railways.dir/flags.make
-CMakeFiles/Railways.dir/src/helpy.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/helpy.cpp
-CMakeFiles/Railways.dir/src/helpy.cpp.obj: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Railways.dir/src/helpy.cpp.obj"
-	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/helpy.cpp.obj -MF CMakeFiles\Railways.dir\src\helpy.cpp.obj.d -o CMakeFiles\Railways.dir\src\helpy.cpp.obj -c "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\helpy.cpp"
-
-CMakeFiles/Railways.dir/src/helpy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Railways.dir/src/helpy.cpp.i"
-	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\helpy.cpp" > CMakeFiles\Railways.dir\src\helpy.cpp.i
-
-CMakeFiles/Railways.dir/src/helpy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Railways.dir/src/helpy.cpp.s"
-	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\helpy.cpp" -o CMakeFiles\Railways.dir\src\helpy.cpp.s
-
 CMakeFiles/Railways.dir/src/lib/fort.c.obj: CMakeFiles/Railways.dir/flags.make
 CMakeFiles/Railways.dir/src/lib/fort.c.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/lib/fort.c
 CMakeFiles/Railways.dir/src/lib/fort.c.obj: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Railways.dir/src/lib/fort.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Railways.dir/src/lib/fort.c.obj"
 	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/lib/fort.c.obj -MF CMakeFiles\Railways.dir\src\lib\fort.c.obj.d -o CMakeFiles\Railways.dir\src\lib\fort.c.obj -c "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\lib\fort.c"
 
 CMakeFiles/Railways.dir/src/lib/fort.c.i: cmake_force
@@ -183,7 +169,7 @@ CMakeFiles/Railways.dir/src/lib/fort.c.s: cmake_force
 CMakeFiles/Railways.dir/src/Menu.cpp.obj: CMakeFiles/Railways.dir/flags.make
 CMakeFiles/Railways.dir/src/Menu.cpp.obj: C:/Users/ritac/OneDrive/Ambiente\ de\ Trabalho/2S_2A/da/da_railway_project/Railways/src/Menu.cpp
 CMakeFiles/Railways.dir/src/Menu.cpp.obj: CMakeFiles/Railways.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Railways.dir/src/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Railways.dir/src/Menu.cpp.obj"
 	C:\Users\ritac\AppData\Local\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Railways.dir/src/Menu.cpp.obj -MF CMakeFiles\Railways.dir\src\Menu.cpp.obj.d -o CMakeFiles\Railways.dir\src\Menu.cpp.obj -c "C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\src\Menu.cpp"
 
 CMakeFiles/Railways.dir/src/Menu.cpp.i: cmake_force
@@ -202,7 +188,6 @@ Railways_OBJECTS = \
 "CMakeFiles/Railways.dir/src/Program_data.cpp.obj" \
 "CMakeFiles/Railways.dir/src/main.cpp.obj" \
 "CMakeFiles/Railways.dir/src/algorithms.cpp.obj" \
-"CMakeFiles/Railways.dir/src/helpy.cpp.obj" \
 "CMakeFiles/Railways.dir/src/lib/fort.c.obj" \
 "CMakeFiles/Railways.dir/src/Menu.cpp.obj"
 
@@ -215,14 +200,13 @@ Railways.exe: CMakeFiles/Railways.dir/src/Graph.cpp.obj
 Railways.exe: CMakeFiles/Railways.dir/src/Program_data.cpp.obj
 Railways.exe: CMakeFiles/Railways.dir/src/main.cpp.obj
 Railways.exe: CMakeFiles/Railways.dir/src/algorithms.cpp.obj
-Railways.exe: CMakeFiles/Railways.dir/src/helpy.cpp.obj
 Railways.exe: CMakeFiles/Railways.dir/src/lib/fort.c.obj
 Railways.exe: CMakeFiles/Railways.dir/src/Menu.cpp.obj
 Railways.exe: CMakeFiles/Railways.dir/build.make
 Railways.exe: CMakeFiles/Railways.dir/linklibs.rsp
 Railways.exe: CMakeFiles/Railways.dir/objects1.rsp
 Railways.exe: CMakeFiles/Railways.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Railways.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ritac\OneDrive\Ambiente de Trabalho\2S_2A\da\da_railway_project\Railways\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Railways.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Railways.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

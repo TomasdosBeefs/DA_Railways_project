@@ -272,30 +272,6 @@ src/file_reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Railways.dir\build.make CMakeFiles/Railways.dir/src/file_reader.cpp.s
 .PHONY : src/file_reader.cpp.s
 
-src/helpy.obj: src/helpy.cpp.obj
-.PHONY : src/helpy.obj
-
-# target to build an object file
-src/helpy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Railways.dir\build.make CMakeFiles/Railways.dir/src/helpy.cpp.obj
-.PHONY : src/helpy.cpp.obj
-
-src/helpy.i: src/helpy.cpp.i
-.PHONY : src/helpy.i
-
-# target to preprocess a source file
-src/helpy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Railways.dir\build.make CMakeFiles/Railways.dir/src/helpy.cpp.i
-.PHONY : src/helpy.cpp.i
-
-src/helpy.s: src/helpy.cpp.s
-.PHONY : src/helpy.s
-
-# target to generate assembly for a file
-src/helpy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Railways.dir\build.make CMakeFiles/Railways.dir/src/helpy.cpp.s
-.PHONY : src/helpy.cpp.s
-
 src/lib/fort.obj: src/lib/fort.c.obj
 .PHONY : src/lib/fort.obj
 
@@ -371,9 +347,6 @@ help:
 	@echo ... src/file_reader.obj
 	@echo ... src/file_reader.i
 	@echo ... src/file_reader.s
-	@echo ... src/helpy.obj
-	@echo ... src/helpy.i
-	@echo ... src/helpy.s
 	@echo ... src/lib/fort.obj
 	@echo ... src/lib/fort.i
 	@echo ... src/lib/fort.s

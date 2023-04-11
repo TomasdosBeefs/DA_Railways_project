@@ -118,12 +118,6 @@
 		<Unit filename="C:/Users/ritac/OneDrive/Ambiente de Trabalho/2S_2A/da/da_railway_project/Railways/src/file_reader.h">
 			<Option target="Railways"/>
 		</Unit>
-		<Unit filename="C:/Users/ritac/OneDrive/Ambiente de Trabalho/2S_2A/da/da_railway_project/Railways/src/helpy.cpp">
-			<Option target="Railways"/>
-		</Unit>
-		<Unit filename="C:/Users/ritac/OneDrive/Ambiente de Trabalho/2S_2A/da/da_railway_project/Railways/src/helpy.h">
-			<Option target="Railways"/>
-		</Unit>
 		<Unit filename="C:/Users/ritac/OneDrive/Ambiente de Trabalho/2S_2A/da/da_railway_project/Railways/src/lib/fort.c">
 			<Option target="Railways"/>
 		</Unit>

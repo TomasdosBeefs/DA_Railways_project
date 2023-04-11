@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Railways.dir/src/algorithms.cpp.obj.d"
   "CMakeFiles/Railways.dir/src/file_reader.cpp.obj"
   "CMakeFiles/Railways.dir/src/file_reader.cpp.obj.d"
-  "CMakeFiles/Railways.dir/src/helpy.cpp.obj"
-  "CMakeFiles/Railways.dir/src/helpy.cpp.obj.d"
   "CMakeFiles/Railways.dir/src/lib/fort.c.obj"
   "CMakeFiles/Railways.dir/src/lib/fort.c.obj.d"
   "CMakeFiles/Railways.dir/src/main.cpp.obj"
