@@ -83,7 +83,7 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
         for (Edge *e: v->getIncoming()) {
 
             if (!e->getOrig()->isVisited() && e->getBiFlow() > 0 && e->getFlow() > 0) {
-                //std::cout << '\n' << e->getBiFlow() << ' ' << e->getFlow() << '\n';
+                std::cout << '\n' << e->getBiFlow() << ' ' << e->getFlow() << '\n';
                 e->getOrig()->setVisited(true);
                 e->getOrig()->setPath(e);
                 q.push(e->getOrig());
@@ -105,8 +105,8 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
     Vertex *currVertex = sink;
 
     while (currVertex != source) {
-        //std::cout << " Caminho " << currVertex->getPath()->getDest()->getName() << ' '
-            //      << currVertex->getPath()->getOrig()->getName();
+        std::cout << " Caminho " << currVertex->getPath()->getDest()->getName() << ' '
+                  << currVertex->getPath()->getOrig()->getName();
         Edge *e = currVertex->getPath();
         if (e->getDest() == currVertex) {
             e->setFlow(e->getFlow() + f);
@@ -123,17 +123,16 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
         }
         //bidirectional edge //frente) adicionar flow e ir ao reverse tirar o flow
     }
-  //  std::cout << '\n' << "next" << '\n';
+    std::cout << '\n' << "next" << '\n';
 }
 
 void Graph::Most_fluent_stations() {
-                            //  2.2 -- calcula as estaçoes com maior flow
+    //  2.2 -- calcula as estaçoes com maior flow
     double maxflow = 0;
     std::pair<Vertex *, Vertex *> pair;
     for (Vertex *v: vertexSet) {
         for (Vertex *vv: vertexSet) {
             if (v == vv) continue;
-            ResetGraphValues();
             double flow = edmondskarp(v, vv);
             if (flow > maxflow) {
                 pair.first = v;
@@ -148,8 +147,8 @@ void Graph::Most_fluent_stations() {
 }
 
 double Program_data::Cost_Efficient(Vertex *v1, Vertex *v2) {
-                // 3.1 cost efficient -- podemos usar Dijkstra our Bellman
-     this->graph.edmondskarp(v1, v2);
+    // 3.1 cost efficient -- podemos usar Dijkstra our Bellman
+    this->graph.edmondskarp(v1, v2);
 
     double min_cost;
 
@@ -284,7 +283,7 @@ Graph Program_data::SubGraphCreate(Graph original, std::vector<Edge *> &edges, s
 }
 
 double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Vertex* v2,std::vector<Vertex*> vertex,std::vector<Edge*> edge){
-                        // 4.1 -- ele retira as edegs e vertex dos vetores e faz edmondkarp, depois restitui o grafo, se quiseres restituir atraves do menu será melhor
+    // 4.1 -- ele retira as edegs e vertex dos vetores e faz edmondkarp, depois restitui o grafo, se quiseres restituir atraves do menu será melhor
     double max = 0;
     SubGraphEdit(this->graph,edge,vertex);
     graph.ResetGraphValues();
@@ -297,7 +296,7 @@ double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Ver
 
 std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
 Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
-                               std::vector<Vertex *> vertex, int num) {
+                               std::vector<Vertex *> vertex) {
     double max = 0;                                           //4.2 -- função que retorna uma priority queue com os segmentos mais afetados, 4.2;
     std::unordered_map<Edge *, double> oldflow;
     max = graph.edmondskarp(v1, v2);
@@ -306,7 +305,7 @@ Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<
         oldflow.insert(pairr);
     }
     graph.ResetGraphValues();
-    //std::cout << "primeiro Edmond->" << max << ' ' << '\n' << graph.edgeSet.size() << '\n';
+    std::cout << "primeiro Edmond->" << max << ' ' << '\n' << graph.edgeSet.size() << '\n';
 
     SubGraphEdit(graph, edges, vertex);
     std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>> pq(
@@ -317,11 +316,10 @@ Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<
         e->setFlowDifference(diff);
         pq.push(e);
     }
-    //std::cout << "segundo Edmond->" << max << '\n' << graph.edgeSet.size() << '\n';
+    std::cout << "segundo Edmond->" << max << '\n' << graph.edgeSet.size() << '\n';
 
-    int count = 0;
-    while (!pq.empty() && count<num) {
-        count++;
+
+    while (!pq.empty()) {
         std::cout << pq.top()->getOrig()->getName() << "->" << pq.top()->getDest()->getName() << ' '
                   << pq.top()->getFlowDifference() << '\n';
         pq.pop();
@@ -340,6 +338,7 @@ void Graph::ResetGraphValues() {
         for (Edge *e: v->getAdj()) {
             e->setFlow(0);
             e->getReverse()->setFlow(0);
+            e->getOtherDirection()->setFlow(0);
         }
     }
 }
@@ -389,26 +388,20 @@ std::vector<std::pair<std::string, int>> Graph::Budget_needed_municipality() {
 }
 
 
-
-
 double Graph::MaxTrainsAtStation(Vertex* sink){
+    // 2.4 --
+    Vertex* super = new Vertex("SuperSource","SuperDistrict","SuperMunicipality","SuperTownship","SuperLine");
+    this->addVertex(super);
+    double max;
+    for(Vertex* v : this->getVertexSet()){
+        if(v->getAdj().size() == 1)
 
-    // 2.4 -
+            addBidirectionalEdge(super,v,INF,"STANDARD");
+    }
+    max = edmondskarp(super,sink);
 
-        double maxFlow = 0;
+    this->removeVertex(super);
 
-        // iterate over all vertices to find incoming and outgoing vertices
-        for (auto & v : getVertexSet()) {
-            if(v != sink){
+    return max;
 
-                double flow = edmondskarp(v, sink);
-
-                // Update the maximum flow if this vertex contributes to a higher maximum
-                if (flow > maxFlow) {
-                    maxFlow = flow;
-                }
-            }
-        }
-
-        return maxFlow;
 }

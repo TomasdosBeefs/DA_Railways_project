@@ -9,7 +9,7 @@
 #include "file_reader.h"
 #include "Vertex_Edge.h"
 
-void file_reader::readNetworks(Program_data& data) {
+ void file_reader::readNetworks(Program_data& data) {
     std::string Station_A, Station_B,Service,Capacitystring;
     int Capacity;
     std::string line;
@@ -35,7 +35,7 @@ void file_reader::readNetworks(Program_data& data) {
 }
 
 
-void file_reader::readStations(Program_data& data) {
+ void file_reader::readStations(Program_data& data) {
     int id = 0;
     std::string Name,District,Municipality,Township,Line;
     std::string line;
