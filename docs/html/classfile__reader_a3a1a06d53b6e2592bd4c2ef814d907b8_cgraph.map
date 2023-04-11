@@ -1,0 +1,6 @@
+<map id="file_reader::readNetworks" name="file_reader::readNetworks">
+<area shape="rect" id="node1" title="Reads network data from a CSV file and adds edges to the graph." alt="" coords="5,31,176,56"/>
+<area shape="rect" id="node2" href="$class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="224,31,411,56"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="461,5,634,31"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="459,55,636,80"/>
+</map>

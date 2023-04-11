@@ -1,0 +1,4 @@
+<map id="Graph::removeEdge" name="Graph::removeEdge">
+<area shape="rect" id="node1" title="Removes an edge from the graph." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="node2" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="192,5,355,31"/>
+</map>

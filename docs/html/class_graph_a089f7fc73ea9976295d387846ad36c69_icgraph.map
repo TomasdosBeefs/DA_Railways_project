@@ -1,0 +1,4 @@
+<map id="Graph::findVertex" name="Graph::findVertex">
+<area shape="rect" id="node1" title="Finds a vertex with a given content." alt="" coords="153,5,277,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="5,5,105,31"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graph::subaddBidirectionalEdge" name="Graph::subaddBidirectionalEdge">
+<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph, using an existing edge as a template." alt="" coords="5,31,213,56"/>
+<area shape="rect" id="node2" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="261,5,424,31"/>
+<area shape="rect" id="node3" href="$class_edge.html#a756d2d246aa5445d0f396626c7d4fd56" title="Get the reverse edge of the edge." alt="" coords="279,55,406,80"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graph::addBidirectionalEdge" name="Graph::addBidirectionalEdge">
+<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="5,31,192,56"/>
+<area shape="rect" id="node2" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="242,5,415,31"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="240,55,417,80"/>
+</map>

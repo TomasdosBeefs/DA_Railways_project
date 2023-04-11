@@ -1,0 +1,5 @@
+<map id="Vertex::setId" name="Vertex::setId">
+<area shape="rect" id="node1" title="Set the identifier of the vertex." alt="" coords="456,5,553,31"/>
+<area shape="rect" id="node2" href="$classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" id="node3" href="$class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
+</map>

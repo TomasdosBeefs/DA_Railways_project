@@ -1,0 +1,4 @@
+<map id="Vertex::removeOutgoingEdge" name="Vertex::removeOutgoingEdge">
+<area shape="rect" id="node1" title="Remove an outgoing edge from the vertex." alt="" coords="248,29,441,55"/>
+<area shape="rect" id="node2" href="$class_vertex.html#a487a80f45d6595048babb140e1db46f0" title="Remove an incoming edge from the vertex." alt="" coords="5,29,200,55"/>
+</map>

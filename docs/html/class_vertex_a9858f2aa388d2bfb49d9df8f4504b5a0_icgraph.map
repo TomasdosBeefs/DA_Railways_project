@@ -1,0 +1,12 @@
+<map id="Vertex::getAdj" name="Vertex::getAdj">
+<area shape="rect" id="node1" title="Get the adjacent edges of the vertex." alt="" coords="860,81,965,107"/>
+<area shape="rect" id="node2" href="$class_graph.html#a64043294f4c4b9bb8260048cea18f312" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="660,7,771,32"/>
+<area shape="rect" id="node3" href="$class_graph.html#a2302857290e9ce1b5c74f7c09da4a4e6" title="Finds an augmenting path from the source to the destination vertex in the Edmonds&#45;Karp algorithm." alt="" coords="654,56,777,81"/>
+<area shape="rect" id="node8" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="665,105,765,131"/>
+<area shape="rect" id="node9" href="$class_vertex.html#a936d6daae679b6d2e1def3bfc4b43b4e" title="Remove an outgoing edge from the vertex." alt="" coords="619,179,812,204"/>
+<area shape="rect" id="node4" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="402,56,545,81"/>
+<area shape="rect" id="node5" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,5,328,31"/>
+<area shape="rect" id="node6" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,56,100,81"/>
+<area shape="rect" id="node7" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="171,106,305,146"/>
+<area shape="rect" id="node10" href="$class_vertex.html#a487a80f45d6595048babb140e1db46f0" title="Remove an incoming edge from the vertex." alt="" coords="376,179,571,204"/>
+</map>

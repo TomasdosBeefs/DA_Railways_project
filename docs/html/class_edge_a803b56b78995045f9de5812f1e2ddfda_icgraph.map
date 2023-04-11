@@ -1,0 +1,16 @@
+<map id="Edge::getOtherDirection" name="Edge::getOtherDirection">
+<area shape="rect" id="node1" title="Get the other direction edge of the edge." alt="" coords="1067,116,1229,141"/>
+<area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="617,14,717,40"/>
+<area shape="rect" id="node3" href="$class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="845,90,984,116"/>
+<area shape="rect" id="node7" href="$class_program__data.html#added51d7cd2c5577d5c3e7c60082b247" title=" " alt="" coords="823,241,1007,266"/>
+<area shape="rect" id="node9" href="$class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="579,190,754,216"/>
+<area shape="rect" id="node10" href="$class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa" title="Set the flow of the edge." alt="" coords="861,140,968,165"/>
+<area shape="rect" id="node14" href="$class_graph.html#ac3759f0927c613567f392594cfa13ecb" title="Adds a bidirectional edge between two vertices in the graph, using an existing edge as a template." alt="" coords="811,41,1019,66"/>
+<area shape="rect" id="node4" href="$class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="376,89,523,114"/>
+<area shape="rect" id="node5" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,89,328,114"/>
+<area shape="rect" id="node6" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,169,100,194"/>
+<area shape="rect" id="node8" href="$class_program__data.html#a6e8e789481bba95fe95ecf6acbd11a8b" title=" " alt="" coords="571,241,763,266"/>
+<area shape="rect" id="node11" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="595,140,738,165"/>
+<area shape="rect" id="node12" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="378,140,521,165"/>
+<area shape="rect" id="node13" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="171,190,305,230"/>
+</map>

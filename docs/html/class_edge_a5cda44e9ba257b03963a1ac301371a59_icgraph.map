@@ -1,0 +1,15 @@
+<map id="Edge::getDest" name="Edge::getDest">
+<area shape="rect" id="node1" title="Get the destination vertex of the edge." alt="" coords="860,155,967,180"/>
+<area shape="rect" id="node2" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="644,31,787,56"/>
+<area shape="rect" id="node7" href="$class_graph.html#ae40b72fc8bb09d95294dbbfb06ecfab0" title="Performs edge relaxation on a given edge during Dijkstra&#39;s algorithm. This function performs edge rel..." alt="" coords="633,129,797,155"/>
+<area shape="rect" id="node9" href="$class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="636,80,795,105"/>
+<area shape="rect" id="node10" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="665,179,765,204"/>
+<area shape="rect" id="node11" href="$class_vertex.html#a46201ca95c1e8e0e6edd4ece4067706f" title="Add an outgoing edge to the vertex." alt="" coords="645,228,786,253"/>
+<area shape="rect" id="node12" href="$class_vertex.html#a936d6daae679b6d2e1def3bfc4b43b4e" title="Remove an outgoing edge from the vertex." alt="" coords="619,301,812,327"/>
+<area shape="rect" id="node3" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="402,56,545,81"/>
+<area shape="rect" id="node4" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,5,328,31"/>
+<area shape="rect" id="node5" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,56,100,81"/>
+<area shape="rect" id="node6" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="171,106,305,146"/>
+<area shape="rect" id="node8" href="$class_graph.html#a64043294f4c4b9bb8260048cea18f312" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="418,129,529,155"/>
+<area shape="rect" id="node13" href="$class_vertex.html#a487a80f45d6595048babb140e1db46f0" title="Remove an incoming edge from the vertex." alt="" coords="376,301,571,327"/>
+</map>

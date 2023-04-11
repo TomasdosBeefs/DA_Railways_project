@@ -1,0 +1,8 @@
+<map id="Edge::setFlow" name="Edge::setFlow">
+<area shape="rect" id="node1" title="Set the flow of the edge." alt="" coords="5,104,112,129"/>
+<area shape="rect" id="node2" href="$class_edge.html#aece03ec4ebb5e0966ae09a69eaafcb23" title="Get the capacity of the edge." alt="" coords="176,5,307,31"/>
+<area shape="rect" id="node3" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="160,55,323,80"/>
+<area shape="rect" id="node4" href="$class_edge.html#a1caaffca117bab3ff5b7387623a356f8" title="Get the weight of the edge." alt="" coords="182,104,301,129"/>
+<area shape="rect" id="node5" href="$class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c" title="Set the bidirectional flow of the edge." alt="" coords="182,153,301,179"/>
+<area shape="rect" id="node6" href="$class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387" title="Set the capacity of the edge." alt="" coords="176,203,307,228"/>
+</map>

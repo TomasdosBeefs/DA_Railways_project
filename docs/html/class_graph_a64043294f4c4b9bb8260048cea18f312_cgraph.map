@@ -1,0 +1,13 @@
+<map id="Graph::Dijkstra" name="Graph::Dijkstra">
+<area shape="rect" id="node1" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="5,205,116,231"/>
+<area shape="rect" id="node2" href="$class_graph.html#ae40b72fc8bb09d95294dbbfb06ecfab0" title="Performs edge relaxation on a given edge during Dijkstra&#39;s algorithm. This function performs edge rel..." alt="" coords="164,129,328,155"/>
+<area shape="rect" id="node4" href="$class_vertex.html#aa36ca926de23a6e7283be42e2930957c" title="Get the current distance of the vertex from a source vertex in a graph traversal algorithm." alt="" coords="402,5,513,31"/>
+<area shape="rect" id="node7" href="$class_vertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Set the distance of the vertex from a source vertex in a graph traversal algorithm." alt="" coords="402,252,513,277"/>
+<area shape="rect" id="node9" href="$class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="193,231,299,256"/>
+<area shape="rect" id="node10" href="$class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Check if the vertex has been visited in a graph traversal." alt="" coords="187,280,305,305"/>
+<area shape="rect" id="node11" href="$class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Set the visited status of the vertex." alt="" coords="183,329,309,355"/>
+<area shape="rect" id="node3" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="404,55,511,80"/>
+<area shape="rect" id="node5" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="406,104,509,129"/>
+<area shape="rect" id="node6" href="$class_edge.html#a836af338ac5c731f0c2c2e9c31310911" title="Get the segment cost of the edge." alt="" coords="376,153,539,179"/>
+<area shape="rect" id="node8" href="$class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Set the path of the vertex in a graph traversal algorithm." alt="" coords="401,203,514,228"/>
+</map>

@@ -1,0 +1,32 @@
+<map id="Graph::MaxTrainsAtStation" name="Graph::MaxTrainsAtStation">
+<area shape="rect" id="node1" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="5,212,185,237"/>
+<area shape="rect" id="node2" href="$class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="233,88,420,113"/>
+<area shape="rect" id="node5" href="$class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adds a vertex to the graph." alt="" coords="265,163,389,188"/>
+<area shape="rect" id="node6" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="255,212,398,237"/>
+<area shape="rect" id="node28" href="$class_graph.html#a619ac583094079134074658e29463c0e" title="Gets the vertex set of the graph." alt="" coords="256,261,397,287"/>
+<area shape="rect" id="node29" href="$class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="253,409,400,435"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="470,39,643,64"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="468,88,645,113"/>
+<area shape="rect" id="node7" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="485,236,628,261"/>
+<area shape="rect" id="node20" href="$class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="477,137,636,163"/>
+<area shape="rect" id="node22" href="$class_graph.html#a2302857290e9ce1b5c74f7c09da4a4e6" title="Finds an augmenting path from the source to the destination vertex in the Edmonds&#45;Karp algorithm." alt="" coords="495,483,618,508"/>
+<area shape="rect" id="node27" href="$class_vertex.html#ad071b1a9398fc94bf5ec22e3e78c1342" title="Get the line of the vertex." alt="" coords="501,187,612,212"/>
+<area shape="rect" id="node8" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="709,187,816,212"/>
+<area shape="rect" id="node9" href="$class_edge.html#a30ff9f3127097db8dce20f5e8b15e6dc" title="Get the flow of the edge." alt="" coords="709,384,816,409"/>
+<area shape="rect" id="node10" href="$class_vertex.html#a9d1db1789299fd14088a7f4bc3c8e194" title="Get the name of the vertex." alt="" coords="702,236,823,261"/>
+<area shape="rect" id="node11" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="711,88,814,113"/>
+<area shape="rect" id="node12" href="$class_vertex.html#a6e120e57da6af94892fae44e05868794" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="706,137,819,163"/>
+<area shape="rect" id="node13" href="$class_edge.html#a756d2d246aa5445d0f396626c7d4fd56" title="Get the reverse edge of the edge." alt="" coords="699,285,826,311"/>
+<area shape="rect" id="node14" href="$class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa" title="Set the flow of the edge." alt="" coords="709,335,816,360"/>
+<area shape="rect" id="node15" href="$class_edge.html#aece03ec4ebb5e0966ae09a69eaafcb23" title="Get the capacity of the edge." alt="" coords="896,285,1027,311"/>
+<area shape="rect" id="node16" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="880,532,1043,557"/>
+<area shape="rect" id="node17" href="$class_edge.html#a1caaffca117bab3ff5b7387623a356f8" title="Get the weight of the edge." alt="" coords="902,112,1021,137"/>
+<area shape="rect" id="node18" href="$class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c" title="Set the bidirectional flow of the edge." alt="" coords="902,335,1021,360"/>
+<area shape="rect" id="node19" href="$class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387" title="Set the capacity of the edge." alt="" coords="896,384,1027,409"/>
+<area shape="rect" id="node21" href="$class_edge.html#a520e673dd2988c14e920851b0212e895" title="Get the bidirectional flow of the edge." alt="" coords="703,39,822,64"/>
+<area shape="rect" id="node23" href="$class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="710,581,815,607"/>
+<area shape="rect" id="node24" href="$class_vertex.html#a84b20dae22321e5a729606885357b015" title="Get the incoming edges of the vertex." alt="" coords="693,433,832,459"/>
+<area shape="rect" id="node25" href="$class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Check if the vertex has been visited in a graph traversal." alt="" coords="703,483,822,508"/>
+<area shape="rect" id="node26" href="$class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Set the visited status of the vertex." alt="" coords="699,532,826,557"/>
+<area shape="rect" id="node30" href="$class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="487,581,626,607"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graph::removeVertex" name="Graph::removeVertex">
+<area shape="rect" id="node1" title="Removes a vertex from the graph." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="200,5,339,31"/>
+<area shape="rect" id="node3" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="387,5,549,31"/>
+</map>

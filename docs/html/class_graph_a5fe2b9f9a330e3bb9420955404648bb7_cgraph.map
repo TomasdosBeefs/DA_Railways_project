@@ -1,0 +1,4 @@
+<map id="Graph::addEdge" name="Graph::addEdge">
+<area shape="rect" id="node1" title="Adds an edge to the graph." alt="" coords="5,5,121,31"/>
+<area shape="rect" id="node2" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="169,5,272,31"/>
+</map>

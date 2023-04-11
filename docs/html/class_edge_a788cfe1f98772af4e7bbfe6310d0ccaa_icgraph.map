@@ -1,0 +1,9 @@
+<map id="Edge::setFlow" name="Edge::setFlow">
+<area shape="rect" id="node1" title="Set the flow of the edge." alt="" coords="789,115,896,140"/>
+<area shape="rect" id="node2" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="599,87,741,112"/>
+<area shape="rect" id="node7" href="$class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="376,169,551,195"/>
+<area shape="rect" id="node3" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="392,85,535,111"/>
+<area shape="rect" id="node4" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,5,328,31"/>
+<area shape="rect" id="node5" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,85,100,111"/>
+<area shape="rect" id="node6" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="171,106,305,146"/>
+</map>

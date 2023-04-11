@@ -1,0 +1,6 @@
+<map id="Graph::addVertex" name="Graph::addVertex">
+<area shape="rect" id="node1" title="Adds a vertex to the graph." alt="" coords="376,31,500,56"/>
+<area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="188,5,288,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,55,328,80"/>
+<area shape="rect" id="node4" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,55,100,80"/>
+</map>

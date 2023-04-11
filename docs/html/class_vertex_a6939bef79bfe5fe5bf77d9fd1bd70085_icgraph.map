@@ -1,0 +1,5 @@
+<map id="Vertex::setDist" name="Vertex::setDist">
+<area shape="rect" id="node1" title="Set the distance of the vertex from a source vertex in a graph traversal algorithm." alt="" coords="376,5,487,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a64043294f4c4b9bb8260048cea18f312" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#ae40b72fc8bb09d95294dbbfb06ecfab0" title="Performs edge relaxation on a given edge during Dijkstra&#39;s algorithm. This function performs edge rel..." alt="" coords="164,31,328,56"/>
+</map>
