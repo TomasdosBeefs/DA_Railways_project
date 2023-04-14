@@ -60,9 +60,10 @@ Menu::Menu(Program_data data) {
                 std::string station1;
                 auto it1 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while (it1 == data.Stations_Network.end()) {
+                while (it1 == data.Stations_Network.end() || station1 == "") {
                     std::cout << "Enter station1: \n";
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore any remaining input from previous input
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
+                                    '\n'); // Ignore any remaining input from previous input
                     std::getline(std::cin, station1);
 
                     it1 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
@@ -74,7 +75,7 @@ Menu::Menu(Program_data data) {
                 std::string station2;
                 auto it2 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while (it2 == data.Stations_Network.end()) {
+                while (it2 == data.Stations_Network.end() || station2 == "") {
                     std::cout << "Enter station2: \n";
                     std::getline(std::cin, station2);
 
@@ -84,60 +85,59 @@ Menu::Menu(Program_data data) {
                                        });
                 }
 
+
+
+
+
+
+
+
+
             //function
-            data_.graph.ResetGraphValues();
-            double max = data_.graph.edmondskarp(*it1, *it2);
+
             //cout the number of simultaneous trains between two stations
 
             std::cout << "The maximum number of simultaneous trains between the stations " + station1 + " and " +
-                         station2 + " is " + std::to_string(max) + "\n";
+                         station2 + " is " "\n";
         }
             else if (topic_in_metrics_menu == 2){
-                std::cout <<"The stations that require the most amount of trains are: \n";
-                data_.graph.Most_fluent_stations();
+                std::cout <<"The stations that require the most amount of trains are is \n";
                 //for cycle to print the vector
 
             }
             else if (topic_in_metrics_menu == 3){
-                std::string input;
-                std::cout << "Introduce the number of municipalities to display... \n";
+                std::string input ;
+                std::cout <<" Introduce the number of municipalities to display... \n";
                 std::cin >> input;
                 int k = std::stoi(input);
 
-                while (k < 0 || k > data.Municipality.size()) {
-                    std::cout << "Introduce the number of municipalities to display... \n";
+                while(k>data.Municipality.size() || k<data.Municipality.size()){
+                    std::cout <<" Introduce the number of stations to display... \n";
                     std::cin >> input;
                     k = std::stoi(input);
                 }
 
-                std::cout <<"The top " + input + " municipalities that require the largest  of trains are is: ";
+                std::cout <<"The top " + input + " municipalities that require the largest  of trains are is \n";
 
-                std::vector<std::pair<std::string, int>> vec = data_.graph.Budget_needed_municipality();
                 //for cycle to print the vector
-                for(int i = 0; i<k; i++){
-                    std::cout << vec[i].first << std::endl;
-                }
 
             }
             else if (topic_in_metrics_menu == 4){
-                std::string input;
-                std::cout << "Introduce the number of districts to display... \n";
+                std::string input ;
+                std::cout <<" Introduce the number of districts to display... \n";
                 std::cin >> input;
                 int k = std::stoi(input);
+                //verify if number is valid
 
-                while (k < 0 || k > data.District.size()) {
-                    std::cout << "Introduce the number of disctrics to display... \n";
+                while(k>data.District.size() || k<data.District.size()){
+                    std::cout <<" Introduce the number of districts to display... \n";
                     std::cin >> input;
                     k = std::stoi(input);
                 }
 
-                std::cout <<"The top " + input +  " districts that require the largest  of trains are is: \n";
+                std::cout <<"The top ", k, " districts that require the largest  of trains are is \n";
 
-                std::vector<std::pair<std::string, int>> vec = data_.graph.Budget_needed_district();
                 //for cycle to print the vector
-                for(int i = 0; i<k; i++){
-                    std::cout << vec[i].first << std::endl;
-                }
             }
             else if (topic_in_metrics_menu == 5){
                 std::string station;
@@ -155,10 +155,7 @@ Menu::Menu(Program_data data) {
 
                 //verify if station exists
 
-                double temp =data_.graph.MaxTrainsAtStation(*it);
-
-                std::cout <<"The maximum number of simultaneous trains in the station " + station + " having the entire railway system in mind, is  " +
-                        std::to_string(temp) + "\n";
+                std::cout <<"The maximum number of simultaneous trains in the station ", station, ", having the entire railway system in mind, is  " "\n";
 
             }
 
@@ -178,13 +175,12 @@ Menu::Menu(Program_data data) {
 
             int topic_in_optimization_menu;
             std::string striTemp;
-            std::cin >> topic_in_optimization_menu;
 
             if (topic_in_optimization_menu == 1) {
                 std::string station1;
                 auto it1 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while (it1 == data.Stations_Network.end()) {
+                while (it1 == data.Stations_Network.end() || station1 == "") {
                     std::cout << "Enter station1: \n";
                     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
                                     '\n'); // Ignore any remaining input from previous input
@@ -199,7 +195,7 @@ Menu::Menu(Program_data data) {
                 std::string station2;
                 auto it2 = data.Stations_Network.end(); // Initialize iterator to end
 
-                while (it2 == data.Stations_Network.end()) {
+                while (it2 == data.Stations_Network.end() || station2 == "") {
                     std::cout << "Enter station2: \n";
                     std::getline(std::cin, station2);
 
@@ -215,19 +211,7 @@ Menu::Menu(Program_data data) {
 
                 //cout the number of simultaneous trains between two stations
 
-                //std::unordered_map<std::string,Vertex*> Name;
-                auto vec1 = data.Name.find(station1)->second;
-                if (vec1 == nullptr) {
-                    //std::cout << "estação inválida pff escolhe outra";
-                    // escolher outra vez
-                    e1:
-                    goto e1;
-                }
-
-                auto vec2 = data.Name.find(station2)->second;
-
-
-                std::cout <<"The maximum number of simultaneous trains between the stations " + station1 + " and " + station2 +" , with minimum cost, is " << data_.Cost_Efficient(vec1,vec2) <<  "\n";
+                std::cout <<"The maximum number of simultaneous trains between the stations " + station1 + " and " + station2 +" , with minimum cost, is " "\n";
 
             }
 
@@ -246,7 +230,6 @@ Menu::Menu(Program_data data) {
 
             int topic_in_failures_menu;
             std::string striTemp;
-            std::cin >> topic_in_failures_menu;
 
             if (topic_in_failures_menu == 1) {
                 std::string station1;
@@ -277,63 +260,27 @@ Menu::Menu(Program_data data) {
                                        });
                 }
 
-                auto vec1 = data.Name.find(station1)->second;
-
-                auto vec2 = data.Name.find(station2)->second;
-
                 //function
 
                 //cout the number of simultaneous trains between two stations
-                auto func = data_.ReducedConnectivityMaximumTrains(data_.graph, vec1,vec2, data_.keepVertex, data_.keepEdge);
-                std::cout <<"The maximum number of simultaneous trains between the stations " + station1 + " and " + station2 + " with reduced connectivity is " + std::to_string(func) + "\n";
+
+                std::cout <<"The maximum number of simultaneous trains between the stations " + station1 + " and " + station2 + " with reduced connectivity is " "\n";
             }
             else if (topic_in_failures_menu == 2){
-                std::string station1;
-                auto it1 = data.Stations_Network.end(); // Initialize iterator to end
-
-                while (it1 == data.Stations_Network.end() || station1 == "") {
-                    std::cout << "Enter station1: \n";
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
-                                    '\n'); // Ignore any remaining input from previous input
-                    std::getline(std::cin, station1);
-
-                    it1 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
-                                       [&station1](Vertex *vertex) {
-                                           return station1 == vertex->getName();
-                                       });
-                }
-
-                std::string station2;
-                auto it2 = data.Stations_Network.end(); // Initialize iterator to end
-
-                while (it2 == data.Stations_Network.end() || station2 == "") {
-                    std::cout << "Enter station2: \n";
-                    std::getline(std::cin, station2);
-
-                    it2 = std::find_if(data.Stations_Network.begin(), data.Stations_Network.end(),
-                                       [&station2](Vertex *vertex) {
-                                           return station2 == vertex->getName();
-                                       });
-                }
-
                 std::string input ;
                 std::cout <<" Introduce the number of stations to display... \n";
                 std::cin >> input;
                 int k = std::stoi(input);
 
-                while(k>data.Stations_Network.size() || k<0){
+                while(k>data.Stations_Network.size() || k<data.Stations_Network.size()){
                     std::cout <<" Introduce the number of stations to display... \n";
                     std::cin >> input;
                     k = std::stoi(input);
                 }
 
+                std::cout <<"The top ", k, " stations that are the most affected by each segment failure \n";
 
-                auto vec1 = data.Name.find(station1)->second;
-
-                auto vec2 = data.Name.find(station2)->second;
-
-                std::cout <<"The top" + input +" stations that are the most affected by this segment failure are \n";
-                data_.unresolved_lines(data_.graph, vec1,vec2, data_.keepEdge, data_.keepVertex, k);
+                //for cycle to print the vector
 
             }
 
