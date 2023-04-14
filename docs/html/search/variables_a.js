@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_0',['Name',['../class_program__data.html#a7073383083184baa212aa65b5d75ab49',1,'Program_data::Name()'],['../class_vertex.html#a61d955dc8ab84caf91ab661723c72064',1,'Vertex::Name()']]]
+  ['municipality_0',['Municipality',['../class_program__data.html#a2804e42c5ad4b395cc1fb3473a4368ee',1,'Program_data']]],
+  ['municipaly_1',['Municipaly',['../class_vertex.html#a715683fd3929e3a84b38240f195a8163',1,'Vertex']]]
 ];

@@ -1,0 +1,9 @@
+<map id="Program_data::OriginalGraph" name="Program_data::OriginalGraph">
+<area shape="rect" id="node1" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="5,79,196,104"/>
+<area shape="rect" id="node2" href="$class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7" title="Adds an edge to the graph." alt="" coords="273,29,389,55"/>
+<area shape="rect" id="node6" href="$class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adds a vertex to the graph." alt="" coords="269,79,393,104"/>
+<area shape="rect" id="node7" href="$class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="244,128,419,153"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="467,5,585,31"/>
+<area shape="rect" id="node5" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="475,55,577,80"/>
+<area shape="rect" id="node4" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="633,5,740,31"/>
+</map>

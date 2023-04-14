@@ -1,4 +1,4 @@
 <map id="Graph::subaddBidirectionalEdge" name="Graph::subaddBidirectionalEdge">
-<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph, using an existing edge as a template." alt="" coords="153,5,361,31"/>
+<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="153,5,361,31"/>
 <area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="5,5,105,31"/>
 </map>

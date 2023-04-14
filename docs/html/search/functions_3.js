@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['edge_0',['Edge',['../class_edge.html#addd388ca7a2bd9134b471b6795060083',1,'Edge::Edge(Vertex *orig, Vertex *dest, double w)'],['../class_edge.html#aa6b0d6e1fb6324802c05f3c5514440c2',1,'Edge::Edge(Vertex *Station_A, Vertex *Station_B, double weight, std::string Service, double cost)'],['../class_edge.html#a0da72448940df43265b38d54d26268d5',1,'Edge::Edge(Edge *e)']]],
-  ['edge_5frelaxation_1',['Edge_Relaxation',['../class_graph.html#ae40b72fc8bb09d95294dbbfb06ecfab0',1,'Graph']]],
-  ['edmondskarp_2',['edmondskarp',['../class_graph.html#a15f171401b797c4e2234f3410dd1e2b9',1,'Graph']]]
+  ['deletematrix_0',['deleteMatrix',['../_graph_8cpp.html#ad56527992afe31a371065e795da57d25',1,'deleteMatrix(int **m, int n):&#160;Graph.cpp'],['../_graph_8cpp.html#af077bc8682a1a1d97e30b08eb1131b19',1,'deleteMatrix(double **m, int n):&#160;Graph.cpp'],['../_graph_8h.html#ad56527992afe31a371065e795da57d25',1,'deleteMatrix(int **m, int n):&#160;Graph.cpp'],['../_graph_8h.html#af077bc8682a1a1d97e30b08eb1131b19',1,'deleteMatrix(double **m, int n):&#160;Graph.cpp']]],
+  ['dijkstra_1',['Dijkstra',['../class_graph.html#a64043294f4c4b9bb8260048cea18f312',1,'Graph']]]
 ];

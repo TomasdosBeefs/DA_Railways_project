@@ -1,5 +1,5 @@
 <map id="Vertex::removeEdge" name="Vertex::removeEdge">
-<area shape="rect" id="node1" title="Add an outgoing edge to the vertex." alt="" coords="5,31,147,56"/>
+<area shape="rect" id="node1" title="Remove an outgoing edge from the vertex by its ID." alt="" coords="5,31,147,56"/>
 <area shape="rect" id="node2" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="195,5,301,31"/>
 <area shape="rect" id="node3" href="$class_vertex.html#a0727b6f271acd67946d085b0c95558ee" title="Get the identifier of the vertex." alt="" coords="199,55,297,80"/>
 </map>

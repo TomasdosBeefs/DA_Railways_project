@@ -1,7 +1,7 @@
 var searchData=
 [
   ['addbidirectionaledge_0',['addBidirectionalEdge',['../class_graph.html#ad8b401179838661c879b58ea65dbdc79',1,'Graph']]],
-  ['addedge_1',['addEdge',['../class_graph.html#a516f4487d70f4b15e413447afa8c2310',1,'Graph::addEdge(const int &amp;sourc, const int &amp;dest, double w)'],['../class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7',1,'Graph::addEdge(Edge *)']]],
+  ['addedge_1',['addEdge',['../class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7',1,'Graph::addEdge()'],['../class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a',1,'Vertex::addEdge()']]],
   ['addvertex_2',['addVertex',['../class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01',1,'Graph']]],
   ['adj_3',['adj',['../class_vertex.html#a0be7a8d322f99d4812261af91c3e2178',1,'Vertex']]],
   ['algorithms_4',['algorithms',['../classalgorithms.html',1,'']]],

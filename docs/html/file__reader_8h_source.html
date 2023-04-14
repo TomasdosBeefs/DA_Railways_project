@@ -80,29 +80,43 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by tomas on 10/03/2023.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef RAILWAYS_FILE_READER_H</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define RAILWAYS_FILE_READER_H</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_graph_8h.html">Graph.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_program__data_8h.html">Program_data.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classfile__reader.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classfile__reader.html">file_reader</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8">readNetworks</a>(<a class="code hl_class" href="class_program__data.html">Program_data</a>&amp; data);</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef RAILWAYS_FILE_READER_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define RAILWAYS_FILE_READER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_graph_8h.html">Graph.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_program__data_8h.html">Program_data.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classfile__reader.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classfile__reader.html">file_reader</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classfile__reader.html#afb4e1c087b74305aa887143d25969873">   27</a></span>    <a class="code hl_function" href="classfile__reader.html#afb4e1c087b74305aa887143d25969873">file_reader</a>();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9">readStations</a>(<a class="code hl_class" href="class_program__data.html">Program_data</a>&amp; data);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif </span><span class="comment">//RAILWAYS_FILE_READER_H</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8">readNetworks</a>(<a class="code hl_class" href="class_program__data.html">Program_data</a>&amp; data);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9">readStations</a>(<a class="code hl_class" href="class_program__data.html">Program_data</a>&amp; data);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">//RAILWAYS_FILE_READER_H</span></div>
 <div class="ttc" id="a_graph_8h_html"><div class="ttname"><a href="_graph_8h.html">Graph.h</a></div><div class="ttdoc">Definition of Graph class and related functions for graph manipulation.</div></div>
 <div class="ttc" id="a_program__data_8h_html"><div class="ttname"><a href="_program__data_8h.html">Program_data.h</a></div></div>
 <div class="ttc" id="aclass_program__data_html"><div class="ttname"><a href="class_program__data.html">Program_data</a></div><div class="ttdef"><b>Definition:</b> Program_data.h:25</div></div>
-<div class="ttc" id="aclassfile__reader_html"><div class="ttname"><a href="classfile__reader.html">file_reader</a></div><div class="ttdoc">Reads network and station data from CSV files.</div><div class="ttdef"><b>Definition:</b> file_reader.h:21</div></div>
-<div class="ttc" id="aclassfile__reader_html_a3a1a06d53b6e2592bd4c2ef814d907b8"><div class="ttname"><a href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8">file_reader::readNetworks</a></div><div class="ttdeci">static void readNetworks(Program_data &amp;data)</div><div class="ttdoc">Reads network data from a CSV file and adds edges to the graph.</div><div class="ttdef"><b>Definition:</b> file_reader.cpp:12</div></div>
-<div class="ttc" id="aclassfile__reader_html_a7b636cbf6a7674e4326d89b660af8ae9"><div class="ttname"><a href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9">file_reader::readStations</a></div><div class="ttdeci">static void readStations(Program_data &amp;data)</div><div class="ttdoc">Reads station data from a CSV file and creates Vertex objects.</div><div class="ttdef"><b>Definition:</b> file_reader.cpp:38</div></div>
+<div class="ttc" id="aclassfile__reader_html"><div class="ttname"><a href="classfile__reader.html">file_reader</a></div><div class="ttdoc">Class for reading network and station data from files.</div><div class="ttdef"><b>Definition:</b> file_reader.h:20</div></div>
+<div class="ttc" id="aclassfile__reader_html_a3a1a06d53b6e2592bd4c2ef814d907b8"><div class="ttname"><a href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8">file_reader::readNetworks</a></div><div class="ttdeci">static void readNetworks(Program_data &amp;data)</div><div class="ttdoc">Reads network data from a file and populates the Program_data object.</div><div class="ttdef"><b>Definition:</b> file_reader.cpp:12</div></div>
+<div class="ttc" id="aclassfile__reader_html_a7b636cbf6a7674e4326d89b660af8ae9"><div class="ttname"><a href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9">file_reader::readStations</a></div><div class="ttdeci">static void readStations(Program_data &amp;data)</div><div class="ttdoc">Reads station data from a file and populates the Program_data object.</div><div class="ttdef"><b>Definition:</b> file_reader.cpp:38</div></div>
+<div class="ttc" id="aclassfile__reader_html_afb4e1c087b74305aa887143d25969873"><div class="ttname"><a href="classfile__reader.html#afb4e1c087b74305aa887143d25969873">file_reader::file_reader</a></div><div class="ttdeci">file_reader()</div><div class="ttdoc">Default constructor for file_reader class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

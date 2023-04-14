@@ -1,5 +1,5 @@
 <map id="Graph::getVertexSet" name="Graph::getVertexSet">
 <area shape="rect" id="node1" title="Gets the vertex set of the graph." alt="" coords="376,5,517,31"/>
 <area shape="rect" id="node2" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,5,328,31"/>
-<area shape="rect" id="node3" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,5,100,31"/>
+<area shape="rect" id="node3" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,5,100,31"/>
 </map>

@@ -83,7 +83,7 @@ Collaboration diagram for Program_data:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_program__data__coll__graph.png" border="0" usemap="#a_program__data_coll__map" alt="Collaboration graph"/></div>
 <map name="a_program__data_coll__map" id="a_program__data_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,108,119"/>
+<area shape="rect" title=" " alt="" coords="5,108,108,133"/>
 <area shape="rect" href="class_graph.html" title="Represents a graph data structure." alt="" coords="28,5,85,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -106,15 +106,48 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6e8e789481bba95fe95ecf6acbd11a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:added51d7cd2c5577d5c3e7c60082b247"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#added51d7cd2c5577d5c3e7c60082b247">removeEdge</a> (<a class="el" href="class_edge.html">Edge</a> *e)</td></tr>
 <tr class="separator:added51d7cd2c5577d5c3e7c60082b247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360e92d02d1cb875dcd2179e25368dd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_graph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a360e92d02d1cb875dcd2179e25368dd0">SubGraphCreate</a> (<a class="el" href="class_graph.html">Graph</a> original, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt; &amp;edges, std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; &amp;vertextoRemove)</td></tr>
+<tr class="separator:a360e92d02d1cb875dcd2179e25368dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0476e62f5f68d0c48f88283e165cc033"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a0476e62f5f68d0c48f88283e165cc033">Cost_Efficient</a> (<a class="el" href="class_vertex.html">Vertex</a> *v1, <a class="el" href="class_vertex.html">Vertex</a> *v2)</td></tr>
+<tr class="memdesc:a0476e62f5f68d0c48f88283e165cc033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cost-efficient value between two vertices in the graph. This function calculates and returns the cost-efficient value between two given vertices in the graph. The cost-efficient value represents the efficiency of reaching from one vertex to another, taking into consideration the cost of edges, distances, or other relevant factors. The result is returned as a double value, representing the cost-efficient value between the two vertices.  <br /></td></tr>
+<tr class="separator:a0476e62f5f68d0c48f88283e165cc033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26872f83a566280923940f2156459c82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a26872f83a566280923940f2156459c82">OriginalGraph</a> ()</td></tr>
+<tr class="memdesc:a26872f83a566280923940f2156459c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a subgraph from the original graph, by removing specified edges and vertices. This function creates a subgraph from the original graph, by removing the specified edges and vertices. The resulting subgraph will only contain the remaining edges and vertices.  <br /></td></tr>
+<tr class="separator:a26872f83a566280923940f2156459c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab420e2d0f98b8e75cb2f932eba4aa56d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#ab420e2d0f98b8e75cb2f932eba4aa56d">SubGraphEdit</a> (<a class="el" href="class_graph.html">Graph</a> original, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt; edges, std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; vertextoRemove)</td></tr>
+<tr class="memdesc:ab420e2d0f98b8e75cb2f932eba4aa56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the current graph is the original graph. This function checks if the current graph is the original graph, which means that it has not been modified or altered since its creation.  <br /></td></tr>
+<tr class="separator:ab420e2d0f98b8e75cb2f932eba4aa56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb9993d50296dc99d8cdf300a89ef39"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39">ReducedConnectivityMaximumTrains</a> (<a class="el" href="class_graph.html">Graph</a> <a class="el" href="class_program__data.html#a362d0411aef946b90ee544ce5fa437e5">graph</a>, <a class="el" href="class_vertex.html">Vertex</a> *v1, <a class="el" href="class_vertex.html">Vertex</a> *v2, std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; vertex, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt; edge)</td></tr>
+<tr class="memdesc:a1cb9993d50296dc99d8cdf300a89ef39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the maximum number of trains that can pass from one vertex to another in a graph with reduced connectivity. This function calculates and returns the maximum number of trains that can pass from one vertex (v1) to another vertex (v2) in a graph with reduced connectivity. The reduced connectivity is achieved by removing certain vertices from the graph, as specified in the 'vertex' vector, and edges, as specified in the 'edge' vector. The resulting graph may have reduced connectivity compared to the original graph, and this function calculates the maximum number of trains that can pass between the specified vertices in this reduced connectivity graph.  <br /></td></tr>
+<tr class="separator:a1cb9993d50296dc99d8cdf300a89ef39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fc5fe4a23f959c97b0854c41ec7d5a"><td class="memItemLeft" align="right" valign="top">std::priority_queue&lt; <a class="el" href="class_edge.html">Edge</a> *, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;, std::function&lt; bool(<a class="el" href="class_edge.html">Edge</a> *, <a class="el" href="class_edge.html">Edge</a> *)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a">unresolved_lines</a> (<a class="el" href="class_graph.html">Graph</a> <a class="el" href="class_program__data.html#a362d0411aef946b90ee544ce5fa437e5">graph</a>, <a class="el" href="class_vertex.html">Vertex</a> *v1, <a class="el" href="class_vertex.html">Vertex</a> *v2, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt; edges, std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; vertex)</td></tr>
+<tr class="memdesc:a26fc5fe4a23f959c97b0854c41ec7d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a priority queue with the most affected segments.  <br /></td></tr>
+<tr class="separator:a26fc5fe4a23f959c97b0854c41ec7d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a362d0411aef946b90ee544ce5fa437e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_graph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a362d0411aef946b90ee544ce5fa437e5">graph</a></td></tr>
+<tr class="separator:a362d0411aef946b90ee544ce5fa437e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ecc135a4cd4bbb8a952bc066f4d37e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_graph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a16ecc135a4cd4bbb8a952bc066f4d37e">originalgraph</a></td></tr>
+<tr class="separator:a16ecc135a4cd4bbb8a952bc066f4d37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7073383083184baa212aa65b5d75ab49"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a7073383083184baa212aa65b5d75ab49">Name</a></td></tr>
 <tr class="separator:a7073383083184baa212aa65b5d75ab49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c719db6f9af51789811f9ba442b5360"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a6c719db6f9af51789811f9ba442b5360">Stations_Network</a></td></tr>
 <tr class="separator:a6c719db6f9af51789811f9ba442b5360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a362d0411aef946b90ee544ce5fa437e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_graph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a362d0411aef946b90ee544ce5fa437e5">graph</a></td></tr>
-<tr class="separator:a362d0411aef946b90ee544ce5fa437e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8346f91d8c0cab94b536c3b12823f521"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_program__data_8h.html#af9461a88c1ae91c4918c960fafcc861b">EV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a8346f91d8c0cab94b536c3b12823f521">Networks_vector</a></td></tr>
+<tr class="separator:a8346f91d8c0cab94b536c3b12823f521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f5fb765016a81d8958fb406a370b21"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a67f5fb765016a81d8958fb406a370b21">keepVertex</a></td></tr>
+<tr class="separator:a67f5fb765016a81d8958fb406a370b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fb6dccb966a703020edee356a2e5b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#af1fb6dccb966a703020edee356a2e5b8">keepEdge</a></td></tr>
+<tr class="separator:af1fb6dccb966a703020edee356a2e5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2804e42c5ad4b395cc1fb3473a4368ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a2804e42c5ad4b395cc1fb3473a4368ee">Municipality</a></td></tr>
+<tr class="separator:a2804e42c5ad4b395cc1fb3473a4368ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a399583d18e6258548afb7401bc855d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a0a399583d18e6258548afb7401bc855d">Township</a></td></tr>
+<tr class="separator:a0a399583d18e6258548afb7401bc855d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af867da854b5bfe150b707e1f43be5f84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#af867da854b5bfe150b707e1f43be5f84">Line</a></td></tr>
+<tr class="separator:af867da854b5bfe150b707e1f43be5f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca5fce9ed5c6618bcee4eaacb6f8c6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_program__data.html#a7ca5fce9ed5c6618bcee4eaacb6f8c6c">District</a></td></tr>
+<tr class="separator:a7ca5fce9ed5c6618bcee4eaacb6f8c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="class_program__data.html">Program_data</a>: Represents program data for a transportation network. This class contains various member functions for managing and manipulating the data related to the transportation network, including stations, edges, and categories. </p>
@@ -139,24 +172,266 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_program__data_a074f35636c48fb19f2373548107a7b3a_cgraph.png" border="0" usemap="#aclass_program__data_a074f35636c48fb19f2373548107a7b3a_cgraph" alt=""/></div>
 <map name="aclass_program__data_a074f35636c48fb19f2373548107a7b3a_cgraph" id="aclass_program__data_a074f35636c48fb19f2373548107a7b3a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,153,197,179"/>
-<area shape="rect" href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8" title="Reads network data from a CSV file and adds edges to the graph." alt="" coords="245,79,416,104"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="249,177,412,203"/>
-<area shape="rect" href="class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="473,29,660,55"/>
-<area shape="rect" href="class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="719,5,893,31"/>
-<area shape="rect" href="class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="717,55,895,80"/>
-<area shape="rect" href="class_program__data.html#a0f58d813a3f9c6e7a432ab2e16926f9e" title=" " alt="" coords="477,79,656,104"/>
-<area shape="rect" href="class_program__data.html#a5a40bfd29aed12638e5fe3275d2a8c26" title=" " alt="" coords="487,128,647,153"/>
-<area shape="rect" href="class_program__data.html#aafdb805d08bff2974e93c9c3f8ce4137" title=" " alt="" coords="464,177,669,203"/>
-<area shape="rect" href="class_program__data.html#a677ddab37345ef48f5e9dd68d7cf41bc" title=" " alt="" coords="481,227,652,252"/>
-<area shape="rect" href="class_program__data.html#a28ff42c059e4ea43b301270133c1c3a9" title=" " alt="" coords="471,276,662,301"/>
-<area shape="rect" href="class_vertex.html#a0b766cc3ce251348af422c0773bb4359" title="Set the identifier of the vertex." alt="" coords="518,325,615,351"/>
+<area shape="rect" title=" " alt="" coords="5,179,197,204"/>
+<area shape="rect" href="classfile__reader.html#a3a1a06d53b6e2592bd4c2ef814d907b8" title="Reads network data from a file and populates the Program_data object." alt="" coords="245,104,416,129"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="249,203,412,228"/>
+<area shape="rect" href="class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="473,55,660,80"/>
+<area shape="rect" href="class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="747,5,865,31"/>
+<area shape="rect" href="class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="719,55,893,80"/>
+<area shape="rect" href="class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="717,104,895,129"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="943,5,1049,31"/>
+<area shape="rect" href="class_program__data.html#a0f58d813a3f9c6e7a432ab2e16926f9e" title=" " alt="" coords="477,104,656,129"/>
+<area shape="rect" href="class_program__data.html#a5a40bfd29aed12638e5fe3275d2a8c26" title=" " alt="" coords="487,153,647,179"/>
+<area shape="rect" href="class_program__data.html#aafdb805d08bff2974e93c9c3f8ce4137" title=" " alt="" coords="464,203,669,228"/>
+<area shape="rect" href="class_program__data.html#a677ddab37345ef48f5e9dd68d7cf41bc" title=" " alt="" coords="481,252,652,277"/>
+<area shape="rect" href="class_program__data.html#a28ff42c059e4ea43b301270133c1c3a9" title=" " alt="" coords="471,301,662,327"/>
+<area shape="rect" href="class_vertex.html#a0b766cc3ce251348af422c0773bb4359" title="Set the identifier of the vertex." alt="" coords="518,351,615,376"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0476e62f5f68d0c48f88283e165cc033" name="a0476e62f5f68d0c48f88283e165cc033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0476e62f5f68d0c48f88283e165cc033">&#9670;&#160;</a></span>Cost_Efficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Program_data::Cost_Efficient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the cost-efficient value between two vertices in the graph. This function calculates and returns the cost-efficient value between two given vertices in the graph. The cost-efficient value represents the efficiency of reaching from one vertex to another, taking into consideration the cost of edges, distances, or other relevant factors. The result is returned as a double value, representing the cost-efficient value between the two vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Pointer to the source vertex. </td></tr>
+    <tr><td class="paramname">v2</td><td>Pointer to the destination vertex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The cost-efficient value between the two given vertices as a double value. Complexity: O(V^2 * E^2) </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a0476e62f5f68d0c48f88283e165cc033_cgraph.png" border="0" usemap="#aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_cgraph" alt=""/></div>
+<map name="aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_cgraph" id="aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_cgraph">
+<area shape="rect" title="Calculates the cost&#45;efficient value between two vertices in the graph. This function calculates and r..." alt="" coords="5,323,144,363"/>
+<area shape="rect" href="class_graph.html#a64043294f4c4b9bb8260048cea18f312" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="208,208,319,233"/>
+<area shape="rect" href="class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="192,405,335,431"/>
+<area shape="rect" href="class_graph.html#ae40b72fc8bb09d95294dbbfb06ecfab0" title="Performs edge relaxation on a given edge during Dijkstra&#39;s algorithm. This function performs edge rel..." alt="" coords="383,309,547,335"/>
+<area shape="rect" href="class_vertex.html#aa36ca926de23a6e7283be42e2930957c" title="Get the current distance of the vertex from a source vertex in a graph traversal algorithm." alt="" coords="621,256,731,281"/>
+<area shape="rect" href="class_vertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Set the distance of the vertex from a source vertex in a graph traversal algorithm." alt="" coords="621,207,731,232"/>
+<area shape="rect" href="class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="623,5,729,31"/>
+<area shape="rect" href="class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Check if the vertex has been visited in a graph traversal." alt="" coords="617,56,735,81"/>
+<area shape="rect" href="class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Set the visited status of the vertex." alt="" coords="613,156,739,181"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="623,601,729,627"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="625,404,727,429"/>
+<area shape="rect" href="class_edge.html#a836af338ac5c731f0c2c2e9c31310911" title="Get the segment cost of the edge." alt="" coords="595,305,757,331"/>
+<area shape="rect" href="class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Set the path of the vertex in a graph traversal algorithm." alt="" coords="619,355,733,380"/>
+<area shape="rect" href="class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="393,503,536,528"/>
+<area shape="rect" href="class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="385,625,544,651"/>
+<area shape="rect" href="class_graph.html#a2302857290e9ce1b5c74f7c09da4a4e6" title="Finds an augmenting path from the source to the destination vertex in the Edmonds&#45;Karp algorithm." alt="" coords="403,107,526,132"/>
+<area shape="rect" href="class_vertex.html#ad071b1a9398fc94bf5ec22e3e78c1342" title="Get the line of the vertex." alt="" coords="409,405,520,431"/>
+<area shape="rect" href="class_edge.html#a30ff9f3127097db8dce20f5e8b15e6dc" title="Get the flow of the edge." alt="" coords="623,552,729,577"/>
+<area shape="rect" href="class_vertex.html#a6e120e57da6af94892fae44e05868794" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="619,651,733,676"/>
+<area shape="rect" href="class_edge.html#a756d2d246aa5445d0f396626c7d4fd56" title="Get the reverse edge of the edge." alt="" coords="613,453,739,479"/>
+<area shape="rect" href="class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa" title="Set the flow of the edge." alt="" coords="623,503,729,528"/>
+<area shape="rect" href="class_edge.html#aece03ec4ebb5e0966ae09a69eaafcb23" title="Get the capacity of the edge." alt="" coords="821,479,952,504"/>
+<area shape="rect" href="class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="805,528,968,553"/>
+<area shape="rect" href="class_edge.html#a1caaffca117bab3ff5b7387623a356f8" title="Get the weight of the edge." alt="" coords="827,676,946,701"/>
+<area shape="rect" href="class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c" title="Set the bidirectional flow of the edge." alt="" coords="827,577,946,603"/>
+<area shape="rect" href="class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387" title="Set the capacity of the edge." alt="" coords="821,429,952,455"/>
+<area shape="rect" href="class_edge.html#a520e673dd2988c14e920851b0212e895" title="Get the bidirectional flow of the edge." alt="" coords="617,700,735,725"/>
+<area shape="rect" href="class_vertex.html#a84b20dae22321e5a729606885357b015" title="Get the incoming edges of the vertex." alt="" coords="607,107,745,132"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a0476e62f5f68d0c48f88283e165cc033_icgraph.png" border="0" usemap="#aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_icgraph" alt=""/></div>
+<map name="aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_icgraph" id="aclass_program__data_a0476e62f5f68d0c48f88283e165cc033_icgraph">
+<area shape="rect" title="Calculates the cost&#45;efficient value between two vertices in the graph. This function calculates and r..." alt="" coords="148,5,287,45"/>
+<area shape="rect" href="class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,13,100,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26872f83a566280923940f2156459c82" name="a26872f83a566280923940f2156459c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26872f83a566280923940f2156459c82">&#9670;&#160;</a></span>OriginalGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Program_data::OriginalGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a subgraph from the original graph, by removing specified edges and vertices. This function creates a subgraph from the original graph, by removing the specified edges and vertices. The resulting subgraph will only contain the remaining edges and vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>The original graph from which the subgraph needs to be created. </td></tr>
+    <tr><td class="paramname">edges</td><td>A vector of pointers to the edges that need to be removed from the original graph. </td></tr>
+    <tr><td class="paramname">vertextoRemove</td><td>A vector of pointers to the vertices that need to be removed from the original graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The subgraph created from the original graph, after removing the specified edges and vertices. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a26872f83a566280923940f2156459c82_cgraph.png" border="0" usemap="#aclass_program__data_a26872f83a566280923940f2156459c82_cgraph" alt=""/></div>
+<map name="aclass_program__data_a26872f83a566280923940f2156459c82_cgraph" id="aclass_program__data_a26872f83a566280923940f2156459c82_cgraph">
+<area shape="rect" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="5,79,196,104"/>
+<area shape="rect" href="class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7" title="Adds an edge to the graph." alt="" coords="273,29,389,55"/>
+<area shape="rect" href="class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adds a vertex to the graph." alt="" coords="269,79,393,104"/>
+<area shape="rect" href="class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="244,128,419,153"/>
+<area shape="rect" href="class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="467,5,585,31"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="475,55,577,80"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="633,5,740,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a26872f83a566280923940f2156459c82_icgraph.png" border="0" usemap="#aclass_program__data_a26872f83a566280923940f2156459c82_icgraph" alt=""/></div>
+<map name="aclass_program__data_a26872f83a566280923940f2156459c82_icgraph" id="aclass_program__data_a26872f83a566280923940f2156459c82_icgraph">
+<area shape="rect" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="432,45,623,70"/>
+<area shape="rect" href="class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,5,384,45"/>
+<area shape="rect" href="class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a" title="Returns a priority queue with the most affected segments." alt="" coords="179,69,353,109"/>
+<area shape="rect" href="class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,45,100,70"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1cb9993d50296dc99d8cdf300a89ef39" name="a1cb9993d50296dc99d8cdf300a89ef39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb9993d50296dc99d8cdf300a89ef39">&#9670;&#160;</a></span>ReducedConnectivityMaximumTrains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Program_data::ReducedConnectivityMaximumTrains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;&#160;</td>
+          <td class="paramname"><em>edge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the maximum number of trains that can pass from one vertex to another in a graph with reduced connectivity. This function calculates and returns the maximum number of trains that can pass from one vertex (v1) to another vertex (v2) in a graph with reduced connectivity. The reduced connectivity is achieved by removing certain vertices from the graph, as specified in the 'vertex' vector, and edges, as specified in the 'edge' vector. The resulting graph may have reduced connectivity compared to the original graph, and this function calculates the maximum number of trains that can pass between the specified vertices in this reduced connectivity graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph from which the maximum number of trains needs to be calculated. </td></tr>
+    <tr><td class="paramname">v1</td><td>Pointer to the source vertex. </td></tr>
+    <tr><td class="paramname">v2</td><td>Pointer to the destination vertex. </td></tr>
+    <tr><td class="paramname">vertex</td><td>A vector of pointers to the vertices that need to be removed from the graph to achieve reduced connectivity. </td></tr>
+    <tr><td class="paramname">edge</td><td>A vector of pointers to the edges that need to be removed from the graph to achieve reduced connectivity. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The maximum number of trains that can pass from v1 to v2 in the reduced connectivity graph as a double value. Complexity: O(V * E^2) </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a1cb9993d50296dc99d8cdf300a89ef39_cgraph.png" border="0" usemap="#aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_cgraph" alt=""/></div>
+<map name="aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_cgraph" id="aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_cgraph">
+<area shape="rect" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="5,619,241,659"/>
+<area shape="rect" href="class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="314,353,457,379"/>
+<area shape="rect" href="class_program__data.html#a26872f83a566280923940f2156459c82" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="290,601,481,627"/>
+<area shape="rect" href="class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="529,652,704,677"/>
+<area shape="rect" href="class_program__data.html#ab420e2d0f98b8e75cb2f932eba4aa56d" title="Checks if the current graph is the original graph. This function checks if the current graph is the o..." alt="" coords="289,703,481,728"/>
+<area shape="rect" href="class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="545,353,688,379"/>
+<area shape="rect" href="class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="537,477,696,503"/>
+<area shape="rect" href="class_graph.html#a2302857290e9ce1b5c74f7c09da4a4e6" title="Finds an augmenting path from the source to the destination vertex in the Edmonds&#45;Karp algorithm." alt="" coords="555,104,678,129"/>
+<area shape="rect" href="class_vertex.html#ad071b1a9398fc94bf5ec22e3e78c1342" title="Get the line of the vertex." alt="" coords="561,304,672,329"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="967,604,1073,629"/>
+<area shape="rect" href="class_edge.html#a30ff9f3127097db8dce20f5e8b15e6dc" title="Get the flow of the edge." alt="" coords="768,353,875,379"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="770,553,873,579"/>
+<area shape="rect" href="class_vertex.html#a6e120e57da6af94892fae44e05868794" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="765,403,878,428"/>
+<area shape="rect" href="class_edge.html#a756d2d246aa5445d0f396626c7d4fd56" title="Get the reverse edge of the edge." alt="" coords="758,203,885,228"/>
+<area shape="rect" href="class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa" title="Set the flow of the edge." alt="" coords="768,252,875,277"/>
+<area shape="rect" href="class_edge.html#aece03ec4ebb5e0966ae09a69eaafcb23" title="Get the capacity of the edge." alt="" coords="955,203,1085,228"/>
+<area shape="rect" href="class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="939,477,1101,503"/>
+<area shape="rect" href="class_edge.html#a1caaffca117bab3ff5b7387623a356f8" title="Get the weight of the edge." alt="" coords="961,427,1079,452"/>
+<area shape="rect" href="class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c" title="Set the bidirectional flow of the edge." alt="" coords="961,252,1079,277"/>
+<area shape="rect" href="class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387" title="Set the capacity of the edge." alt="" coords="955,301,1085,327"/>
+<area shape="rect" href="class_edge.html#a520e673dd2988c14e920851b0212e895" title="Get the bidirectional flow of the edge." alt="" coords="762,452,881,477"/>
+<area shape="rect" href="class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="769,104,874,129"/>
+<area shape="rect" href="class_vertex.html#a84b20dae22321e5a729606885357b015" title="Get the incoming edges of the vertex." alt="" coords="752,153,891,179"/>
+<area shape="rect" href="class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Check if the vertex has been visited in a graph traversal." alt="" coords="762,5,881,31"/>
+<area shape="rect" href="class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Set the visited status of the vertex." alt="" coords="758,55,885,80"/>
+<area shape="rect" href="class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7" title="Adds an edge to the graph." alt="" coords="559,553,675,579"/>
+<area shape="rect" href="class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adds a vertex to the graph." alt="" coords="555,603,679,628"/>
+<area shape="rect" href="class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="762,655,881,680"/>
+<area shape="rect" href="class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="752,704,891,729"/>
+<area shape="rect" href="class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="543,703,690,728"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a1cb9993d50296dc99d8cdf300a89ef39_icgraph.png" border="0" usemap="#aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_icgraph" alt=""/></div>
+<map name="aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_icgraph" id="aclass_program__data_a1cb9993d50296dc99d8cdf300a89ef39_icgraph">
+<area shape="rect" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,5,384,45"/>
+<area shape="rect" href="class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,13,100,38"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="added51d7cd2c5577d5c3e7c60082b247" name="added51d7cd2c5577d5c3e7c60082b247"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#added51d7cd2c5577d5c3e7c60082b247">&#9670;&#160;</a></span>removeEdge()</h2>
 
@@ -273,7 +548,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_program__data_a0f58d813a3f9c6e7a432ab2e16926f9e_icgraph.png" border="0" usemap="#aclass_program__data_a0f58d813a3f9c6e7a432ab2e16926f9e_icgraph" alt=""/></div>
 <map name="aclass_program__data_a0f58d813a3f9c6e7a432ab2e16926f9e_icgraph" id="aclass_program__data_a0f58d813a3f9c6e7a432ab2e16926f9e_icgraph">
 <area shape="rect" title=" " alt="" coords="456,5,635,31"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" href="class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>
 </div>
@@ -318,7 +593,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_program__data_a5a40bfd29aed12638e5fe3275d2a8c26_icgraph.png" border="0" usemap="#aclass_program__data_a5a40bfd29aed12638e5fe3275d2a8c26_icgraph" alt=""/></div>
 <map name="aclass_program__data_a5a40bfd29aed12638e5fe3275d2a8c26_icgraph" id="aclass_program__data_a5a40bfd29aed12638e5fe3275d2a8c26_icgraph">
 <area shape="rect" title=" " alt="" coords="456,5,616,31"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" href="class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>
 </div>
@@ -363,7 +638,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_program__data_aafdb805d08bff2974e93c9c3f8ce4137_icgraph.png" border="0" usemap="#aclass_program__data_aafdb805d08bff2974e93c9c3f8ce4137_icgraph" alt=""/></div>
 <map name="aclass_program__data_aafdb805d08bff2974e93c9c3f8ce4137_icgraph" id="aclass_program__data_aafdb805d08bff2974e93c9c3f8ce4137_icgraph">
 <area shape="rect" title=" " alt="" coords="456,5,661,31"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" href="class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>
 </div>
@@ -408,7 +683,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_program__data_a677ddab37345ef48f5e9dd68d7cf41bc_icgraph.png" border="0" usemap="#aclass_program__data_a677ddab37345ef48f5e9dd68d7cf41bc_icgraph" alt=""/></div>
 <map name="aclass_program__data_a677ddab37345ef48f5e9dd68d7cf41bc_icgraph" id="aclass_program__data_a677ddab37345ef48f5e9dd68d7cf41bc_icgraph">
 <area shape="rect" title=" " alt="" coords="456,5,627,31"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" href="class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>
 </div>
@@ -453,14 +728,235 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_program__data_a28ff42c059e4ea43b301270133c1c3a9_icgraph.png" border="0" usemap="#aclass_program__data_a28ff42c059e4ea43b301270133c1c3a9_icgraph" alt=""/></div>
 <map name="aclass_program__data_a28ff42c059e4ea43b301270133c1c3a9_icgraph" id="aclass_program__data_a28ff42c059e4ea43b301270133c1c3a9_icgraph">
 <area shape="rect" title=" " alt="" coords="456,5,647,31"/>
-<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" href="classfile__reader.html#a7b636cbf6a7674e4326d89b660af8ae9" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" href="class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>
 </div>
 
 </div>
 </div>
+<a id="a360e92d02d1cb875dcd2179e25368dd0" name="a360e92d02d1cb875dcd2179e25368dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360e92d02d1cb875dcd2179e25368dd0">&#9670;&#160;</a></span>SubGraphCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_graph.html">Graph</a> Program_data::SubGraphCreate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertextoRemove</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab420e2d0f98b8e75cb2f932eba4aa56d" name="ab420e2d0f98b8e75cb2f932eba4aa56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab420e2d0f98b8e75cb2f932eba4aa56d">&#9670;&#160;</a></span>SubGraphEdit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Program_data::SubGraphEdit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td>
+          <td class="paramname"><em>vertextoRemove</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the current graph is the original graph. This function checks if the current graph is the original graph, which means that it has not been modified or altered since its creation. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the current graph is the original graph, False otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function may be used in conjunction with other functions that modify or create subgraphs, to determine if the current graph is still the original graph or not. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Graph::Vertex </dd>
+<dd>
+Graph::Edge Complexity: O(E) </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_cgraph.png" border="0" usemap="#aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_cgraph" alt=""/></div>
+<map name="aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_cgraph" id="aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_cgraph">
+<area shape="rect" title="Checks if the current graph is the original graph. This function checks if the current graph is the o..." alt="" coords="5,5,197,31"/>
+<area shape="rect" href="class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="440,5,579,31"/>
+<area shape="rect" href="class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="245,31,392,56"/>
+<area shape="rect" href="class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="627,5,789,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_icgraph.png" border="0" usemap="#aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_icgraph" alt=""/></div>
+<map name="aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_icgraph" id="aclass_program__data_ab420e2d0f98b8e75cb2f932eba4aa56d_icgraph">
+<area shape="rect" title="Checks if the current graph is the original graph. This function checks if the current graph is the o..." alt="" coords="432,45,624,70"/>
+<area shape="rect" href="class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,5,384,45"/>
+<area shape="rect" href="class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a" title="Returns a priority queue with the most affected segments." alt="" coords="179,69,353,109"/>
+<area shape="rect" href="class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,45,100,70"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26fc5fe4a23f959c97b0854c41ec7d5a" name="a26fc5fe4a23f959c97b0854c41ec7d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fc5fe4a23f959c97b0854c41ec7d5a">&#9670;&#160;</a></span>unresolved_lines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::priority_queue&lt; <a class="el" href="class_edge.html">Edge</a> *, std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;, std::function&lt; bool(<a class="el" href="class_edge.html">Edge</a> *, <a class="el" href="class_edge.html">Edge</a> *)&gt; &gt; Program_data::unresolved_lines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> * &gt;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td>
+          <td class="paramname"><em>vertex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a priority queue with the most affected segments. </p>
+<p>This function calculates the maximum flow in a given graph using the Edmonds-Karp algorithm. It then resets the graph values, applies some subgraph edits, and calculates the flow differences for each edge in the graph. The edges are then stored in a priority queue based on their flow differences. Finally, the top <code>num</code> edges with the highest flow differences are printed and returned as a priority queue.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph object to operate on. </td></tr>
+    <tr><td class="paramname">v1</td><td>The source vertex. </td></tr>
+    <tr><td class="paramname">v2</td><td>The sink vertex. </td></tr>
+    <tr><td class="paramname">edges</td><td>A vector of edges to be edited. </td></tr>
+    <tr><td class="paramname">vertex</td><td>A vector of vertices in the graph. </td></tr>
+    <tr><td class="paramname">num</td><td>The number of top edges to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A priority queue of edges with the most affected segments. Complexity: O(V * E^2) </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_cgraph.png" border="0" usemap="#aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_cgraph" alt=""/></div>
+<map name="aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_cgraph" id="aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_cgraph">
+<area shape="rect" title="Returns a priority queue with the most affected segments." alt="" coords="5,583,180,623"/>
+<area shape="rect" href="class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="253,352,395,377"/>
+<area shape="rect" href="class_edge.html#a30ff9f3127097db8dce20f5e8b15e6dc" title="Get the flow of the edge." alt="" coords="707,203,813,228"/>
+<area shape="rect" href="class_edge.html#a5c142d972dbcc9bfefae7a2e153eba37" title="Get the flow difference of the edge." alt="" coords="241,541,407,567"/>
+<area shape="rect" href="class_program__data.html#a26872f83a566280923940f2156459c82" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="229,640,419,665"/>
+<area shape="rect" href="class_graph.html#aa16e2002fac4c5e7c1550363e3fb86a3" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="468,740,643,765"/>
+<area shape="rect" href="class_edge.html#a8f31c7d4d5a11644640b5f9606384c00" title="Set the flow difference of the edge." alt="" coords="241,689,407,715"/>
+<area shape="rect" href="class_program__data.html#ab420e2d0f98b8e75cb2f932eba4aa56d" title="Checks if the current graph is the original graph. This function checks if the current graph is the o..." alt="" coords="228,591,420,616"/>
+<area shape="rect" href="class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="484,352,627,377"/>
+<area shape="rect" href="class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="476,465,635,491"/>
+<area shape="rect" href="class_graph.html#a2302857290e9ce1b5c74f7c09da4a4e6" title="Finds an augmenting path from the source to the destination vertex in the Edmonds&#45;Karp algorithm." alt="" coords="494,104,617,129"/>
+<area shape="rect" href="class_vertex.html#ad071b1a9398fc94bf5ec22e3e78c1342" title="Get the line of the vertex." alt="" coords="500,303,611,328"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="905,604,1012,629"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="709,452,811,477"/>
+<area shape="rect" href="class_vertex.html#a6e120e57da6af94892fae44e05868794" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="703,403,817,428"/>
+<area shape="rect" href="class_edge.html#a756d2d246aa5445d0f396626c7d4fd56" title="Get the reverse edge of the edge." alt="" coords="697,252,823,277"/>
+<area shape="rect" href="class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa" title="Set the flow of the edge." alt="" coords="707,301,813,327"/>
+<area shape="rect" href="class_edge.html#aece03ec4ebb5e0966ae09a69eaafcb23" title="Get the capacity of the edge." alt="" coords="893,252,1024,277"/>
+<area shape="rect" href="class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="877,503,1040,528"/>
+<area shape="rect" href="class_edge.html#a1caaffca117bab3ff5b7387623a356f8" title="Get the weight of the edge." alt="" coords="899,452,1018,477"/>
+<area shape="rect" href="class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c" title="Set the bidirectional flow of the edge." alt="" coords="899,301,1018,327"/>
+<area shape="rect" href="class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387" title="Set the capacity of the edge." alt="" coords="893,351,1024,376"/>
+<area shape="rect" href="class_edge.html#a520e673dd2988c14e920851b0212e895" title="Get the bidirectional flow of the edge." alt="" coords="701,553,819,579"/>
+<area shape="rect" href="class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="707,153,813,179"/>
+<area shape="rect" href="class_vertex.html#a84b20dae22321e5a729606885357b015" title="Get the incoming edges of the vertex." alt="" coords="691,5,829,31"/>
+<area shape="rect" href="class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Check if the vertex has been visited in a graph traversal." alt="" coords="701,55,819,80"/>
+<area shape="rect" href="class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Set the visited status of the vertex." alt="" coords="697,104,823,129"/>
+<area shape="rect" href="class_graph.html#a5fe2b9f9a330e3bb9420955404648bb7" title="Adds an edge to the graph." alt="" coords="497,691,613,716"/>
+<area shape="rect" href="class_graph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adds a vertex to the graph." alt="" coords="493,641,617,667"/>
+<area shape="rect" href="class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="701,704,819,729"/>
+<area shape="rect" href="class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="691,655,829,680"/>
+<area shape="rect" href="class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="482,592,629,617"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_icgraph.png" border="0" usemap="#aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_icgraph" alt=""/></div>
+<map name="aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_icgraph" id="aclass_program__data_a26fc5fe4a23f959c97b0854c41ec7d5a_icgraph">
+<area shape="rect" title="Returns a priority queue with the most affected segments." alt="" coords="148,5,323,45"/>
+<area shape="rect" href="class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,13,100,38"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7ca5fce9ed5c6618bcee4eaacb6f8c6c" name="a7ca5fce9ed5c6618bcee4eaacb6f8c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca5fce9ed5c6618bcee4eaacb6f8c6c">&#9670;&#160;</a></span>District</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a> Program_data::District</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map for storing vertices categorized by district. </p>
+
+</div>
+</div>
 <a id="a362d0411aef946b90ee544ce5fa437e5" name="a362d0411aef946b90ee544ce5fa437e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a362d0411aef946b90ee544ce5fa437e5">&#9670;&#160;</a></span>graph</h2>
 
@@ -475,6 +971,66 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="af1fb6dccb966a703020edee356a2e5b8" name="af1fb6dccb966a703020edee356a2e5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fb6dccb966a703020edee356a2e5b8">&#9670;&#160;</a></span>keepEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_edge.html">Edge</a>*&gt; Program_data::keepEdge</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vector for keeping track of edges. </p>
+
+</div>
+</div>
+<a id="a67f5fb765016a81d8958fb406a370b21" name="a67f5fb765016a81d8958fb406a370b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f5fb765016a81d8958fb406a370b21">&#9670;&#160;</a></span>keepVertex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_vertex.html">Vertex</a>*&gt; Program_data::keepVertex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vector for keeping track of vertices. </p>
+
+</div>
+</div>
+<a id="af867da854b5bfe150b707e1f43be5f84" name="af867da854b5bfe150b707e1f43be5f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af867da854b5bfe150b707e1f43be5f84">&#9670;&#160;</a></span>Line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a> Program_data::Line</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map for storing vertices categorized by line. </p>
+
+</div>
+</div>
+<a id="a2804e42c5ad4b395cc1fb3473a4368ee" name="a2804e42c5ad4b395cc1fb3473a4368ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2804e42c5ad4b395cc1fb3473a4368ee">&#9670;&#160;</a></span>Municipality</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a> Program_data::Municipality</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map for storing vertices categorized by municipality. </p>
+
+</div>
+</div>
 <a id="a7073383083184baa212aa65b5d75ab49" name="a7073383083184baa212aa65b5d75ab49"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7073383083184baa212aa65b5d75ab49">&#9670;&#160;</a></span>Name</h2>
 
@@ -483,6 +1039,36 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_vertex.html">Vertex</a> *&gt; Program_data::Name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map for storing vertex names. </p>
+
+</div>
+</div>
+<a id="a8346f91d8c0cab94b536c3b12823f521" name="a8346f91d8c0cab94b536c3b12823f521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8346f91d8c0cab94b536c3b12823f521">&#9670;&#160;</a></span>Networks_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_program__data_8h.html#af9461a88c1ae91c4918c960fafcc861b">EV</a> Program_data::Networks_vector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vector for storing networks. </p>
+
+</div>
+</div>
+<a id="a16ecc135a4cd4bbb8a952bc066f4d37e" name="a16ecc135a4cd4bbb8a952bc066f4d37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ecc135a4cd4bbb8a952bc066f4d37e">&#9670;&#160;</a></span>originalgraph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_graph.html">Graph</a> Program_data::originalgraph</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -500,6 +1086,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Vector for storing vertices in the network. </p>
+
+</div>
+</div>
+<a id="a0a399583d18e6258548afb7401bc855d" name="a0a399583d18e6258548afb7401bc855d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a399583d18e6258548afb7401bc855d">&#9670;&#160;</a></span>Township</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_program__data_8h.html#a45e04f07dfbbed5037f1c0a8b4bfddfd">Categ</a> Program_data::Township</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map for storing vertices categorized by township. </p>
 
 </div>
 </div>

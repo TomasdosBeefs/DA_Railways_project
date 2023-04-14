@@ -1,9 +1,12 @@
 <map id="Vertex::getPath" name="Vertex::getPath">
-<area shape="rect" id="node1" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="773,56,887,81"/>
-<area shape="rect" id="node2" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="575,31,717,56"/>
-<area shape="rect" id="node7" href="$class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="567,80,725,105"/>
-<area shape="rect" id="node3" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="376,56,519,81"/>
-<area shape="rect" id="node4" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,5,328,31"/>
-<area shape="rect" id="node5" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,56,100,81"/>
-<area shape="rect" id="node6" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="171,106,305,146"/>
+<area shape="rect" id="node1" title="Get the path of the vertex in a graph traversal algorithm." alt="" coords="829,150,943,175"/>
+<area shape="rect" id="node2" href="$class_graph.html#a97854748a12998545d818d9d2d4d739c" title="Augments a path in the graph with a given flow. This function augments a path in the graph from a sou..." alt="" coords="631,125,773,150"/>
+<area shape="rect" id="node10" href="$class_graph.html#a7d4364d637327e5bbe1ced0a6a8085c8" title="Finds the bottleneck capacity of the augmenting path from source to sink vertex in the Edmonds&#45;Karp a..." alt="" coords="623,174,781,199"/>
+<area shape="rect" id="node3" href="$class_graph.html#a15f171401b797c4e2234f3410dd1e2b9" title="Finds the maximum flow between a source and sink vertex using the Edmonds&#45;Karp algorithm." alt="" coords="432,150,575,175"/>
+<area shape="rect" id="node4" href="$class_program__data.html#a0476e62f5f68d0c48f88283e165cc033" title="Calculates the cost&#45;efficient value between two vertices in the graph. This function calculates and r..." alt="" coords="197,5,335,45"/>
+<area shape="rect" id="node5" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,150,100,175"/>
+<area shape="rect" id="node6" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="176,121,356,146"/>
+<area shape="rect" id="node7" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="199,171,333,211"/>
+<area shape="rect" id="node8" href="$class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,235,384,275"/>
+<area shape="rect" id="node9" href="$class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a" title="Returns a priority queue with the most affected segments." alt="" coords="179,299,353,339"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp" name="/Users/brunodrumond/Documents/GitHub/DA_Railways_project/src/Program_data.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="205,5,366,75"/>
 <area shape="rect" id="node2" href="$_program__data_8h.html" title=" " alt="" coords="187,196,301,221"/>
-<area shape="rect" id="node13" href="$file__reader_8h.html" title="Contains the declaration of file_reader class for reading network and station data from CSV files." alt="" coords="282,123,374,148"/>
+<area shape="rect" id="node13" href="$file__reader_8h.html" title=" " alt="" coords="282,123,374,148"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,269,45,295"/>
 <area shape="rect" id="node4" title=" " alt="" coords="70,269,181,295"/>
 <area shape="rect" id="node5" href="$_graph_8h.html" title="Definition of Graph class and related functions for graph manipulation." alt="" coords="307,269,375,295"/>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['orig_0',['orig',['../class_edge.html#a48f1521d20ead8492fd1d184656862f5',1,'Edge']]],
-  ['otherdirection_1',['otherdirection',['../class_edge.html#a1e926d93ead1a6b64cc6e88994a0f853',1,'Edge']]],
-  ['out_5fcapacity_2',['OUT_capacity',['../class_vertex.html#abd4360c92ddcd8d0ecbc326ff5c85d2d',1,'Vertex']]]
+  ['name_0',['Name',['../class_program__data.html#a7073383083184baa212aa65b5d75ab49',1,'Program_data::Name()'],['../class_vertex.html#a61d955dc8ab84caf91ab661723c72064',1,'Vertex::Name()']]],
+  ['networks_5fvector_1',['Networks_vector',['../class_program__data.html#a8346f91d8c0cab94b536c3b12823f521',1,'Program_data']]]
 ];

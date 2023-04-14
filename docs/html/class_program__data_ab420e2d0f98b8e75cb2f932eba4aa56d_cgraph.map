@@ -1,0 +1,6 @@
+<map id="Program_data::SubGraphEdit" name="Program_data::SubGraphEdit">
+<area shape="rect" id="node1" title="Checks if the current graph is the original graph. This function checks if the current graph is the o..." alt="" coords="5,5,197,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a547b3fd6878fe70dda8d221926803b75" title="Removes an edge from the graph." alt="" coords="440,5,579,31"/>
+<area shape="rect" id="node4" href="$class_graph.html#ad3efda9573757644ea501c8078b5ee4b" title="Removes a vertex from the graph." alt="" coords="245,31,392,56"/>
+<area shape="rect" id="node3" href="$class_edge.html#a803b56b78995045f9de5812f1e2ddfda" title="Get the other direction edge of the edge." alt="" coords="627,5,789,31"/>
+</map>

@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Get the identifier of the vertex." alt="" coords="199,55,296,80"/>
 <area shape="rect" id="node2" href="$class_graph.html#ae30b478171293f02406aa1aea2168d45" title="Calculates the shortest path between two vertices using the Bellman&#45;Ford algorithm...." alt="" coords="5,5,151,31"/>
 <area shape="rect" id="node3" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="28,55,128,80"/>
-<area shape="rect" id="node4" href="$class_vertex.html#a46201ca95c1e8e0e6edd4ece4067706f" title="Add an outgoing edge to the vertex." alt="" coords="7,104,149,129"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a46201ca95c1e8e0e6edd4ece4067706f" title="Remove an outgoing edge from the vertex by its ID." alt="" coords="7,104,149,129"/>
 </map>

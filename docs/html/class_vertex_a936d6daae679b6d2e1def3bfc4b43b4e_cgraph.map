@@ -1,7 +1,6 @@
 <map id="Vertex::removeOutgoingEdge" name="Vertex::removeOutgoingEdge">
-<area shape="rect" id="node1" title="Remove an outgoing edge from the vertex." alt="" coords="5,80,199,105"/>
+<area shape="rect" id="node1" title="Remove an outgoing edge from the vertex." alt="" coords="5,55,199,80"/>
 <area shape="rect" id="node2" href="$class_vertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Get the adjacent edges of the vertex." alt="" coords="291,5,397,31"/>
-<area shape="rect" id="node3" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="291,55,397,80"/>
-<area shape="rect" id="node4" href="$class_vertex.html#a487a80f45d6595048babb140e1db46f0" title="Remove an incoming edge from the vertex." alt="" coords="247,104,441,129"/>
-<area shape="rect" id="node5" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="489,104,592,129"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a487a80f45d6595048babb140e1db46f0" title="Remove an incoming edge from the vertex." alt="" coords="247,55,441,80"/>
+<area shape="rect" id="node4" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Get the origin vertex of the edge." alt="" coords="489,55,592,80"/>
 </map>

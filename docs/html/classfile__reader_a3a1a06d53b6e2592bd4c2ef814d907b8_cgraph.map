@@ -1,6 +1,8 @@
 <map id="file_reader::readNetworks" name="file_reader::readNetworks">
-<area shape="rect" id="node1" title="Reads network data from a CSV file and adds edges to the graph." alt="" coords="5,31,176,56"/>
-<area shape="rect" id="node2" href="$class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="224,31,411,56"/>
-<area shape="rect" id="node3" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="461,5,634,31"/>
-<area shape="rect" id="node4" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="459,55,636,80"/>
+<area shape="rect" id="node1" title="Reads network data from a file and populates the Program_data object." alt="" coords="5,55,176,80"/>
+<area shape="rect" id="node2" href="$class_graph.html#ad8b401179838661c879b58ea65dbdc79" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="224,55,411,80"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="488,5,607,31"/>
+<area shape="rect" id="node5" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="461,55,634,80"/>
+<area shape="rect" id="node6" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="459,104,636,129"/>
+<area shape="rect" id="node4" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="684,5,791,31"/>
 </map>

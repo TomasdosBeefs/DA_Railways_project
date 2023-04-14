@@ -1,6 +1,8 @@
 <map id="Graph::addVertex" name="Graph::addVertex">
-<area shape="rect" id="node1" title="Adds a vertex to the graph." alt="" coords="376,31,500,56"/>
-<area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="188,5,288,31"/>
-<area shape="rect" id="node3" href="$class_graph.html#a1995b1217a9dcb3e3de1d7bade268bb6" title="Calculates the maximum number of trains that can reach a given vertex (station) in the graph...." alt="" coords="148,55,328,80"/>
-<area shape="rect" id="node4" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,55,100,80"/>
+<area shape="rect" id="node1" title="Adds a vertex to the graph." alt="" coords="671,31,795,56"/>
+<area shape="rect" id="node2" href="$class_graph.html#a7c1d2fb98d48c806ba9a01df3347166c" title="Constructs a Graph object by copying another Graph object." alt="" coords="477,5,577,31"/>
+<area shape="rect" id="node3" href="$class_program__data.html#a26872f83a566280923940f2156459c82" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="432,55,623,80"/>
+<area shape="rect" id="node4" href="$class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,15,384,55"/>
+<area shape="rect" id="node6" href="$class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a" title="Returns a priority queue with the most affected segments." alt="" coords="179,79,353,119"/>
+<area shape="rect" id="node5" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,55,100,80"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="Graph::Dijkstra" name="Graph::Dijkstra">
+<area shape="rect" id="node1" title="Calculates the shortest path between two vertices using Dijkstra&#39;s algorithm. This function calculate..." alt="" coords="335,13,445,38"/>
+<area shape="rect" id="node2" href="$class_program__data.html#a0476e62f5f68d0c48f88283e165cc033" title="Calculates the cost&#45;efficient value between two vertices in the graph. This function calculates and r..." alt="" coords="148,5,287,45"/>
+<area shape="rect" id="node3" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,13,100,38"/>
+</map>

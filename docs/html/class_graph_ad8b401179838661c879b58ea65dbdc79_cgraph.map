@@ -1,5 +1,7 @@
 <map id="Graph::addBidirectionalEdge" name="Graph::addBidirectionalEdge">
-<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="5,31,192,56"/>
-<area shape="rect" id="node2" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="242,5,415,31"/>
-<area shape="rect" id="node3" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="240,55,417,80"/>
+<area shape="rect" id="node1" title="Adds a bidirectional edge between two vertices in the graph." alt="" coords="5,55,192,80"/>
+<area shape="rect" id="node2" href="$class_vertex.html#a97aaa07ac800fca2e5aca22facfd776a" title="Add an outgoing edge to the vertex." alt="" coords="269,5,388,31"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62" title="Set the incoming capacity (INC) of the vertex." alt="" coords="242,55,415,80"/>
+<area shape="rect" id="node5" href="$class_vertex.html#a06df22721ba1441a93c5dfe4c67df426" title="Set the outgoing capacity (OUT) of the vertex." alt="" coords="240,104,417,129"/>
+<area shape="rect" id="node3" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="465,5,572,31"/>
 </map>

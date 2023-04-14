@@ -1,4 +1,4 @@
 <map id="file_reader::readStations" name="file_reader::readStations">
-<area shape="rect" id="node1" title="Reads station data from a CSV file and creates Vertex objects." alt="" coords="245,5,408,31"/>
+<area shape="rect" id="node1" title="Reads station data from a file and populates the Program_data object." alt="" coords="245,5,408,31"/>
 <area shape="rect" id="node2" href="$class_program__data.html#a074f35636c48fb19f2373548107a7b3a" title=" " alt="" coords="5,5,197,31"/>
 </map>

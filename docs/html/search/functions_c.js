@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['vertex_0',['Vertex',['../class_vertex.html#adbb78f1dc9c0fc3a52543c212c8bddf2',1,'Vertex::Vertex(std::string Name, std::string District, std::string Municipaly, std::string Township, std::string Line)'],['../class_vertex.html#ae41392c22babfd6a464544e1bc1df332',1,'Vertex::Vertex(const Vertex &amp;other)']]]
+  ['set_5fdistrict_0',['set_District',['../class_program__data.html#a0f58d813a3f9c6e7a432ab2e16926f9e',1,'Program_data']]],
+  ['set_5finc_5fcapacity_1',['set_INC_capacity',['../class_vertex.html#a6fd13a517fe48ec9ec386d669bdbca62',1,'Vertex']]],
+  ['set_5fline_2',['set_Line',['../class_program__data.html#a5a40bfd29aed12638e5fe3275d2a8c26',1,'Program_data']]],
+  ['set_5fmunicipality_3',['set_Municipality',['../class_program__data.html#aafdb805d08bff2974e93c9c3f8ce4137',1,'Program_data']]],
+  ['set_5fname_4',['set_Name',['../class_program__data.html#a677ddab37345ef48f5e9dd68d7cf41bc',1,'Program_data']]],
+  ['set_5fout_5fcapacity_5',['set_OUT_capacity',['../class_vertex.html#a06df22721ba1441a93c5dfe4c67df426',1,'Vertex']]],
+  ['set_5ftownship_6',['set_Township',['../class_program__data.html#a28ff42c059e4ea43b301270133c1c3a9',1,'Program_data']]],
+  ['setbiflow_7',['setBiFlow',['../class_edge.html#a9437d7d5adb160e65ecd0fbcb4c1e87c',1,'Edge']]],
+  ['setcapacity_8',['setCapacity',['../class_edge.html#af94cdf9eede40e3bc6cf55ca9a57d387',1,'Edge']]],
+  ['setdist_9',['setDist',['../class_vertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085',1,'Vertex']]],
+  ['setflow_10',['setFlow',['../class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa',1,'Edge']]],
+  ['setflowdifference_11',['setFlowDifference',['../class_edge.html#a8f31c7d4d5a11644640b5f9606384c00',1,'Edge']]],
+  ['setid_12',['setId',['../class_vertex.html#a0b766cc3ce251348af422c0773bb4359',1,'Vertex']]],
+  ['setindegree_13',['setIndegree',['../class_vertex.html#aeb605d2ba9296a5e40496a9e37557d03',1,'Vertex']]],
+  ['setotherdirection_14',['setOtherDirection',['../class_edge.html#a86f494d5447f05206d22cede7ffa86f1',1,'Edge']]],
+  ['setpath_15',['setPath',['../class_vertex.html#abe4bc30005eec65e775d0cd51f456460',1,'Vertex']]],
+  ['setprocesssing_16',['setProcesssing',['../class_vertex.html#a1c93b166281b30db2edef03791748ace',1,'Vertex']]],
+  ['setreverse_17',['setReverse',['../class_edge.html#a64881280015bd83702fe3b2c6234b7e5',1,'Edge']]],
+  ['setsegment_5fcost_18',['setSegment_cost',['../class_edge.html#a984c79a183d2b15fc10a3926cd3043c4',1,'Edge']]],
+  ['setselected_19',['setSelected',['../class_edge.html#a8ab1cf2fe7fd16152d1dba3822853894',1,'Edge']]],
+  ['setvisited_20',['setVisited',['../class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595',1,'Vertex']]],
+  ['subaddbidirectionaledge_21',['subaddBidirectionalEdge',['../class_graph.html#ac3759f0927c613567f392594cfa13ecb',1,'Graph']]],
+  ['subgraphcreate_22',['SubGraphCreate',['../class_program__data.html#a360e92d02d1cb875dcd2179e25368dd0',1,'Program_data']]],
+  ['subgraphedit_23',['SubGraphEdit',['../class_program__data.html#ab420e2d0f98b8e75cb2f932eba4aa56d',1,'Program_data']]]
 ];

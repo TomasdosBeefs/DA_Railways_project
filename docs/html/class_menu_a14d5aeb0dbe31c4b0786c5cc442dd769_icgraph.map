@@ -1,4 +1,4 @@
 <map id="Menu::backToMainMenu" name="Menu::backToMainMenu">
-<area shape="rect" id="node1" title=" " alt="" coords="148,5,312,31"/>
-<area shape="rect" id="node2" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,5,100,31"/>
+<area shape="rect" id="node1" title="Navigates back to the main menu." alt="" coords="148,5,312,31"/>
+<area shape="rect" id="node2" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,5,100,31"/>
 </map>

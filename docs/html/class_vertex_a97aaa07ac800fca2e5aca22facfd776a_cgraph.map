@@ -1,0 +1,4 @@
+<map id="Vertex::addEdge" name="Vertex::addEdge">
+<area shape="rect" id="node1" title="Add an outgoing edge to the vertex." alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node2" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Get the destination vertex of the edge." alt="" coords="172,5,279,31"/>
+</map>

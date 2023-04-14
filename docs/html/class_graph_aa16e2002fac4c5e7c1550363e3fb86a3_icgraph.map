@@ -1,4 +1,8 @@
 <map id="Graph::ResetGraphValues" name="Graph::ResetGraphValues">
-<area shape="rect" id="node1" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="148,5,323,31"/>
-<area shape="rect" id="node2" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title=" " alt="" coords="5,5,100,31"/>
+<area shape="rect" id="node1" title="Resets the values of the graph vertices for a fresh traversal or computation. This function resets th..." alt="" coords="671,104,845,130"/>
+<area shape="rect" id="node2" href="$class_menu.html#abbcea4a79e06acec80e0e85e29c38198" title="Constructor for Menu class." alt="" coords="5,76,100,102"/>
+<area shape="rect" id="node3" href="$class_graph.html#afd0c851198e279322ea831591f04c3d7" title="Finds the pair of stations with the highest flow in the graph. This function calculates the maximum f..." alt="" coords="461,40,594,80"/>
+<area shape="rect" id="node4" href="$class_program__data.html#a26872f83a566280923940f2156459c82" title="Creates a subgraph from the original graph, by removing specified edges and vertices...." alt="" coords="432,155,623,180"/>
+<area shape="rect" id="node5" href="$class_program__data.html#a1cb9993d50296dc99d8cdf300a89ef39" title="Calculates the maximum number of trains that can pass from one vertex to another in a graph with redu..." alt="" coords="148,97,384,137"/>
+<area shape="rect" id="node6" href="$class_program__data.html#a26fc5fe4a23f959c97b0854c41ec7d5a" title="Returns a priority queue with the most affected segments." alt="" coords="179,161,353,201"/>
 </map>
