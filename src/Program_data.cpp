@@ -10,6 +10,7 @@ Program_data::Program_data() {
 
     this->graph = Graph();
     file_reader::readStations(*this);
+    this->graph.vertexSet = this->Stations_Network;
     file_reader::readNetworks(*this);
     this->originalgraph = this->graph;
 }
