@@ -5,7 +5,6 @@
 
 #include <iostream>
 #include "Program_data.h"
-#include "helpy.h"
 #include "file_reader.h"
 #include "Menu.h"
 

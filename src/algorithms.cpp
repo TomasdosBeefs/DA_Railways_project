@@ -295,8 +295,7 @@ double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Ver
 }
 
 
-std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
-Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
+std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>> Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
                                std::vector<Vertex *> vertex, int num) {
     double max = 0;                                           //4.2 -- função que retorna uma priority queue com os segmentos mais afetados, 4.2;
     std::unordered_map<Edge *, double> oldflow;
