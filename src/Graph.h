@@ -64,6 +64,7 @@ public:
     This function augments a path in the graph from a source vertex to a sink vertex with a given flow value. The path is determined
     using the path information stored in the vertices during the graph traversal. The flow value is added to the forward edges
     and subtracted from the backward edges along the path.
+     Complexity: O(V)
     @param source The source vertex of the path.
     @param sink The sink vertex of the path.
     @param f The flow value to augment the path with.
@@ -76,6 +77,7 @@ public:
      * @param source The source vertex of the augmenting path.
      * @param dest The destination vertex of the augmenting path.
      * @return True if an augmenting path is found, False otherwise.
+     * Complexity: O(V + E)
      *
      * This function performs a breadth-first search starting from the source vertex to find an augmenting path to the destination vertex.
      * It marks visited vertices and sets the path from the visited vertices to the source vertex.
@@ -88,6 +90,7 @@ public:
      * @param src The source vertex of the augmenting path.
      * @param sink The sink vertex of the augmenting path.
      * @return The bottleneck capacity of the augmenting path.
+     * Complexity: O(V)
      */
     double Find_Bottleneck(Vertex* source, Vertex* dest);
 
@@ -96,6 +99,7 @@ public:
      * @param source The source vertex of the graph.
      * @param sink The sink vertex of the graph.
      * @return The maximum flow between the source and sink vertices.
+     * Complexity: O(V^2 * E^2)
      */
     double edmondskarp(Vertex* source, Vertex* sink);
 
@@ -104,6 +108,7 @@ public:
     This function calculates the maximum flow between all pairs of stations in the graph using the Edmonds-Karp algorithm,
     and identifies the pair of stations with the highest flow. The result is printed to std::cout, including the names of the
     two stations and the corresponding maximum flow.
+     Complexity: O(V^2 * E^2)
      */
     void Most_fluent_stations();
 
@@ -115,6 +120,7 @@ public:
     If there is no path between the two vertices, or if there is a negative-weight cycle in the graph, -1 is returned.
     @param v1 Pointer to the source vertex.
     @param v2 Pointer to the destination vertex.
+     Complexity: O(V * E)
      */
     double Bellman_Ford(Vertex* v1, Vertex* v2);
 
@@ -126,6 +132,7 @@ public:
     @param v1 Pointer to the source vertex.
     @param v2 Pointer to the destination vertex.
     @return The shortest distance between v1 and v2.
+     Complexity: O(V^2)
      */
     double Dijkstra(Vertex* v1, Vertex* v2);
 
@@ -135,6 +142,7 @@ public:
     Edge relaxation is the process of updating the distance and path of the destination vertex of an edge
     if a shorter path is found from the source vertex through the given edge.
     @param e Pointer to the edge to be relaxed.
+     Complexity: O(N)
      */
     void Edge_Relaxation(Edge* e);
 
@@ -196,7 +204,8 @@ public:
     @brief Resets the values of the graph vertices for a fresh traversal or computation.
     This function resets the values of the graph vertices, such as "visited", "dist", and "path", to their initial state.
     It is useful to call this function before starting a fresh traversal or computation on the graph.
-    */
+    Complexity: O(V + E)
+     */
     void ResetGraphValues();
 
     /**
@@ -204,7 +213,8 @@ public:
     This function calculates the budget needed for each district in the graph based on some predefined rules or algorithms.
     The result is returned as a vector of pairs, where each pair contains the name of the district and the corresponding budget needed.
     @return A vector of pairs, where each pair contains the name of a district and the corresponding budget needed.
-    */
+     Complexity: O(V log V)
+     */
     std::vector<std::pair<std::string, int>> Budget_needed_district();
 
     /**
@@ -212,6 +222,7 @@ public:
     This function calculates the budget needed for each municipality in the graph based on some predefined rules or algorithms.
     The result is returned as a vector of pairs, where each pair contains the name of the municipality and the corresponding budget needed.
     @return A vector of pairs, where each pair contains the name of a municipality and the corresponding budget needed.
+    Complexity: O(V log V)
      */
     std::vector<std::pair<std::string, int>> Budget_needed_municipality();
 
@@ -221,6 +232,7 @@ public:
     The result is returned as a double value, representing the maximum number of trains that can reach the vertex.
     @param sink Pointer to the vertex (station) for which the maximum number of trains needs to be calculated.
     @return The maximum number of trains that can reach the given vertex (station) as a double value.
+     Complexity: O(V * (V + E + V * E))
      */
     double MaxTrainsAtStation(Vertex *sink);
 
@@ -245,7 +257,8 @@ protected:
 * @param vector The vector of Edge pointers to search in.
 * @param value The Edge pointer to find.
 * @return The index of the found Edge pointer in the vector, or -1 if not found.
-*/
+* Complexity: O(N)
+ */
 int find(std::vector<Edge *> vector, Edge *value);
 
 /**
@@ -262,6 +275,7 @@ int find(std::vector<Edge *> vector, Edge *value);
  * @return True if the bidirectional edge was successfully added, false otherwise.
  */
 bool subaddBidirectionalEdge(Vertex *v1, Vertex *v2, Edge* e );
+
 
 };
 

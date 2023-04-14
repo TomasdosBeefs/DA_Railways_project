@@ -426,7 +426,6 @@ protected:
     double cost = 0; /** edge cost*/
     double flow_difference = 0; /** flow difference for flow-related problems*/
 
-    // auxiliary fields
     bool selected = false; /** flag to indicate if the edge is selected*/
 
     // used for bidirectional edges

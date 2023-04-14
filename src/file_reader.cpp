@@ -13,7 +13,7 @@ void file_reader::readNetworks(Program_data& data) {
     std::string Station_A, Station_B,Service,Capacitystring;
     int Capacity;
     std::string line;
-    std::ifstream ifs("../data/network.csv");
+    std::ifstream ifs("../data/networks.csv");
     std::getline(ifs,line, '\n');
     while(std::getline(ifs,line, '\n')){
         std::regex rgx(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");

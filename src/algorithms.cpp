@@ -10,7 +10,7 @@
 #include "Graph.h"
 
 
-double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow?
+double Graph::edmondskarp(Vertex *source, Vertex *sink) {
 
     //2.1 -- antes de usar deve-se usar ResetGraphValues()
 
@@ -23,7 +23,7 @@ double Graph::edmondskarp(Vertex *source, Vertex *sink) { // retornar o max-flow
         maxflow += f;
         augmentPath(source, sink, f);
     }
-    // std::cout << '\n' << "FLOW" << maxflow <<'\n';
+
     return maxflow;
 
 }
@@ -40,7 +40,6 @@ double Graph::Find_Bottleneck(Vertex *src, Vertex *sink) {
             bottleneck = std::min(currVertex->getPath()->getWeight() - currVertex->getPath()->getBiFlow(), bottleneck);
             currVertex = currVertex->getPath()->getOrig();
         } else if (e->getOrig() == currVertex) {
-            //   std::cout<< "auiq";
             bottleneck = std::min(currVertex->getPath()->getBiFlow(), bottleneck);
             currVertex = currVertex->getPath()->getDest();
 
@@ -72,8 +71,8 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
         for (Edge *e: v->getAdj()) {
 
             if (!e->getDest()->isVisited() && e->getWeight() - e->getBiFlow() >
-                                              0) { // n faz mais sentido aqui meter no flow o que resta e guardar no reverse o flow?
-                e->getDest()->setVisited(true); // nao sei o que fazer com as reverse n entendo a utilidade do reverse
+                                              0) {
+                e->getDest()->setVisited(true);
                 e->getDest()->setPath(e);
                 q.push(e->getDest());
                 //  std::cout << e->getDest()->getName() << ' ';
@@ -87,14 +86,12 @@ bool Graph::Find_path(Vertex *source, Vertex *dest) {
                 e->getOrig()->setVisited(true);
                 e->getOrig()->setPath(e);
                 q.push(e->getOrig());
-                //     std::cout << e->getOrig()->getName()<< ' ';
+
             }
         }
 
-        //  std::cout << "next" << '\n';
 
     }
-    //  std::cout << "end"<<'\n';
     return dest->isVisited();
 
 }
@@ -114,16 +111,11 @@ void Graph::augmentPath(Vertex *source, Vertex *sink, double f) {
             currVertex = e->getOrig();
 
         } else if (e->getOrig() == currVertex) {
-            // std::cout << "até os comemos \n" << e->getOrig();
             e->setFlow(e->getFlow() - f);
             e->getReverse()->setFlow(e->getFlow());
-            // e->setCapacity(e->getWeight()-e->getFlow());
-            // e->getReverse()->setBiFlow(e->getBiFlow()-f); // wut? faz sentido usar o reverse aqui sequer? pra que serve o reverse?
             currVertex = e->getDest();
         }
-        //bidirectional edge //frente) adicionar flow e ir ao reverse tirar o flow
     }
-  //  std::cout << '\n' << "next" << '\n';
 }
 
 void Graph::Most_fluent_stations() {
@@ -138,7 +130,6 @@ void Graph::Most_fluent_stations() {
             if (flow > maxflow) {
                 pair.first = v;
                 pair.second = vv;
-                //  std::cout << pair.first->getName() << ' ' << pair.second->getName();
                 maxflow = flow;
             }
 
@@ -272,6 +263,7 @@ bool Program_data::OriginalGraph() {
     for (Edge *e: this->keepEdge) {
         this->graph.addEdge(e);
     }
+    this->graph.ResetGraphValues();
 
     return true;
 }
@@ -291,12 +283,12 @@ double Program_data::ReducedConnectivityMaximumTrains(Graph graph,Vertex* v1,Ver
     max = this->graph.edmondskarp(v1,v2);
     OriginalGraph();
     return max;
-
 }
 
 
-std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>> Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
-                               std::vector<Vertex *> vertex, int num) {
+std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
+Program_data::unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges,
+                               std::vector<Vertex *> vertex) {
     double max = 0;                                           //4.2 -- função que retorna uma priority queue com os segmentos mais afetados, 4.2;
     std::unordered_map<Edge *, double> oldflow;
     max = graph.edmondskarp(v1, v2);
@@ -305,7 +297,6 @@ std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge
         oldflow.insert(pairr);
     }
     graph.ResetGraphValues();
-    //std::cout << "primeiro Edmond->" << max << ' ' << '\n' << graph.edgeSet.size() << '\n';
 
     SubGraphEdit(graph, edges, vertex);
     std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>> pq(
@@ -316,11 +307,10 @@ std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge
         e->setFlowDifference(diff);
         pq.push(e);
     }
-    //std::cout << "segundo Edmond->" << max << '\n' << graph.edgeSet.size() << '\n';
 
-    int count = 0;
-    while (!pq.empty() && count<num) {
-        count++;
+
+
+    while (!pq.empty()) {
         std::cout << pq.top()->getOrig()->getName() << "->" << pq.top()->getDest()->getName() << ' '
                   << pq.top()->getFlowDifference() << '\n';
         pq.pop();
@@ -343,7 +333,6 @@ void Graph::ResetGraphValues() {
     }
 }
 
-//FUNÇOES CACHALDORA
 
 std::vector<std::pair<std::string, int>> Graph::Budget_needed_district() {
     std::vector<std::pair<std::string, int>> networkCount;
@@ -396,13 +385,11 @@ double Graph::MaxTrainsAtStation(Vertex* sink){
 
         double maxFlow = 0;
 
-        // iterate over all vertices to find incoming and outgoing vertices
         for (auto & v : getVertexSet()) {
             if(v != sink){
 
                 double flow = edmondskarp(v, sink);
 
-                // Update the maximum flow if this vertex contributes to a higher maximum
                 if (flow > maxFlow) {
                     maxFlow = flow;
                 }

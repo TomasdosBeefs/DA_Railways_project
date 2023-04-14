@@ -108,10 +108,10 @@ public:
     @param v1 Pointer to the source vertex.
     @param v2 Pointer to the destination vertex.
     @return The cost-efficient value between the two given vertices as a double value.
+    Complexity: O(V^2 * E^2)
      */
     double Cost_Efficient(Vertex *v1, Vertex *v2);
 
-    //Graph SubGraphCreate(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 
     /**
     @brief Creates a subgraph from the original graph, by removing specified edges and vertices.
@@ -120,7 +120,7 @@ public:
     @param edges A vector of pointers to the edges that need to be removed from the original graph.
     @param vertextoRemove A vector of pointers to the vertices that need to be removed from the original graph.
     @return The subgraph created from the original graph, after removing the specified edges and vertices.
-    */
+     */
     bool OriginalGraph();
 
     /**
@@ -130,6 +130,7 @@ public:
    @note This function may be used in conjunction with other functions that modify or create subgraphs, to determine if the current graph is still the original graph or not.
    @see Graph::Vertex
    @see Graph::Edge
+     Complexity: O(E)
    */
     bool SubGraphEdit(Graph original, std::vector<Edge *> edges, std::vector<Vertex *> vertextoRemove);
 
@@ -142,6 +143,7 @@ public:
     @param vertex A vector of pointers to the vertices that need to be removed from the graph to achieve reduced connectivity.
     @param edge A vector of pointers to the edges that need to be removed from the graph to achieve reduced connectivity.
     @return The maximum number of trains that can pass from v1 to v2 in the reduced connectivity graph as a double value.
+     Complexity: O(V * E^2)
      */
     double ReducedConnectivityMaximumTrains(Graph graph, Vertex *v1, Vertex *v2, std::vector<Vertex *> vertex,
                                             std::vector<Edge *> edge);
@@ -162,10 +164,10 @@ public:
  * @param vertex A vector of vertices in the graph.
  * @param num The number of top edges to return.
  * @return A priority queue of edges with the most affected segments.
- */
+ Complexity: O(V * E^2)
+     */
     std::priority_queue<Edge *, std::vector<Edge *>, std::function<bool(Edge *, Edge *)>>
-    unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges, std::vector<Vertex *> vertex,
-                     int num);
+    unresolved_lines(Graph graph, Vertex *v1, Vertex *v2, std::vector<Edge *> edges, std::vector<Vertex *> vertex);
 };
 
 
